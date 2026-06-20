@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranking Kont Osobistych - Porównywarka Finansowa</title>
+    
+    <!-- Połączenie z plikiem CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Nowoczesna czcionka i ikony -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Pasek nawigacji / Logo -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <i class="fa-solid fa-wallet"></i> <span>Finansowy<strong>Ekspert</strong></span>
+            </div>
+            <div class="nav-links">
+                <a href="#ranking">Konta osobiste</a>
+                <a href="#lokaty">Lokaty</a>
+                <a href="#kontakt">Kontakt</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Nagłówek (Hero Section) -->
+    <header class="hero">
+        <div class="container text-center">
+            <span class="badge">Aktualizacja: <span id="current-date">Czerwiec 2026</span></span>
+            <h1>Ranking Kont Osobistych</h1>
+            <p>Porównaj najlepsze oferty na rynku, omiń ukryte opłaty i zgarnij nawet do 600 zł premii gotówkowej za założenie darmowego konta.</p>
+        </div>
+    </header>
+
+    <!-- Główna sekcja z porównywarką -->
+    <main class="container" id="ranking">
+        <div class="table-wrapper">
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th class="col-rank">Miejsce</th>
+                        <th class="col-bank">Bank i Produkt</th>
+                        <th>Opłata za konto</th>
+                        <th>Opłata za kartę</th>
+                        <th>Premia na start</th>
+                        <th class="col-action">Akcja</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <!-- Miejsce 1 -->
+                    <tr class="highlighted-row">
+                        <td class="col-rank">
+                            <div class="rank-badge rank-1">1</div>
+                        </td>
+                        <td class="col-bank">
+                            <div class="bank-info">
+                                <div class="bank-logo" style="background-color: #e0f2fe; color: #0369a1;">V</div>
+                                <div>
+                                    <div class="bank-name">VeloBank</div>
+                                    <div class="product-name">VeloKonto</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td data-label="Konto">
+                            <div class="value-main">0 zł</div>
+                            <div class="value-sub">bezwarunkowo</div>
+                        </td>
+                        <td data-label="Karta">
+                            <div class="value-main">0 zł</div>
+                            <div class="value-sub">przy 5 płatnościach</div>
+                        </td>
+                        <td data-label="Premia">
+                            <span class="bonus-tag">Nawet 500 zł premii</span>
+                        </td>
+                        <td class="col-action">
+                            <a href="twoj-link-1" class="btn btn-primary" target="_blank" rel="sponsored">
+                                Otwórz konto <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                        </td>
+                    </tr>
+
+                    <!-- Miejsce 2 -->
+                    <tr>
+                        <td class="col-rank">
+                            <div class="rank-badge rank-2">2</div>
+                        </td>
+                        <td class="col-bank">
+                            <div class="bank-info">
+                                <div class="bank-logo" style="background-color: #fee2e2; color: #b91c1c;">M</div>
+                                <div>
+                                    <div class="bank-name">mBank</div>
+                                    <div class="product-name">eKonto do usług</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td data-label="Konto">
+                            <div class="value-main">0 zł</div>
+                            <div class="value-sub">bezwarunkowo</div>
+                        </td>
+                        <td data-label="Karta">
+                            <div class="value-main">0 zł</div>
+                            <div class="value-sub">obrót min. 350 zł</div>
+                        </td>
+                        <td data-label="Premia">
+                            <span class="bonus-tag">Do 460 zł bonusu</span>
+                        </td>
+                        <td class="col-action">
+                            <a href="twoj-link-2" class="btn btn-secondary" target="_blank" rel="sponsored">
+                                Sprawdź ofertę <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                        </td>
+                    </tr>
+
+                    <!-- Miejsce 3 -->
+                    <tr>
+                        <td class="col-rank">
+                            <div class="rank-badge rank-3">3</div>
+                        </td>
+                        <td class="col-bank">
+                            <div class="bank-info">
+                                <div class="bank-logo" style="background-color: #fef3c7; color: #b45309;">P</div>
+                                <div>
+                                    <div class="bank-name">Pekao S.A.</div>
+                                    <div class="product-name">Konto Przekorzystne</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td data-label="Konto">
+                            <div class="value-main">0 zł</div>
+                            <div class="value-sub">bezwarunkowo</div>
+                        </td>
+                        <td data-label="Karta">
+                            <div class="value-main">0 zł</div>
+                            <div class="value-sub">wpływ 500 zł + 1 płatność</div>
+                        </td>
+                        <td data-label="Premia">
+                            <span class="bonus-tag">200 zł gotówki</span>
+                        </td>
+                        <td class="col-action">
+                            <a href="twoj-link-3" class="btn btn-secondary" target="_blank" rel="sponsored">
+                                Sprawdź ofertę <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <!-- Stopka z notą prawną -->
+    <footer>
+        <div class="container text-center">
+            <p><strong>Nota prawna:</strong> Powyższy ranking ma charakter wyłącznie informacyjny i nie stanowi oferty w rozumieniu prawa cywilnego. Dokładamy wszelkich starań, aby dane były rzetelne i aktualne, jednak zawsze weryfikuj regulamin promocji na stronie banku. Serwis może otrzymywać wynagrodzenie z tytułu polecania produktów (linki afiliacyjne), co pozwala na darmowe udostępnianie treści.</p>
+            <p class="copyright">&copy; 2026 FinansowyEkspert. Wszelkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
+
+    <!-- Połączenie z plikiem JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
