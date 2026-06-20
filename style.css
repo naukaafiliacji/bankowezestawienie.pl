@@ -1,0 +1,326 @@
+/* Zmienne CSS dla spójności kolorystycznej */
+:root {
+    --primary-color: #2563eb;
+    --primary-hover: #1d4ed8;
+    --bg-color: #f8fafc;
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    --success-bg: #ecfdf5;
+    --success-text: #059669;
+    --white: #ffffff;
+}
+
+/* Reset i podstawowe ustawienia */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Nawigacja */
+.navbar {
+    background: var(--white);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo span {
+    color: var(--text-main);
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    margin-left: 1.5rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Nagłówek (Hero) */
+.hero {
+    padding: 4rem 0 3rem;
+}
+
+.badge {
+    display: inline-block;
+    background: #e0e7ff;
+    color: #4f46e5;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    margin-bottom: 1rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+.hero p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Tabela Porównywarki */
+.table-wrapper {
+    background: var(--white);
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    margin-bottom: 4rem;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.comparison-table th {
+    background-color: #f1f5f9;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.comparison-table td {
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: middle;
+}
+
+.comparison-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Wyróżniony pierwszy wiersz */
+.highlighted-row {
+    background-color: #f8fafc;
+    position: relative;
+}
+
+/* Odznaki miejsc */
+.rank-badge {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: var(--white);
+    font-size: 0.9rem;
+}
+.rank-1 { background: #fbbf24; box-shadow: 0 0 10px rgba(251, 191, 36, 0.4); }
+.rank-2 { background: #94a3b8; }
+.rank-3 { background: #b45309; }
+
+/* Informacje o banku */
+.bank-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.bank-logo {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+
+.bank-name {
+    font-weight: 700;
+    font-size: 1.05rem;
+}
+
+.product-name {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* Wartości */
+.value-main {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.value-sub {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 0.2rem;
+}
+
+/* Bonus Tag */
+.bonus-tag {
+    background: var(--success-bg);
+    color: var(--success-text);
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+/* Przyciski */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: all 0.2s;
+    width: 100%;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.btn-secondary {
+    background: #f1f5f9;
+    color: var(--text-main);
+}
+
+.btn-secondary:hover {
+    background: #e2e8f0;
+}
+
+/* Stopka */
+footer {
+    background: #1e293b;
+    color: #94a3b8;
+    padding: 3rem 0;
+    font-size: 0.85rem;
+}
+
+footer strong {
+    color: #cbd5e1;
+}
+
+footer .copyright {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #334155;
+}
+
+/* --- RESPONSYWNOŚĆ (MOBILE) --- */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Ukrywa linki nawigacji na telefonie dla porządku */
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .comparison-table thead {
+        display: none;
+    }
+
+    .comparison-table, .comparison-table tbody, .comparison-table tr, .comparison-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .comparison-table tr {
+        margin-bottom: 1rem;
+        border-bottom: 4px solid var(--bg-color);
+        position: relative;
+    }
+
+    .comparison-table td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        text-align: right;
+    }
+
+    .comparison-table td::before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: var(--text-muted);
+        font-size: 0.85rem;
+        text-transform: uppercase;
+    }
+
+    .comparison-table td.col-bank, .comparison-table td.col-action, .comparison-table td.col-rank {
+        display: block;
+        text-align: left;
+    }
+
+    .comparison-table td.col-bank::before, .comparison-table td.col-action::before, .comparison-table td.col-rank::before {
+        display: none;
+    }
+
+    .col-rank {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        padding: 0 !important;
+        border: none !important;
+    }
+}
