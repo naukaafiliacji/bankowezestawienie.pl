@@ -1,0 +1,209 @@
+:root {
+    --primary-color: #0066cc;
+    --secondary-color: #2ecc71;
+    --bg-color: #f4f6f9;
+    --card-bg: #ffffff;
+    --text-main: #333333;
+    --text-muted: #666666;
+    --border-color: #e1e8ed;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #111;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+/* Sekcja Filtrów */
+.filter-panel {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    align-items: flex-end;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.filter-group label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #444;
+}
+
+.filter-group input, .filter-group select {
+    padding: 10px 14px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.filter-group input:focus, .filter-group select:focus {
+    border-color: var(--primary-color);
+}
+
+/* Lista Wyników */
+.results-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.bank-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    padding: 25px;
+    display: grid;
+    grid-template-columns: 180px repeat(3, 1fr) 180px;
+    align-items: center;
+    gap: 20px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid transparent;
+}
+
+.bank-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    border-color: #d0e1fd;
+}
+
+/* Kolumny karty bankowej */
+.bank-logo-section {
+    text-align: center;
+}
+
+.bank-name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #111;
+}
+
+.account-name {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-top: 4px;
+}
+
+.fee-column {
+    text-align: center;
+}
+
+.fee-value {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.fee-value.free {
+    color: var(--secondary-color);
+}
+
+.fee-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 5px;
+}
+
+.features-column ul {
+    list-style: none;
+    font-size: 0.9rem;
+}
+
+.features-column li {
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.features-column li::before {
+    content: "✓";
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.action-column {
+    text-align: right;
+}
+
+.btn-apply {
+    display: inline-block;
+    background: var(--primary-color);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s;
+    width: 100%;
+    text-align: center;
+}
+
+.btn-apply:hover {
+    background: #0052a3;
+}
+
+.badge-promo {
+    background: #fff3cd;
+    color: #856404;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 8px;
+}
+
+/* Responsywność */
+@media (max-width: 900px) {
+    .bank-card {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    .bank-logo-section, .action-column {
+        grid-column: span 2;
+        text-align: center;
+    }
+    .action-column {
+        margin-top: 10px;
+    }
+}

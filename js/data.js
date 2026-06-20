@@ -1,0 +1,75 @@
+// Baza danych polskich kont bankowych (Oddzielny plik dla łatwej aktualizacji)
+const bankData = [
+    {
+        bankName: "mBank",
+        accountName: "eKonto osobiste",
+        promoText: "Do 500 zł premii za założenie konta i aktywność",
+        affiliateUrl: "https://twoj-link-afiliacyjny.pl/mbank",
+        baseAccountFee: 0, 
+        minIncomeForFreeAccount: 0,
+        baseCardFee: 10,
+        minCardTransactionsForFree: 350,
+        atmFee: "0 zł (od 100 zł w bankomatach sieci mBank, Euronet, Planet Cash)",
+        freeAllAtms: false,
+        youthMaxAge: 24,
+        youthCardFee: 0
+    },
+    {
+        bankName: "PKO BP",
+        accountName: "Konto za Zero",
+        promoText: "Brak opłat za prowadzenie konta",
+        affiliateUrl: "https://twoj-link-afiliacyjny.pl/pkobp",
+        baseAccountFee: 0,
+        minIncomeForFreeAccount: 0,
+        baseCardFee: 10,
+        minCardTransactionsForFree: 5,
+        isTransactionCountBased: true,
+        atmFee: "0 zł z bankomatów PKO BP, BLIKiem darmowe wszystkie",
+        freeAllAtms: false,
+        youthMaxAge: 26,
+        youthCardFee: 0
+    },
+    {
+        bankName: "Santander Bank Polska",
+        accountName: "Konto Santander",
+        promoText: "Zyskaj do 600 zł w bonusach i zwrotach za rachunki",
+        affiliateUrl: "https://twoj-link-afiliacyjny.pl/santander",
+        baseAccountFee: 6,
+        minIncomeForFreeAccount: 1000,
+        baseCardFee: 9,
+        minCardTransactionsForFree: 1,
+        isSingleTransactionRequirement: true,
+        atmFee: "0 zł z bankomatów Santander (oraz BLIKiem we wszystkich)",
+        freeAllAtms: false,
+        youthMaxAge: 26,
+        youthCardFee: 0
+    },
+    {
+        bankName: "ING Bank Śląski",
+        accountName: "Konto z Lwem Direct",
+        promoText: "Do 500 zł premii za otwarcie konta",
+        affiliateUrl: "https://twoj-link-afiliacyjny.pl/ing",
+        baseAccountFee: 0,
+        minIncomeForFreeAccount: 0,
+        baseCardFee: 10,
+        minCardTransactionsForFree: 300,
+        atmFee: "0 zł z bankomatów ING oraz Planet Cash",
+        freeAllAtms: false,
+        youthMaxAge: 26,
+        youthCardFee: 0
+    },
+    {
+        bankName: "Bank Pekao S.A.",
+        accountName: "Konto Przekorzystne",
+        promoText: "200 zł premii + 7% na koncie oszczędnościowym",
+        affiliateUrl: "https://twoj-link-afiliacyjny.pl/pekao",
+        baseAccountFee: 6,
+        minIncomeForFreeAccount: 500,
+        baseCardFee: 4,
+        minCardTransactionsForFree: 1, 
+        atmFee: "0 zł za 2 pierwsze wypłaty w miesiącu z obcych bankomatów",
+        freeAllAtms: false,
+        youthMaxAge: 26,
+        youthCardFee: 0
+    }
+];
