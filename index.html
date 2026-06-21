@@ -4,14 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bankowe Zestawienie - Ekspert Finansowy</title>
-    <!-- Zwróć uwagę na ?v=2 - to wymusza pobranie nowych stylów! -->
-    <link rel="stylesheet" href="style.css?v=2">
+    <link rel="stylesheet" href="style.css?v=3">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- Nawigacja -->
     <nav class="navbar">
         <div class="container nav-container">
             <div class="logo">
@@ -26,7 +24,6 @@
         </div>
     </nav>
 
-    <!-- Nagłówek -->
     <header class="hero">
         <div class="container text-center">
             <span class="badge"><i class="fa-regular fa-calendar-check"></i> Aktualizacja: <span id="current-date">Czerwiec 2026</span></span>
@@ -37,7 +34,6 @@
 
     <main class="container">
         
-        <!-- ================= KONTA OSOBISTE ================= -->
         <section id="page-osobiste" class="page-section active-section">
             
             <div class="age-toggle-wrapper">
@@ -47,7 +43,6 @@
                 </div>
             </div>
 
-            <!-- Tabela 26+ -->
             <div class="table-wrapper" id="table-26plus">
                 <table class="comparison-table">
                     <thead>
@@ -61,8 +56,8 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="highlighted-row">
-                            <td class="col-rank"><div class="rank-badge rank-1"><i class="fa-solid fa-trophy"></i></div></td>
+                        <tr>
+                            <td class="col-rank"><div class="rank-badge">1</div></td>
                             <td class="col-bank">
                                 <div class="bank-info">
                                     <img src="velobank.png" alt="VeloBank" class="bank-logo-img" onerror="this.style.display='none'">
@@ -75,10 +70,10 @@
                             <td data-label="Konto"><div class="value-main">0 zł</div><div class="value-sub">bezwarunkowo</div></td>
                             <td data-label="Karta"><div class="value-main">0 zł</div><div class="value-sub">przy 5 płatnościach</div></td>
                             <td data-label="Premia"><span class="bonus-tag">Nawet 500 zł premii</span></td>
-                            <td class="col-action"><a href="#" class="btn btn-primary" target="_blank">Otwórz konto <i class="fa-solid fa-arrow-right"></i></a></td>
+                            <td class="col-action"><a href="#" class="btn btn-secondary" target="_blank">Otwórz konto <i class="fa-solid fa-arrow-right"></i></a></td>
                         </tr>
                         <tr>
-                            <td class="col-rank"><div class="rank-badge rank-2">2</div></td>
+                            <td class="col-rank"><div class="rank-badge">2</div></td>
                             <td class="col-bank">
                                 <div class="bank-info">
                                     <img src="millennium.png" alt="Millennium" class="bank-logo-img" onerror="this.style.display='none'">
@@ -94,7 +89,7 @@
                             <td class="col-action"><a href="#" class="btn btn-secondary" target="_blank">Otwórz konto <i class="fa-solid fa-chevron-right"></i></a></td>
                         </tr>
                         <tr>
-                            <td class="col-rank"><div class="rank-badge rank-3">3</div></td>
+                            <td class="col-rank"><div class="rank-badge">3</div></td>
                             <td class="col-bank">
                                 <div class="bank-info">
                                     <img src="mbank.png" alt="mBank" class="bank-logo-img" onerror="this.style.display='none'">
@@ -145,7 +140,6 @@
                 </table>
             </div>
 
-            <!-- Tabela 18-26 -->
             <div class="table-wrapper hidden" id="table-18to26">
                 <table class="comparison-table">
                     <thead>
@@ -159,8 +153,8 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="highlighted-row">
-                            <td class="col-rank"><div class="rank-badge rank-1"><i class="fa-solid fa-trophy"></i></div></td>
+                        <tr>
+                            <td class="col-rank"><div class="rank-badge">1</div></td>
                             <td class="col-bank">
                                 <div class="bank-info">
                                     <img src="mbank.png" alt="mBank" class="bank-logo-img" onerror="this.style.display='none'">
@@ -173,10 +167,10 @@
                             <td data-label="Konto"><div class="value-main">0 zł</div><div class="value-sub">bezwarunkowo</div></td>
                             <td data-label="Karta"><div class="value-main">0 zł</div><div class="value-sub">bezwarunkowo</div></td>
                             <td data-label="Premia"><span class="bonus-tag">Nawet 350 zł premii</span></td>
-                            <td class="col-action"><a href="#" class="btn btn-primary" target="_blank">Otwórz konto <i class="fa-solid fa-arrow-right"></i></a></td>
+                            <td class="col-action"><a href="#" class="btn btn-secondary" target="_blank">Otwórz konto <i class="fa-solid fa-arrow-right"></i></a></td>
                         </tr>
                         <tr>
-                            <td class="col-rank"><div class="rank-badge rank-2">2</div></td>
+                            <td class="col-rank"><div class="rank-badge">2</div></td>
                             <td class="col-bank">
                                 <div class="bank-info">
                                     <img src="millennium.png" alt="Millennium" class="bank-logo-img" onerror="this.style.display='none'">
@@ -196,7 +190,6 @@
             </div>
         </section>
 
-        <!-- ================= KONTA FIRMOWE ================= -->
         <section id="page-firmowe" class="page-section hidden">
             <div class="table-wrapper">
                 <table class="comparison-table">
@@ -211,8 +204,8 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="highlighted-row">
-                            <td class="col-rank"><div class="rank-badge rank-1"><i class="fa-solid fa-trophy"></i></div></td>
+                        <tr>
+                            <td class="col-rank"><div class="rank-badge">1</div></td>
                             <td class="col-bank">
                                 <div class="bank-info">
                                     <img src="mbank.png" alt="mBank" class="bank-logo-img" onerror="this.style.display='none'">
@@ -225,14 +218,77 @@
                             <td data-label="Prowadzenie"><div class="value-main">0 zł</div><div class="value-sub">przez 24 miesiące</div></td>
                             <td data-label="ZUS/US"><div class="value-main">0 zł</div><div class="value-sub">nielimitowane</div></td>
                             <td data-label="Premia"><span class="bonus-tag">Nawet 1500 zł premii</span></td>
-                            <td class="col-action"><a href="#" class="btn btn-primary" target="_blank">Otwórz konto <i class="fa-solid fa-arrow-right"></i></a></td>
+                            <td class="col-action"><a href="#" class="btn btn-secondary" target="_blank">Otwórz konto <i class="fa-solid fa-arrow-right"></i></a></td>
+                        </tr>
+                        <tr>
+                            <td class="col-rank"><div class="rank-badge">2</div></td>
+                            <td class="col-bank">
+                                <div class="bank-info">
+                                    <img src="millennium.png" alt="Millennium" class="bank-logo-img" onerror="this.style.display='none'">
+                                    <div>
+                                        <div class="bank-name">Bank Millennium</div>
+                                        <div class="product-name">Konto Mój Biznes</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td data-label="Prowadzenie"><div class="value-main">0 zł</div><div class="value-sub">przez 24 miesiące</div></td>
+                            <td data-label="ZUS/US"><div class="value-main">0 zł</div><div class="value-sub">nielimitowane</div></td>
+                            <td data-label="Premia"><span class="bonus-tag">Do 1000 zł zwrotu</span></td>
+                            <td class="col-action"><a href="#" class="btn btn-secondary" target="_blank">Otwórz konto <i class="fa-solid fa-arrow-right"></i></a></td>
+                        </tr>
+                        <tr>
+                            <td class="col-rank"><div class="rank-badge">3</div></td>
+                            <td class="col-bank">
+                                <div class="bank-info">
+                                    <img src="pekao.png" alt="Pekao S.A." class="bank-logo-img" onerror="this.style.display='none'">
+                                    <div>
+                                        <div class="bank-name">Pekao S.A.</div>
+                                        <div class="product-name">Konto Przekorzystne Biznes</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td data-label="Prowadzenie"><div class="value-main">0 zł</div><div class="value-sub">bezwarunkowo</div></td>
+                            <td data-label="ZUS/US"><div class="value-main">0 zł</div><div class="value-sub">nielimitowane</div></td>
+                            <td data-label="Premia"><span class="bonus-tag">2000 zł premii max</span></td>
+                            <td class="col-action"><a href="#" class="btn btn-secondary" target="_blank">Otwórz konto <i class="fa-solid fa-arrow-right"></i></a></td>
+                        </tr>
+                        <tr>
+                            <td class="col-rank"><div class="rank-badge">4</div></td>
+                            <td class="col-bank">
+                                <div class="bank-info">
+                                    <img src="velobank.png" alt="VeloBank" class="bank-logo-img" onerror="this.style.display='none'">
+                                    <div>
+                                        <div class="bank-name">VeloBank</div>
+                                        <div class="product-name">VeloKonto Firma</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td data-label="Prowadzenie"><div class="value-main">0 zł</div><div class="value-sub">bezwarunkowo</div></td>
+                            <td data-label="ZUS/US"><div class="value-main">0 zł</div><div class="value-sub">nielimitowane</div></td>
+                            <td data-label="Premia"><span class="bonus-tag">Brak opłat za przelewy</span></td>
+                            <td class="col-action"><a href="#" class="btn btn-secondary" target="_blank">Otwórz konto <i class="fa-solid fa-arrow-right"></i></a></td>
+                        </tr>
+                        <tr>
+                            <td class="col-rank"><div class="rank-badge">5</div></td>
+                            <td class="col-bank">
+                                <div class="bank-info">
+                                    <img src="bnp.png" alt="BNP Paribas" class="bank-logo-img" onerror="this.style.display='none'">
+                                    <div>
+                                        <div class="bank-name">BNP Paribas</div>
+                                        <div class="product-name">Konto Otwarte na Biznes</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td data-label="Prowadzenie"><div class="value-main">0 zł</div><div class="value-sub">z aktywnością</div></td>
+                            <td data-label="ZUS/US"><div class="value-main">0 zł</div><div class="value-sub">nielimitowane</div></td>
+                            <td data-label="Premia"><span class="bonus-tag">Do 1200 zł za terminal</span></td>
+                            <td class="col-action"><a href="#" class="btn btn-secondary" target="_blank">Otwórz konto <i class="fa-solid fa-arrow-right"></i></a></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </section>
 
-        <!-- ================= LOKATY ================= -->
         <section id="page-lokaty" class="page-section hidden">
             <div class="table-wrapper">
                 <table class="comparison-table">
@@ -247,8 +303,8 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="highlighted-row">
-                            <td class="col-rank"><div class="rank-badge rank-1"><i class="fa-solid fa-trophy"></i></div></td>
+                        <tr>
+                            <td class="col-rank"><div class="rank-badge">1</div></td>
                             <td class="col-bank">
                                 <div class="bank-info">
                                     <img src="velobank.png" alt="VeloBank" class="bank-logo-img" onerror="this.style.display='none'">
@@ -258,10 +314,74 @@
                                     </div>
                                 </div>
                             </td>
-                            <td data-label="Oprocentowanie"><div class="value-main" style="color: #ea580c; font-size: 1.3rem;">5.00%</div></td>
+                            <td data-label="Oprocentowanie"><div class="value-main" style="color: #111827; font-size: 1.15rem;">5.00%</div></td>
                             <td data-label="Czas trwania"><div class="value-main">3 miesiące</div></td>
                             <td data-label="Kwota"><div class="value-main">do 150 000 zł</div></td>
-                            <td class="col-action"><a href="#" class="btn btn-primary" target="_blank">Załóż lokatę <i class="fa-solid fa-arrow-right"></i></a></td>
+                            <td class="col-action"><a href="#" class="btn btn-secondary" target="_blank">Załóż lokatę <i class="fa-solid fa-arrow-right"></i></a></td>
+                        </tr>
+                        <tr>
+                            <td class="col-rank"><div class="rank-badge">2</div></td>
+                            <td class="col-bank">
+                                <div class="bank-info">
+                                    <img src="millennium.png" alt="Millennium" class="bank-logo-img" onerror="this.style.display='none'">
+                                    <div>
+                                        <div class="bank-name">Bank Millennium</div>
+                                        <div class="product-name">Lokata Hilo</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td data-label="Oprocentowanie"><div class="value-main" style="color: #111827; font-size: 1.15rem;">4.50%</div></td>
+                            <td data-label="Czas trwania"><div class="value-main">6 miesięcy</div></td>
+                            <td data-label="Kwota"><div class="value-main">do 100 000 zł</div></td>
+                            <td class="col-action"><a href="#" class="btn btn-secondary" target="_blank">Załóż lokatę <i class="fa-solid fa-arrow-right"></i></a></td>
+                        </tr>
+                        <tr>
+                            <td class="col-rank"><div class="rank-badge">3</div></td>
+                            <td class="col-bank">
+                                <div class="bank-info">
+                                    <img src="mbank.png" alt="mBank" class="bank-logo-img" onerror="this.style.display='none'">
+                                    <div>
+                                        <div class="bank-name">mBank</div>
+                                        <div class="product-name">Lokata na Nowe Środki</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td data-label="Oprocentowanie"><div class="value-main" style="color: #111827; font-size: 1.15rem;">4.20%</div></td>
+                            <td data-label="Czas trwania"><div class="value-main">3 miesiące</div></td>
+                            <td data-label="Kwota"><div class="value-main">do 500 000 zł</div></td>
+                            <td class="col-action"><a href="#" class="btn btn-secondary" target="_blank">Załóż lokatę <i class="fa-solid fa-arrow-right"></i></a></td>
+                        </tr>
+                        <tr>
+                            <td class="col-rank"><div class="rank-badge">4</div></td>
+                            <td class="col-bank">
+                                <div class="bank-info">
+                                    <img src="pekao.png" alt="Pekao" class="bank-logo-img" onerror="this.style.display='none'">
+                                    <div>
+                                        <div class="bank-name">Pekao S.A.</div>
+                                        <div class="product-name">Lokata Standardowa</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td data-label="Oprocentowanie"><div class="value-main" style="color: #111827; font-size: 1.15rem;">4.00%</div></td>
+                            <td data-label="Czas trwania"><div class="value-main">6 miesięcy</div></td>
+                            <td data-label="Kwota"><div class="value-main">bez limitu</div></td>
+                            <td class="col-action"><a href="#" class="btn btn-secondary" target="_blank">Załóż lokatę <i class="fa-solid fa-arrow-right"></i></a></td>
+                        </tr>
+                        <tr>
+                            <td class="col-rank"><div class="rank-badge">5</div></td>
+                            <td class="col-bank">
+                                <div class="bank-info">
+                                    <img src="bnp.png" alt="BNP Paribas" class="bank-logo-img" onerror="this.style.display='none'">
+                                    <div>
+                                        <div class="bank-name">BNP Paribas</div>
+                                        <div class="product-name">Lokata Gwarantowana</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td data-label="Oprocentowanie"><div class="value-main" style="color: #111827; font-size: 1.15rem;">3.80%</div></td>
+                            <td data-label="Czas trwania"><div class="value-main">12 miesięcy</div></td>
+                            <td data-label="Kwota"><div class="value-main">do 200 000 zł</div></td>
+                            <td class="col-action"><a href="#" class="btn btn-secondary" target="_blank">Załóż lokatę <i class="fa-solid fa-arrow-right"></i></a></td>
                         </tr>
                     </tbody>
                 </table>
@@ -270,7 +390,6 @@
 
     </main>
 
-    <!-- Stopka -->
     <footer>
         <div class="container text-center">
             <p><strong>Nota prawna:</strong> Powyższe zestawienie ma charakter wyłącznie informacyjny i nie stanowi oferty w rozumieniu prawa cywilnego. Dokładamy starań, aby dane były aktualne, jednak zawsze weryfikuj regulamin promocji na stronie banku.</p>
@@ -278,7 +397,6 @@
         </div>
     </footer>
 
-    <!-- Zwróć uwagę na ?v=2 -->
-    <script src="script.js?v=2"></script>
+    <script src="script.js?v=3"></script>
 </body>
 </html>
