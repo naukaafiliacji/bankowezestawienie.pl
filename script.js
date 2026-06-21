@@ -1,27 +1,77 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Automatyczna aktualizacja daty w nagłówku
+    
+    // --- 1. Ustawianie aktualnej daty i roku ---
     const dateElement = document.getElementById('current-date');
+    const yearElement = document.getElementById('year');
+    const currentDate = new Date();
     
     if(dateElement) {
-        const months = [
-            'Styczeń', 'Luty', 'Marzec', 'Kwiecień', 'Maj', 'Czerwiec', 
-            'Lipiec', 'Sierpień', 'Wrzesień', 'Październik', 'Listopad', 'Grudzień'
-        ];
-        
-        const currentDate = new Date();
-        const currentMonth = months[currentDate.getMonth()];
-        const currentYear = currentDate.getFullYear();
-        
-        dateElement.textContent = `${currentMonth} ${currentYear}`;
+        const months = ['Styczeń', 'Luty', 'Marzec', 'Kwiecień', 'Maj', 'Czerwiec', 'Lipiec', 'Sierpień', 'Wrzesień', 'Październik', 'Listopad', 'Grudzień'];
+        dateElement.textContent = `${months[currentDate.getMonth()]} ${currentDate.getFullYear()}`;
+    }
+    if(yearElement) {
+        yearElement.textContent = currentDate.getFullYear();
     }
 
-    // Proste śledzenie kliknięć w linki afiliacyjne (opcjonalne)
-    const affiliateLinks = document.querySelectorAll('a[rel="sponsored"]');
-    
-    affiliateLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-            // Tutaj można dodać np. kod Google Analytics do śledzenia konwersji
-            console.log('Kliknięto link afiliacyjny do: ' + link.href);
+    // --- 2. Logika nawigacji (Podstrony SPA) ---
+    const navBtns = document.querySelectorAll('.nav-btn');
+    const pageSections = document.querySelectorAll('.page-section');
+    const heroTitle = document.getElementById('hero-title');
+    const heroDesc = document.getElementById('hero-desc');
+
+    const pageData = {
+        'page-osobiste': {
+            title: 'Ranking Kont Osobistych',
+            desc: 'Wybierz najlepszą ofertę na rynku, uniknij ukrytych opłat i zyskaj premię gotówkową za otwarcie darmowego konta.'
+        },
+        'page-firmowe': {
+            title: 'Ranking Kont Firmowych',
+            desc: 'Prowadzisz działalność? Zobacz konta dla firm z darmowymi przelewami ZUS/US i zyskaj bonus za aktywne bankowanie.'
+        },
+        'page-lokaty': {
+            title: 'Ranking Lokat i Oszczędności',
+            desc: 'Chroń swój kapitał przed inflacją. Porównaj najwyżej oprocentowane lokaty i konta oszczędnościowe.'
+        }
+    };
+
+    navBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Usuń klasę active z innych przycisków
+            navBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            // Ukryj wszystkie sekcje
+            pageSections.forEach(section => section.classList.remove('active-section'));
+
+            // Pokaż klikniętą
+            const targetId = btn.getAttribute('data-target');
+            document.getElementById(targetId).classList.add('active-section');
+
+            // Zmień nagłówek
+            heroTitle.textContent = pageData[targetId].title;
+            heroDesc.textContent = pageData[targetId].desc;
+        });
+    });
+
+    // --- 3. Logika przełączania wieku (18-26 lat vs 26+) ---
+    const ageBtns = document.querySelectorAll('.age-btn');
+    const table26Plus = document.getElementById('table-26plus');
+    const table18To26 = document.getElementById('table-18to26');
+
+    ageBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            ageBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const targetAge = btn.getAttribute('data-age');
+
+            if(targetAge === '18to26') {
+                table26Plus.classList.add('hidden');
+                table18To26.classList.remove('hidden');
+            } else {
+                table18To26.classList.add('hidden');
+                table26Plus.classList.remove('hidden');
+            }
         });
     });
 });
