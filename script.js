@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    // --- 1. Ustawianie aktualnej daty i roku ---
+    // 1. Data i Rok
     const dateElement = document.getElementById('current-date');
     const yearElement = document.getElementById('year');
     const currentDate = new Date();
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         yearElement.textContent = currentDate.getFullYear();
     }
 
-    // --- 2. Logika nawigacji (Podstrony SPA) ---
+    // 2. Obsługa podstron (Konta osobiste, Firmowe, Lokaty)
     const navBtns = document.querySelectorAll('.nav-btn');
     const pageSections = document.querySelectorAll('.page-section');
     const heroTitle = document.getElementById('hero-title');
@@ -36,24 +36,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
     navBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-            // Usuń klasę active z innych przycisków
             navBtns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
 
-            // Ukryj wszystkie sekcje
-            pageSections.forEach(section => section.classList.remove('active-section'));
+            pageSections.forEach(section => {
+                section.classList.remove('active-section');
+                section.classList.add('hidden');
+            });
 
-            // Pokaż klikniętą
             const targetId = btn.getAttribute('data-target');
-            document.getElementById(targetId).classList.add('active-section');
+            const targetSection = document.getElementById(targetId);
+            
+            targetSection.classList.remove('hidden');
+            // Małe opóźnienie dla płynnej animacji
+            setTimeout(() => {
+                targetSection.classList.add('active-section');
+            }, 10);
 
-            // Zmień nagłówek
             heroTitle.textContent = pageData[targetId].title;
             heroDesc.textContent = pageData[targetId].desc;
         });
     });
 
-    // --- 3. Logika przełączania wieku (18-26 lat vs 26+) ---
+    // 3. Przełącznik wieku 18-26 / 26+
     const ageBtns = document.querySelectorAll('.age-btn');
     const table26Plus = document.getElementById('table-26plus');
     const table18To26 = document.getElementById('table-18to26');
