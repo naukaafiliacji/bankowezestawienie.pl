@@ -3,166 +3,271 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ranking Kont Osobistych - Porównywarka Finansowa</title>
-    
-    <!-- Połączenie z plikiem CSS -->
+    <title>Bankowe Zestawienie - Porównywarka Finansowa</title>
     <link rel="stylesheet" href="style.css">
-    
-    <!-- Nowoczesna czcionka i ikony -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- Pasek nawigacji / Logo -->
     <nav class="navbar">
-        <div class="container">
+        <div class="container nav-container">
             <div class="logo">
-                <i class="fa-solid fa-wallet"></i> <span>Finansowy<strong>Ekspert</strong></span>
+                <i class="fa-solid fa-wallet"></i> <span>Bankowe<strong>Zestawienie</strong></span>
             </div>
             <div class="nav-links">
-                <a href="#ranking">Konta osobiste</a>
-                <a href="#lokaty">Lokaty</a>
-                <a href="#kontakt">Kontakt</a>
+                <button class="nav-btn active" data-target="page-osobiste">Konta osobiste</button>
+                <button class="nav-btn" data-target="page-firmowe">Konta firmowe</button>
+                <button class="nav-btn" data-target="page-lokaty">Lokaty</button>
             </div>
         </div>
     </nav>
 
-    <!-- Nagłówek (Hero Section) -->
     <header class="hero">
         <div class="container text-center">
             <span class="badge">Aktualizacja: <span id="current-date">Czerwiec 2026</span></span>
-            <h1>Ranking Kont Osobistych</h1>
-            <p>Porównaj najlepsze oferty na rynku, omiń ukryte opłaty i zgarnij nawet do 600 zł premii gotówkowej za założenie darmowego konta.</p>
+            <h1 id="hero-title">Ranking Kont Osobistych</h1>
+            <p id="hero-desc">Wybierz najlepszą ofertę na rynku, uniknij ukrytych opłat i zyskaj premię gotówkową za otwarcie darmowego konta.</p>
         </div>
     </header>
 
-    <!-- Główna sekcja z porównywarką -->
-    <main class="container" id="ranking">
-        <div class="table-wrapper">
-            <table class="comparison-table">
-                <thead>
-                    <tr>
-                        <th class="col-rank">Miejsce</th>
-                        <th class="col-bank">Bank i Produkt</th>
-                        <th>Opłata za konto</th>
-                        <th>Opłata za kartę</th>
-                        <th>Premia na start</th>
-                        <th class="col-action">Akcja</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    
-                    <!-- Miejsce 1 -->
-                    <tr class="highlighted-row">
-                        <td class="col-rank">
-                            <div class="rank-badge rank-1">1</div>
-                        </td>
-                        <td class="col-bank">
-                            <div class="bank-info">
-                                <div class="bank-logo" style="background-color: #e0f2fe; color: #0369a1;">V</div>
-                                <div>
-                                    <div class="bank-name">VeloBank</div>
-                                    <div class="product-name">VeloKonto</div>
-                                </div>
-                            </div>
-                        </td>
-                        <td data-label="Konto">
-                            <div class="value-main">0 zł</div>
-                            <div class="value-sub">bezwarunkowo</div>
-                        </td>
-                        <td data-label="Karta">
-                            <div class="value-main">0 zł</div>
-                            <div class="value-sub">przy 5 płatnościach</div>
-                        </td>
-                        <td data-label="Premia">
-                            <span class="bonus-tag">Nawet 500 zł premii</span>
-                        </td>
-                        <td class="col-action">
-                            <a href="twoj-link-1" class="btn btn-primary" target="_blank" rel="sponsored">
-                                Otwórz konto <i class="fa-solid fa-chevron-right"></i>
-                            </a>
-                        </td>
-                    </tr>
+    <main class="container">
+        
+        <section id="page-osobiste" class="page-section active-section">
+            
+            <div class="age-toggle-wrapper">
+                <div class="age-toggle">
+                    <button class="age-btn active" data-age="26plus">Klienci 26+ lat</button>
+                    <button class="age-btn" data-age="18to26">Młodzi 18-26 lat</button>
+                </div>
+            </div>
 
-                    <!-- Miejsce 2 -->
-                    <tr>
-                        <td class="col-rank">
-                            <div class="rank-badge rank-2">2</div>
-                        </td>
-                        <td class="col-bank">
-                            <div class="bank-info">
-                                <div class="bank-logo" style="background-color: #fee2e2; color: #b91c1c;">M</div>
-                                <div>
-                                    <div class="bank-name">mBank</div>
-                                    <div class="product-name">eKonto do usług</div>
+            <div class="table-wrapper" id="table-26plus">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th class="col-rank">Miejsce</th>
+                            <th class="col-bank">Bank i Produkt</th>
+                            <th>Opłata za konto</th>
+                            <th>Opłata za kartę</th>
+                            <th>Premia na start</th>
+                            <th class="col-action">Akcja</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="highlighted-row">
+                            <td class="col-rank"><div class="rank-badge rank-1">1</div></td>
+                            <td class="col-bank">
+                                <div class="bank-info">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/VeloBank_logo.svg" alt="VeloBank" class="bank-logo-img">
+                                    <div>
+                                        <div class="bank-name">VeloBank</div>
+                                        <div class="product-name">VeloKonto</div>
+                                    </div>
                                 </div>
-                            </div>
-                        </td>
-                        <td data-label="Konto">
-                            <div class="value-main">0 zł</div>
-                            <div class="value-sub">bezwarunkowo</div>
-                        </td>
-                        <td data-label="Karta">
-                            <div class="value-main">0 zł</div>
-                            <div class="value-sub">obrót min. 350 zł</div>
-                        </td>
-                        <td data-label="Premia">
-                            <span class="bonus-tag">Do 460 zł bonusu</span>
-                        </td>
-                        <td class="col-action">
-                            <a href="twoj-link-2" class="btn btn-secondary" target="_blank" rel="sponsored">
-                                Sprawdź ofertę <i class="fa-solid fa-chevron-right"></i>
-                            </a>
-                        </td>
-                    </tr>
-
-                    <!-- Miejsce 3 -->
-                    <tr>
-                        <td class="col-rank">
-                            <div class="rank-badge rank-3">3</div>
-                        </td>
-                        <td class="col-bank">
-                            <div class="bank-info">
-                                <div class="bank-logo" style="background-color: #fef3c7; color: #b45309;">P</div>
-                                <div>
-                                    <div class="bank-name">Pekao S.A.</div>
-                                    <div class="product-name">Konto Przekorzystne</div>
+                            </td>
+                            <td data-label="Konto"><div class="value-main">0 zł</div><div class="value-sub">bezwarunkowo</div></td>
+                            <td data-label="Karta"><div class="value-main">0 zł</div><div class="value-sub">przy 5 płatnościach</div></td>
+                            <td data-label="Premia"><span class="bonus-tag">Nawet 500 zł premii</span></td>
+                            <td class="col-action"><a href="#" class="btn btn-primary" target="_blank" rel="sponsored">Otwórz konto <i class="fa-solid fa-chevron-right"></i></a></td>
+                        </tr>
+                        <tr>
+                            <td class="col-rank"><div class="rank-badge rank-2">2</div></td>
+                            <td class="col-bank">
+                                <div class="bank-info">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/Bank_Millennium_logo.svg" alt="Millennium" class="bank-logo-img">
+                                    <div>
+                                        <div class="bank-name">Bank Millennium</div>
+                                        <div class="product-name">Konto 360°</div>
+                                    </div>
                                 </div>
-                            </div>
-                        </td>
-                        <td data-label="Konto">
-                            <div class="value-main">0 zł</div>
-                            <div class="value-sub">bezwarunkowo</div>
-                        </td>
-                        <td data-label="Karta">
-                            <div class="value-main">0 zł</div>
-                            <div class="value-sub">wpływ 500 zł + 1 płatność</div>
-                        </td>
-                        <td data-label="Premia">
-                            <span class="bonus-tag">200 zł gotówki</span>
-                        </td>
-                        <td class="col-action">
-                            <a href="twoj-link-3" class="btn btn-secondary" target="_blank" rel="sponsored">
-                                Sprawdź ofertę <i class="fa-solid fa-chevron-right"></i>
-                            </a>
-                        </td>
-                    </tr>
+                            </td>
+                            <td data-label="Konto"><div class="value-main">0 zł</div><div class="value-sub">bezwarunkowo</div></td>
+                            <td data-label="Karta"><div class="value-main">0 zł</div><div class="value-sub">min. 5 płatności kartą/BLIK</div></td>
+                            <td data-label="Premia"><span class="bonus-tag">Do 500 zł za aktywność</span></td>
+                            <td class="col-action"><a href="#" class="btn btn-secondary" target="_blank" rel="sponsored">Otwórz konto <i class="fa-solid fa-chevron-right"></i></a></td>
+                        </tr>
+                        <tr>
+                            <td class="col-rank"><div class="rank-badge rank-3">3</div></td>
+                            <td class="col-bank">
+                                <div class="bank-info">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/MBank_logo_new.svg" alt="mBank" class="bank-logo-img" style="height: 24px;">
+                                    <div>
+                                        <div class="bank-name">mBank</div>
+                                        <div class="product-name">eKonto do usług</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td data-label="Konto"><div class="value-main">0 zł</div><div class="value-sub">bezwarunkowo</div></td>
+                            <td data-label="Karta"><div class="value-main">0 zł</div><div class="value-sub">obrót min. 350 zł</div></td>
+                            <td data-label="Premia"><span class="bonus-tag">Do 460 zł bonusu</span></td>
+                            <td class="col-action"><a href="#" class="btn btn-secondary" target="_blank" rel="sponsored">Otwórz konto <i class="fa-solid fa-chevron-right"></i></a></td>
+                        </tr>
+                        <tr>
+                            <td class="col-rank"><div class="rank-badge">4</div></td>
+                            <td class="col-bank">
+                                <div class="bank-info">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/34/BNP_Paribas_logo.svg" alt="BNP Paribas" class="bank-logo-img">
+                                    <div>
+                                        <div class="bank-name">BNP Paribas</div>
+                                        <div class="product-name">Konto Otwarte na Ciebie</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td data-label="Konto"><div class="value-main">0 zł</div><div class="value-sub">bezwarunkowo</div></td>
+                            <td data-label="Karta"><div class="value-main">0 zł</div><div class="value-sub">min. 3 płatności</div></td>
+                            <td data-label="Premia"><span class="bonus-tag">Do 400 zł gotówki</span></td>
+                            <td class="col-action"><a href="#" class="btn btn-secondary" target="_blank" rel="sponsored">Otwórz konto <i class="fa-solid fa-chevron-right"></i></a></td>
+                        </tr>
+                        <tr>
+                            <td class="col-rank"><div class="rank-badge">5</div></td>
+                            <td class="col-bank">
+                                <div class="bank-info">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/23/Bank_Pekao_logo.svg" alt="Pekao" class="bank-logo-img">
+                                    <div>
+                                        <div class="bank-name">Pekao S.A.</div>
+                                        <div class="product-name">Konto Przekorzystne</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td data-label="Konto"><div class="value-main">0 zł</div><div class="value-sub">bezwarunkowo</div></td>
+                            <td data-label="Karta"><div class="value-main">0 zł</div><div class="value-sub">wpływ 500 zł + 1 płatność</div></td>
+                            <td data-label="Premia"><span class="bonus-tag">200 zł za otwarcie</span></td>
+                            <td class="col-action"><a href="#" class="btn btn-secondary" target="_blank" rel="sponsored">Otwórz konto <i class="fa-solid fa-chevron-right"></i></a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
-                </tbody>
-            </table>
-        </div>
+            <div class="table-wrapper hidden" id="table-18to26">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th class="col-rank">Miejsce</th>
+                            <th class="col-bank">Bank i Produkt</th>
+                            <th>Opłata za konto</th>
+                            <th>Opłata za kartę</th>
+                            <th>Premia na start</th>
+                            <th class="col-action">Akcja</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="highlighted-row">
+                            <td class="col-rank"><div class="rank-badge rank-1">1</div></td>
+                            <td class="col-bank">
+                                <div class="bank-info">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/MBank_logo_new.svg" alt="mBank" class="bank-logo-img" style="height: 24px;">
+                                    <div>
+                                        <div class="bank-name">mBank</div>
+                                        <div class="product-name">eKonto możliwości (18-24)</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td data-label="Konto"><div class="value-main">0 zł</div><div class="value-sub">bezwarunkowo</div></td>
+                            <td data-label="Karta"><div class="value-main">0 zł</div><div class="value-sub">bezwarunkowo</div></td>
+                            <td data-label="Premia"><span class="bonus-tag">Nawet 350 zł za otwarcie</span></td>
+                            <td class="col-action"><a href="#" class="btn btn-primary" target="_blank" rel="sponsored">Otwórz konto <i class="fa-solid fa-chevron-right"></i></a></td>
+                        </tr>
+                        <tr>
+                            <td class="col-rank"><div class="rank-badge rank-2">2</div></td>
+                            <td class="col-bank">
+                                <div class="bank-info">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/Bank_Millennium_logo.svg" alt="Millennium" class="bank-logo-img">
+                                    <div>
+                                        <div class="bank-name">Bank Millennium</div>
+                                        <div class="product-name">Konto 360° Student</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td data-label="Konto"><div class="value-main">0 zł</div><div class="value-sub">bezwarunkowo</div></td>
+                            <td data-label="Karta"><div class="value-main">0 zł</div><div class="value-sub">min. 1 płatność w miesiącu</div></td>
+                            <td data-label="Premia"><span class="bonus-tag">Bilety do kina + bonus</span></td>
+                            <td class="col-action"><a href="#" class="btn btn-secondary" target="_blank" rel="sponsored">Otwórz konto <i class="fa-solid fa-chevron-right"></i></a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="page-firmowe" class="page-section hidden">
+            <div class="table-wrapper">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th class="col-rank">Miejsce</th>
+                            <th class="col-bank">Bank i Produkt</th>
+                            <th>Prowadzenie</th>
+                            <th>Przelewy ZUS/US</th>
+                            <th>Premia na start</th>
+                            <th class="col-action">Akcja</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="highlighted-row">
+                            <td class="col-rank"><div class="rank-badge rank-1">1</div></td>
+                            <td class="col-bank">
+                                <div class="bank-info">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/MBank_logo_new.svg" alt="mBank" class="bank-logo-img" style="height: 24px;">
+                                    <div>
+                                        <div class="bank-name">mBank</div>
+                                        <div class="product-name">mBiznes Konto Standard</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td data-label="Prowadzenie"><div class="value-main">0 zł</div><div class="value-sub">przez 24 miesiące</div></td>
+                            <td data-label="ZUS/US"><div class="value-main">0 zł</div><div class="value-sub">nielimitowane</div></td>
+                            <td data-label="Premia"><span class="bonus-tag">Nawet 1500 zł premii</span></td>
+                            <td class="col-action"><a href="#" class="btn btn-primary" target="_blank" rel="sponsored">Otwórz konto <i class="fa-solid fa-chevron-right"></i></a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="page-lokaty" class="page-section hidden">
+            <div class="table-wrapper">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th class="col-rank">Miejsce</th>
+                            <th class="col-bank">Bank i Produkt</th>
+                            <th>Oprocentowanie</th>
+                            <th>Czas trwania</th>
+                            <th>Kwota maksymalna</th>
+                            <th class="col-action">Akcja</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="highlighted-row">
+                            <td class="col-rank"><div class="rank-badge rank-1">1</div></td>
+                            <td class="col-bank">
+                                <div class="bank-info">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/VeloBank_logo.svg" alt="VeloBank" class="bank-logo-img">
+                                    <div>
+                                        <div class="bank-name">VeloBank</div>
+                                        <div class="product-name">Lokata na Nowe Środki</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td data-label="Oprocentowanie"><div class="value-main" style="color: #ea580c;">5.00%</div></td>
+                            <td data-label="Czas trwania"><div class="value-main">3 miesiące</div></td>
+                            <td data-label="Kwota"><div class="value-main">do 150 000 zł</div></td>
+                            <td class="col-action"><a href="#" class="btn btn-primary" target="_blank" rel="sponsored">Załóż lokatę <i class="fa-solid fa-chevron-right"></i></a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
     </main>
 
-    <!-- Stopka z notą prawną -->
     <footer>
         <div class="container text-center">
-            <p><strong>Nota prawna:</strong> Powyższy ranking ma charakter wyłącznie informacyjny i nie stanowi oferty w rozumieniu prawa cywilnego. Dokładamy wszelkich starań, aby dane były rzetelne i aktualne, jednak zawsze weryfikuj regulamin promocji na stronie banku. Serwis może otrzymywać wynagrodzenie z tytułu polecania produktów (linki afiliacyjne), co pozwala na darmowe udostępnianie treści.</p>
-            <p class="copyright">&copy; 2026 FinansowyEkspert. Wszelkie prawa zastrzeżone.</p>
+            <p><strong>Nota prawna:</strong> Powyższe zestawienie ma charakter wyłącznie informacyjny i nie stanowi oferty w rozumieniu prawa cywilnego. Dokładamy starań, aby dane były aktualne, jednak zawsze weryfikuj regulamin promocji na stronie banku. Serwis może otrzymywać wynagrodzenie z tytułu polecania produktów (linki afiliacyjne).</p>
+            <p class="copyright">&copy; <span id="year"></span> Bankowe Zestawienie. Wszelkie prawa zastrzeżone.</p>
         </div>
     </footer>
 
-    <!-- Połączenie z plikiem JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
