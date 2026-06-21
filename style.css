@@ -8,7 +8,6 @@
     --success-bg: #d1fae5;
     --success-text: #047857;
     --white: #ffffff;
-    --gold: #fbbf24;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -98,13 +97,11 @@ body {
 .comparison-table { width: 100%; border-collapse: collapse; text-align: left; }
 .comparison-table th { background-color: #f9fafb; color: var(--text-muted); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 1.2rem 1.5rem; border-bottom: 1px solid var(--border-color); }
 .comparison-table td { padding: 1.5rem; border-bottom: 1px solid var(--border-color); vertical-align: middle; }
+.comparison-table tr:hover { background-color: #f8fafc; }
 .comparison-table tr:last-child td { border-bottom: none; }
-.highlighted-row { background-color: #fdfaf3; position: relative; }
-.highlighted-row::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--gold); }
 
 /* Detale Tabeli */
-.rank-badge { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #6b7280; background: #f3f4f6; font-size: 1rem; border: 1px solid #e5e7eb; }
-.rank-1 { background: var(--gold); color: white; border: none; box-shadow: 0 4px 10px rgba(251, 191, 36, 0.4); font-size: 1.1rem; }
+.rank-badge { width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #6b7280; background: #f3f4f6; font-size: 0.95rem; border: 1px solid #e5e7eb; }
 
 .bank-info { display: flex; align-items: center; gap: 1rem; }
 .bank-logo-img { width: auto; max-width: 90px; height: 30px; object-fit: contain; object-position: left center; }
@@ -117,8 +114,6 @@ body {
 
 /* Przyciski Akcji */
 .btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem; padding: 0.8rem 1.2rem; border-radius: 8px; font-weight: 600; font-size: 0.95rem; text-decoration: none; transition: all 0.2s; width: 100%; box-sizing: border-box; }
-.btn-primary { background: var(--primary-color); color: var(--white); }
-.btn-primary:hover { background: var(--primary-hover); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(26, 86, 219, 0.3); }
 .btn-secondary { background: #f3f4f6; color: #374151; border: 1px solid #e5e7eb; }
 .btn-secondary:hover { background: #e5e7eb; color: #111827; }
 
@@ -135,7 +130,6 @@ footer .copyright { margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #
     .comparison-table thead { display: none; }
     .comparison-table, .comparison-table tbody, .comparison-table tr, .comparison-table td { display: block; width: 100%; }
     .comparison-table tr { margin-bottom: 1.5rem; border: 1px solid var(--border-color); border-radius: 12px; padding-top: 1rem; background: var(--white); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-    .highlighted-row::before { top: 0; left: 0; right: 0; bottom: auto; height: 4px; width: 100%; border-radius: 12px 12px 0 0; }
     .comparison-table td { display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.5rem; text-align: right; border-bottom: 1px solid #f3f4f6; }
     .comparison-table td::before { content: attr(data-label); font-weight: 600; color: var(--text-muted); font-size: 0.85rem; text-transform: uppercase; }
     .comparison-table td.col-bank, .comparison-table td.col-action, .comparison-table td.col-rank { display: block; text-align: left; border-bottom: none; }
