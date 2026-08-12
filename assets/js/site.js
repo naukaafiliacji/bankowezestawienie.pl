@@ -54,7 +54,7 @@
       ${i===0?'<div class="offer-ribbon">#1 BankRanking</div>':""}
       <div class="offer-main">
         <div class="bank-cell">
-          <img class="bank-logo" src="../${esc(o.logo)}" alt="${esc(o.bank)} logo" loading="lazy">
+          <img class="bank-logo" src="${esc(o.logo)}" onerror="this.onerror=null;this.src=\'${esc(o.logoFallback||o.logo)}\'" alt="${esc(o.bank)} logo" loading="lazy">
           <h3>${esc(o.product)}</h3><div class="best">${esc(o.bestFor)}</div>${promo(o)}
           ${o.ageNote?`<div class="age-note">${esc(o.ageNote)}</div>`:""}
           <label class="compare-check"><input class="compare-box" type="checkbox" data-id="${esc(o.id)}" ${state.selected.has(o.id)?"checked":""}> Compare</label>
@@ -80,7 +80,7 @@
   const modal=$("#score-modal");
   function openDetails(id){
     const o=M.offers.find(x=>x.id===id); if(!o||!modal)return;
-    $("#modal-content").innerHTML=`<div class="modal-head"><div><img class="modal-logo" src="../${esc(o.logo)}" alt="${esc(o.bank)} logo"><h3>${esc(o.product)}</h3><p class="muted">${esc(o.bestFor)}</p></div><button class="close" aria-label="Close">×</button></div>
+    $("#modal-content").innerHTML=`<div class="modal-head"><div><img class="modal-logo" src="${esc(o.logo)}" onerror="this.onerror=null;this.src=\'${esc(o.logoFallback||o.logo)}\'" alt="${esc(o.bank)} logo"><h3>${esc(o.product)}</h3><p class="muted">${esc(o.bestFor)}</p></div><button class="close" aria-label="Close">×</button></div>
     <div class="score-breakdown">${Object.entries(o.scoreParts).map(([k,v])=>`<div class="score-row"><span>${esc(k)}</span><div class="bar"><span style="width:${v*10}%"></span></div><strong>${Number(v).toFixed(1)}</strong></div>`).join("")}</div>
     <div class="modal-columns"><div><h4>Strengths</h4><ul>${o.pros.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div><div><h4>Watch-outs</h4><ul>${o.cons.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div></div>
     ${o.promoNote?`<div class="editorial-note"><strong>${esc(o.benefitType)}.</strong> ${esc(o.promoNote)}</div>`:""}
@@ -94,7 +94,7 @@
     const a=[...state.selected].map(id=>M.offers.find(o=>o.id===id)).filter(Boolean);
     if(a.length<2){alert("Choose at least 2 offers.");return}
     $("#modal-content").innerHTML=`<div class="modal-head"><h3>Compare offers</h3><button class="close">×</button></div><div class="compare-table-wrap"><table class="compare-table">
-    <tr><th></th>${a.map(o=>`<th><img class="compare-logo" src="../${esc(o.logo)}" alt=""><br>${esc(o.product)}</th>`).join("")}</tr>
+    <tr><th></th>${a.map(o=>`<th><img class="compare-logo" src="${esc(o.logo)}" onerror="this.onerror=null;this.src=\'${esc(o.logoFallback||o.logo)}\'" alt=""><br>${esc(o.product)}</th>`).join("")}</tr>
     <tr><td>BankRanking Score</td>${a.map(o=>`<td><strong>${currentScore(o).toFixed(1)}/10</strong></td>`).join("")}</tr>
     <tr><td>Monthly fee</td>${a.map(o=>`<td>${esc(o.fee)}</td>`).join("")}</tr>
     <tr><td>Benefit</td>${a.map(o=>`<td><strong>${esc(o.benefit)}</strong><br><small>${esc(o.benefitType)}</small></td>`).join("")}</tr>

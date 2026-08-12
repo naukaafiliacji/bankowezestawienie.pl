@@ -399,3 +399,8 @@ h1{font-size:clamp(44px,6vw,76px);line-height:.98;letter-spacing:-.06em;margin:1
 .modal-logo{max-width:190px!important;height:50px!important;object-fit:contain!important;object-position:left center!important}
 .compare-logo{max-width:150px!important;height:40px!important;object-fit:contain!important}
 .logo-tile img{max-width:175px!important;max-height:48px!important;object-fit:contain!important}
+
+/* Original V5 "Europe" treatment */
+.brand em{font-style:normal!important;color:#718096!important;font-weight:650!important;background:none!important;border:0!important;box-shadow:none!important;padding:0!important;border-radius:0!important}
+.footer .brand em{color:#9eb0bf!important}
+.bank-logo,.modal-logo,.compare-logo,.logo-tile img{background:transparent!important;border:0!important;box-shadow:none!important;object-fit:contain!important}

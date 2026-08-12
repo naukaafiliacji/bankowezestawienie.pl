@@ -11,8 +11,8 @@
 
 /* header */
 .header{border-bottom:1px solid var(--line);background:rgba(255,255,255,.97);backdrop-filter:blur(12px);position:sticky;top:0;z-index:50}
-.nav{height:78px;display:flex;align-items:center;gap:36px}.brand{display:flex;align-items:center;gap:9px;font-weight:900;color:var(--blue);white-space:nowrap}.brand img{width:36px;height:36px}.brand span{font-size:23px;letter-spacing:-.035em}
-.brand em{font-style:normal!important;background:none!important;border:0!important;box-shadow:none!important;padding:0!important;border-radius:0!important;color:#9aa6b1!important;font-size:12px!important;font-weight:650!important;letter-spacing:.01em!important;margin-left:1px}
+.nav{height:78px;display:flex;align-items:center;gap:36px}.brand{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:850;letter-spacing:-.035em;white-space:nowrap}.brand img{width:36px;height:36px}.brand span{font-size:inherit;letter-spacing:inherit}
+.brand em{font-style:normal;color:#718096;font-weight:650}
 .navlinks{display:flex;gap:28px;font-size:15px;font-weight:750;color:#4a657b}.navright{margin-left:auto}
 .lang-menu{position:relative}.lang-menu summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:7px;border:1px solid #d3dee8;border-radius:7px;padding:8px 10px;color:#586f83;font-size:12px;font-weight:750;background:white}.lang-menu summary::-webkit-details-marker{display:none}.lang-globe{font-size:14px;color:#66829b}.lang-chevron{font-size:10px;color:#94a2ae}
 .lang-pop{position:absolute;right:0;top:calc(100% + 7px);width:170px;background:white;border:1px solid var(--line);border-radius:8px;box-shadow:0 14px 35px rgba(26,55,81,.14);padding:6px;z-index:80}
@@ -39,10 +39,15 @@
 .save-features{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid #bcd5c9}.save-feature{padding:23px 20px 25px 0;border-bottom:1px solid #bcd5c9}.save-feature:nth-child(odd){border-right:1px solid #bcd5c9;padding-right:28px}.save-feature:nth-child(even){padding-left:28px}.save-icon{font-size:26px;margin-bottom:10px}.save-feature h3{font-size:20px;color:#174c3a;margin:0 0 7px}.save-feature p{font-size:13px;color:#5d786e;line-height:1.5;margin:0}
 
 /* footer */
-.footer{background:#102a43;color:#fff;padding:48px 0 22px}.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}.footer .brand{color:white}.footer .brand em{color:#9eb0bf!important}.footer p{font-size:13px;line-height:1.6;color:#b8c8d5;max-width:360px}.footer h4{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:#d9e3eb;margin:0 0 12px}.footer a{display:block;color:#aebfcd;font-size:13px;padding:4px 0}.footer-bottom{border-top:1px solid #2f495f;margin-top:30px;padding-top:16px;color:#8fa3b3;font-size:12px}
+.footer{background:#102a43;color:#fff;padding:48px 0 22px}.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}.footer .brand{color:white}.footer .brand em{color:#9eb0bf}.footer p{font-size:13px;line-height:1.6;color:#b8c8d5;max-width:360px}.footer h4{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:#d9e3eb;margin:0 0 12px}.footer a{display:block;color:#aebfcd;font-size:13px;padding:4px 0}.footer-bottom{border-top:1px solid #2f495f;margin-top:30px;padding-top:16px;color:#8fa3b3;font-size:12px}
 
 @media(max-width:950px){.hero-grid{grid-template-columns:1fr}.cards-scene{max-width:540px;width:100%;margin:auto}.product-grid{grid-template-columns:1fr 1fr}.markets{grid-template-columns:1fr 1fr}.guides{grid-template-columns:1fr 1fr}.guides .guide:first-child{grid-column:1/-1}.navlinks{display:none}.network-row{grid-template-columns:1fr}.network-label{padding-top:16px}.network-logos{padding-bottom:18px;flex-wrap:wrap;justify-content:flex-start}.save-grid{grid-template-columns:1fr}}
-@media(max-width:620px){.container{width:min(100% - 26px,1180px)}.nav{height:66px}.brand span{font-size:19px}.brand em{font-size:11px!important}.lang-menu summary{padding:8px}.hero-grid{padding:40px 0}.hero h1{font-size:46px}.hero p{font-size:17px}.category-grid{grid-template-columns:1fr}.cards-scene{min-height:320px}.debit-card{width:220px;height:135px;padding:13px}.debit-card img{width:112px;height:35px}.c1{right:0}.c2{left:0;top:60px}.c3{top:125px}.c4{left:35px;top:185px}.section{padding:52px 0}.section h2{font-size:32px}.product-grid,.markets,.guides,.footer-grid{grid-template-columns:1fr}.guides .guide:first-child{grid-column:auto}.network-logos img{width:105px}.save-section{padding:52px 0}.save-copy h2{font-size:39px}.save-features{grid-template-columns:1fr}.save-feature:nth-child(odd){border-right:0;padding-right:0}.save-feature:nth-child(even){padding-left:0}}
+@media(max-width:620px){.container{width:min(100% - 26px,1180px)}.nav{height:66px}.brand span{font-size:inherit;letter-spacing:inherit}.brand em{font-style:normal;color:#718096;font-weight:650}.lang-menu summary{padding:8px}.hero-grid{padding:40px 0}.hero h1{font-size:46px}.hero p{font-size:17px}.category-grid{grid-template-columns:1fr}.cards-scene{min-height:320px}.debit-card{width:220px;height:135px;padding:13px}.debit-card img{width:112px;height:35px}.c1{right:0}.c2{left:0;top:60px}.c3{top:125px}.c4{left:35px;top:185px}.section{padding:52px 0}.section h2{font-size:32px}.product-grid,.markets,.guides,.footer-grid{grid-template-columns:1fr}.guides .guide:first-child{grid-column:auto}.network-logos img{width:105px}.save-section{padding:52px 0}.save-copy h2{font-size:39px}.save-features{grid-template-columns:1fr}.save-feature:nth-child(odd){border-right:0;padding-right:0}.save-feature:nth-child(even){padding-left:0}}
+
+.partner-brand{display:flex;align-items:center;gap:8px;white-space:nowrap;color:#687b8b;font-size:13px;font-weight:750}
+.partner-brand img{width:27px!important;height:27px!important;object-fit:contain!important;filter:none!important;opacity:1!important;border-radius:5px}
+.brand-rights-notice{margin-top:28px;padding-top:18px;border-top:1px solid #2f495f;color:#8fa3b3;font-size:10px;line-height:1.55;max-width:980px}
+.brand-rights-notice a{display:inline;color:#b8c8d5;font-size:10px;padding:0}
 </style>
 </head>
 <body>
@@ -69,10 +74,10 @@
 </div>
 </div>
 <div class="cards-scene" aria-label="European bank accounts">
-<div class="debit-card c1"><div class="dc-top"><span>PERSONAL</span><span>•••</span></div><img src="/assets/logos/ing.svg" alt="ING"><div class="dc-bottom"><span>Europe</span><strong>ING</strong></div></div>
-<div class="debit-card c2"><div class="dc-top"><span>DIGITAL</span><span>•••</span></div><img src="/assets/logos/n26.svg" alt="N26"><div class="dc-bottom"><span>Europe</span><strong>N26</strong></div></div>
-<div class="debit-card c3"><div class="dc-top"><span>ACCOUNT</span><span>•••</span></div><img src="/assets/logos/bbva.svg" alt="BBVA"><div class="dc-bottom"><span>Europe</span><strong>BBVA</strong></div></div>
-<div class="debit-card c4"><div class="dc-top"><span>BANKING</span><span>•••</span></div><img src="/assets/logos/mbank.svg" alt="mBank"><div class="dc-bottom"><span>Europe</span><strong>mBank</strong></div></div>
+<div class="debit-card c1"><div class="dc-top"><span>PERSONAL</span><span>•••</span></div><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/ING%20Group%20%28wordmark%29.svg" onerror="this.onerror=null;this.src=\'https://www.google.com/s2/favicons?domain=ing.com&amp;sz=256\'" alt="ING"><div class="dc-bottom"><span>Europe</span><strong>ING</strong></div></div>
+<div class="debit-card c2"><div class="dc-top"><span>DIGITAL</span><span>•••</span></div><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/N26%20logo.svg" onerror="this.onerror=null;this.src=\'https://www.google.com/s2/favicons?domain=n26.com&amp;sz=256\'" alt="N26"><div class="dc-bottom"><span>Europe</span><strong>N26</strong></div></div>
+<div class="debit-card c3"><div class="dc-top"><span>ACCOUNT</span><span>•••</span></div><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/BBVA%20logo%202025.svg" onerror="this.onerror=null;this.src=\'https://www.google.com/s2/favicons?domain=bbva.es&amp;sz=256\'" alt="BBVA"><div class="dc-bottom"><span>Europe</span><strong>BBVA</strong></div></div>
+<div class="debit-card c4"><div class="dc-top"><span>BANKING</span><span>•••</span></div><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Mbank%20logo.svg" onerror="this.onerror=null;this.src=\'https://www.google.com/s2/favicons?domain=mbank.pl&amp;sz=256\'" alt="mBank"><div class="dc-bottom"><span>Europe</span><strong>mBank</strong></div></div>
 </div>
 </div>
 </section>
@@ -80,13 +85,7 @@
 <section class="network-strip">
 <div class="container network-row">
 <div class="network-label">Affiliate networks & platforms</div>
-<div class="network-logos">
-<img src="/assets/partner-logos/fintel-connect.svg" alt="Fintel Connect">
-<img src="/assets/partner-logos/awin.svg" alt="Awin">
-<img src="/assets/partner-logos/cj.svg" alt="CJ">
-<img src="/assets/partner-logos/impact.svg" alt="impact.com">
-<img src="/assets/partner-logos/partnerize.svg" alt="Partnerize">
-</div>
+<div class="network-logos"><span class="partner-brand"><img src="https://www.google.com/s2/favicons?domain=fintelconnect.com&sz=128" alt="Fintel Connect logo"><span>Fintel Connect</span></span><span class="partner-brand"><img src="https://www.google.com/s2/favicons?domain=awin.com&sz=128" alt="Awin logo"><span>Awin</span></span><span class="partner-brand"><img src="https://www.google.com/s2/favicons?domain=cj.com&sz=128" alt="CJ logo"><span>CJ</span></span><span class="partner-brand"><img src="https://www.google.com/s2/favicons?domain=impact.com&sz=128" alt="impact.com logo"><span>impact.com</span></span><span class="partner-brand"><img src="https://www.google.com/s2/favicons?domain=partnerize.com&sz=128" alt="Partnerize logo"><span>Partnerize</span></span></div>
 </div>
 </section>
 
@@ -94,9 +93,9 @@
 <div class="container">
 <div class="section-head"><div><div class="kicker">Current offers</div><h2>Worth checking now</h2></div></div>
 <div class="product-grid">
-<article class="product-card"><div class="product-logo"><img src="/assets/logos/bank-millennium.svg" alt="Bank Millennium"></div><div class="market-label">🇵🇱 POLAND</div><h3>Millennium 360°</h3><div class="product-value">up to PLN 700</div><div class="product-note">Welcome campaign</div></article>
-<article class="product-card"><div class="product-logo"><img src="/assets/logos/natwest.svg" alt="NatWest"></div><div class="market-label">🇬🇧 UNITED KINGDOM</div><h3>NatWest Select</h3><div class="product-value">£200</div><div class="product-note">Switch incentive</div></article>
-<article class="product-card"><div class="product-logo"><img src="/assets/logos/bbva.svg" alt="BBVA"></div><div class="market-label">🇪🇸 SPAIN</div><h3>BBVA Cuenta Nómina</h3><div class="product-value">up to €1,060</div><div class="product-note">Combined benefits</div></article>
+<article class="product-card"><div class="product-logo"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Bank%20Millenium.svg" onerror="this.onerror=null;this.src=\'https://www.google.com/s2/favicons?domain=bankmillennium.pl&amp;sz=256\'" alt="Bank Millennium"></div><div class="market-label">🇵🇱 POLAND</div><h3>Millennium 360°</h3><div class="product-value">up to PLN 700</div><div class="product-note">Welcome campaign</div></article>
+<article class="product-card"><div class="product-logo"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/NatWest%20wordmark.svg" onerror="this.onerror=null;this.src=\'https://www.google.com/s2/favicons?domain=natwest.com&amp;sz=256\'" alt="NatWest"></div><div class="market-label">🇬🇧 UNITED KINGDOM</div><h3>NatWest Select</h3><div class="product-value">£200</div><div class="product-note">Switch incentive</div></article>
+<article class="product-card"><div class="product-logo"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/BBVA%20logo%202025.svg" onerror="this.onerror=null;this.src=\'https://www.google.com/s2/favicons?domain=bbva.es&amp;sz=256\'" alt="BBVA"></div><div class="market-label">🇪🇸 SPAIN</div><h3>BBVA Cuenta Nómina</h3><div class="product-value">up to €1,060</div><div class="product-note">Combined benefits</div></article>
 </div>
 </div>
 </section>
@@ -149,7 +148,7 @@
 <div><h4>Europe</h4><a href="/pl/">Poland</a><a href="/de/">Germany</a><a href="/fr/">France</a><a href="/uk/">United Kingdom</a><a href="/it/">Italy</a><a href="/es/">Spain</a><a href="/nl/">Netherlands</a><a href="/se/">Sweden</a></div>
 <div><h4>BankRanking</h4><a href="/privacy/">Privacy</a><a href="/cookies/">Cookies</a><a href="/accessibility/">Accessibility</a><a href="/ranking-policy/">Ranking policy</a><a href="/cooperation/">Cooperation</a></div>
 </div>
-<div class="footer-bottom">© 2026 BankRanking Europe</div>
+<div class="brand-rights-notice">Third-party names, logos and trade marks are displayed solely to identify and compare the referenced providers. They remain the property of their respective owners. Where applicable, their display is intended as referential/quotation use under applicable law and does not imply sponsorship, endorsement or partnership. <a href="/logo-notice/">Logo & trademark notice →</a></div><div class="footer-bottom">© 2026 BankRanking Europe</div>
 </div>
 </footer>
 <script>
