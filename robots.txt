@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bankranking.com/sitemap.xml
+Sitemap: https://bankowezestawienie.pl/sitemap.xml
