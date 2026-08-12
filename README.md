@@ -1,17 +1,23 @@
-# BankRanking V5 — bank.nl-inspired homepage
+# BankRanking V5 — homepage closely inspired by bank.nl
 
-This version keeps all existing V5 country ranking pages and functionality.
-Only the homepage has been redesigned.
+This build preserves the existing V5 country ranking pages and data.
+The homepage has been rebuilt in a much simpler portal style inspired by the structure and visual rhythm of bank.nl, but uses original BankRanking copy and original/local graphics.
 
-Homepage direction inspired by bank.nl:
-- calm light-blue editorial hero
-- immediate account-category choices
-- bank-card composition instead of stock-city photography
-- strong account ranking cards
-- current offers separated from editorial rankings
-- bank directory section
-- concise business-accounts block
-- simplified, trustworthy portal rhythm
+Key homepage choices:
+- light-blue hero
+- account categories immediately visible
+- original composition of debit-card graphics using BankRanking's local bank logo assets
+- independent-comparison disclosure directly below the primary choices
+- featured current-account offers
+- editorial account insight
+- bank cards
+- account knowledge section
+- personal / 18–26 / 26+ / business account categories
+- simplified footer
 
-No USA. Brand remains BankRanking Europe.
-CNAME remains bankowezestawienie.pl.
+Important:
+- no USA
+- no mortgage / loans / insurance categories
+- no Google Translate popup
+- CNAME remains bankowezestawienie.pl
+- homepage styles are embedded directly in index.html so the page does not collapse into unstyled text if an old CSS asset is cached incorrectly.
