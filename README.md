@@ -1,45 +1,71 @@
-# BankRanking V3 — bankowezestawienie.pl
+# BankRanking V4 — English global edition
 
-International static bank-comparison portal for GitHub Pages.
+Ready for GitHub Pages / bankowezestawienie.pl.
 
-## Coverage
-9 markets / 33 researched products:
-PL, DE, FR, UK, US, IT, ES, NL, SE.
+## Main changes
+- Every market page and guide is now written in English.
+- All HTML uses `<html lang="en">`.
+- 9 markets / 33 researched offers.
+- Automatic on-site translation suggestion for visitors whose browser language is not English.
+- The translation button opens Google Translate for the current URL.
+- Chrome's native translation UI cannot be forced by page JavaScript; Chrome decides whether to offer it based on browser settings and language detection.
+- Full legal/editorial footer added.
 
-## Deployment
-Copy the CONTENTS of this folder into the root of your local Git repository:
-1. GitHub Desktop → Changes
-2. Commit to `main`
-3. Push origin
-4. GitHub Pages source: `main` / `(root)`
-5. Custom domain remains `bankowezestawienie.pl`
+## Legal pages
+- /legal/privacy/
+- /legal/cookies/
+- /legal/terms/
+- /legal/affiliate-disclosure/
+- /legal/legal-notice/
+- /legal/financial-disclaimer/
+- /legal/editorial-policy/
+- /legal/methodology/
+- /legal/corrections/
+- /legal/accessibility/
+- /legal/privacy-choices/
+- /legal/contact/
 
-`CNAME` and `.nojekyll` are included.
+## REQUIRED BEFORE COMMERCIAL LAUNCH
+Edit:
+`assets/js/operator-config.js`
 
-## Updating offers
-All offer data is centralized in:
+Fill in the REAL operator details:
+- legal entity / sole trader name
+- legal form
+- registered address
+- country of establishment
+- company / registry number
+- registry
+- VAT / tax number if applicable
+- authorised representative
+- responsible editor / publication director where applicable
+- phone if legally required / used
+- relevant supervisory authority if applicable
+
+The site intentionally does NOT invent these details.
+
+## Affiliate links
+Offer data remains in:
 `assets/js/data.js`
 
-Every offer has:
-- `officialUrl` — evidence/source
-- `affiliateUrl` — destination to replace with your affiliate tracking URL
-- `promoEnd` — promotion deadline
-- `benefit` and `benefitType`
-- fee / rate / summary / pros / cons
-- `verified` date
-- BankRanking score breakdown
+Each offer has:
+- `officialUrl` — research source
+- `affiliateUrl` — replace with your affiliate link
+- `promoEnd`
+- `benefit`
+- `benefitType`
+- `verified`
 
-At the moment `affiliateUrl == officialUrl` for every offer.
+## Translation
+The site does not embed the legacy Google Website Translator widget.
+For non-English browser languages, it shows an on-page top-right prompt with a “Translate with Google” button.
+The close action uses sessionStorage key `br_translate_dismissed`; it is a UI preference, not advertising tracking.
 
-## IMPORTANT — time-sensitive data
-Research snapshot: 12.08.2026.
-Promotions MUST be rechecked after their deadlines.
-The Polish ING promotion in this snapshot has a deadline of 12.08.2026 and is intentionally marked as ending today.
+## Analytics / cookies
+This build does not add GA4, Meta Pixel or advertising cookies.
+If you add any non-essential analytics, remarketing or tracking technology, update Privacy/Cookies and implement consent where required.
 
-## Contact
-Public contact: `kontakt@bankowezestawienie.pl`.
-Make sure this mailbox exists before relying on it publicly.
-
-## Legal / analytics
-This is a static comparison build. If you add GA4, Meta Pixel, affiliate-network tracking cookies,
-personalization, forms, or user accounts, update the privacy/cookies layer accordingly.
+## Deploy
+Copy the CONTENTS of this folder to the root of your local Git repository, then:
+Commit to main → Push origin.
+CNAME remains `bankowezestawienie.pl`.
