@@ -1,7 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="260" height="72" viewBox="0 0 260 72">
-<rect width="260" height="72" rx="12" fill="#ffffff"/>
-<rect x="1" y="1" width="258" height="70" rx="11" fill="none" stroke="#e4ebf1"/>
-<rect x="14" y="16" width="40" height="40" rx="10" fill="#009b77"/>
-<text x="34" y="42" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#ffffff">AA</text>
-<text x="68" y="43" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="700" fill="#009b77">ABN AMRO</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="72" viewBox="0 0 260 72" role="img" aria-label="ABN AMRO">
+<path d="M13 17 L34 17 L47 31 L34 45 L13 45 Z" fill="#009b77"/><path d="M13 45 L34 45 L47 58 L13 58 Z" fill="#f4b400"/>
+<text x="58" y="44" font-family="Arial,Helvetica,sans-serif" font-size="31" font-weight="700" letter-spacing="-0.6" fill="#009b77">ABN AMRO</text>
 </svg>

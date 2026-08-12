@@ -380,3 +380,22 @@ h1{font-size:clamp(44px,6vw,76px);line-height:.98;letter-spacing:-.06em;margin:1
  .ranking-entry-grid{grid-template-columns:1fr}.logo-wall{grid-template-columns:repeat(2,1fr)}
  .atlas-side{grid-template-columns:1fr 1fr}.cooperation-grid{grid-template-columns:1fr}
 }
+
+/* Refined brand suffix */
+.brand em{
+  font-style:normal!important;
+  color:#929faa!important;
+  background:none!important;
+  border:0!important;
+  box-shadow:none!important;
+  padding:0!important;
+  border-radius:0!important;
+  font-size:12px!important;
+  font-weight:650!important;
+  letter-spacing:.01em!important;
+}
+/* Ranking logos: clean wordmark presentation */
+.bank-logo{width:175px!important;height:48px!important;object-fit:contain!important;object-position:left center!important;margin:2px 0 15px!important}
+.modal-logo{max-width:190px!important;height:50px!important;object-fit:contain!important;object-position:left center!important}
+.compare-logo{max-width:150px!important;height:40px!important;object-fit:contain!important}
+.logo-tile img{max-width:175px!important;max-height:48px!important;object-fit:contain!important}
