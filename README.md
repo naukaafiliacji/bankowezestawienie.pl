@@ -1,51 +1,45 @@
-# BankRanking / bankowezestawienie.pl — V2
+# BankRanking V3 — bankowezestawienie.pl
 
-Professional static comparison portal for GitHub Pages.
+International static bank-comparison portal for GitHub Pages.
 
-## Publish
-Copy the **contents** of this folder into the root of your local Git repository, then:
-1. Commit to `main`
-2. Push origin
-3. GitHub → Settings → Pages → `main` / `(root)`
-4. Custom domain: `bankowezestawienie.pl`
+## Coverage
+9 markets / 33 researched products:
+PL, DE, FR, UK, US, IT, ES, NL, SE.
 
-`CNAME` and `.nojekyll` are already included.
+## Deployment
+Copy the CONTENTS of this folder into the root of your local Git repository:
+1. GitHub Desktop → Changes
+2. Commit to `main`
+3. Push origin
+4. GitHub Pages source: `main` / `(root)`
+5. Custom domain remains `bankowezestawienie.pl`
 
-## Affiliate links
-All product data is in:
+`CNAME` and `.nojekyll` are included.
+
+## Updating offers
+All offer data is centralized in:
 `assets/js/data.js`
 
-Each offer contains:
-- `officialUrl` — source / official product page
-- `affiliateUrl` — replace this with your affiliate tracking URL
+Every offer has:
+- `officialUrl` — evidence/source
+- `affiliateUrl` — destination to replace with your affiliate tracking URL
+- `promoEnd` — promotion deadline
+- `benefit` and `benefitType`
+- fee / rate / summary / pros / cons
+- `verified` date
+- BankRanking score breakdown
 
-Right now `affiliateUrl` points to the official bank page, because your affiliate URLs were not provided.
+At the moment `affiliateUrl == officialUrl` for every offer.
 
-## Editing product data
-The production version should update:
-- fee
-- bonus
-- interest rate
-- summary
-- conditions
-- verification date
-- score breakdown
+## IMPORTANT — time-sensitive data
+Research snapshot: 12.08.2026.
+Promotions MUST be rechecked after their deadlines.
+The Polish ING promotion in this snapshot has a deadline of 12.08.2026 and is intentionally marked as ending today.
 
-whenever the bank changes its offer.
+## Contact
+Public contact: `kontakt@bankowezestawienie.pl`.
+Make sure this mailbox exists before relying on it publicly.
 
-## Important
-The site includes a real editorial/affiliate architecture, but the privacy/contact/legal pages still contain explicit reminders to insert your company's actual legal and contact data before commercial launch.
-
-## Structure
-- `/` international homepage
-- `/pl/`, `/de/`, `/fr/`
-- country-specific category URLs
-- editorial policy / methodology / disclosure
-- guides
-- filters
-- 2–3 offer comparison drawer
-- score detail modal
-- SEO sitemap / canonical URLs / CNAME
-
-## Contact email
-Public pages use `kontakt@bankowezestawienie.pl`. Create/configure this mailbox before relying on it for customer contact.
+## Legal / analytics
+This is a static comparison build. If you add GA4, Meta Pixel, affiliate-network tracking cookies,
+personalization, forms, or user accounts, update the privacy/cookies layer accordingly.

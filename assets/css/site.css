@@ -254,3 +254,37 @@ h1{font-size:clamp(44px,6vw,76px);line-height:.98;letter-spacing:-.06em;margin:1
  .footer-grid{grid-template-columns:1fr}.footer-grid>div:first-child{grid-column:auto}
  .trust-chip{width:100%}
 }
+
+
+/* V3: multi-market expansion */
+.market-grid.v3{grid-template-columns:repeat(3,1fr)}
+.market-card .market-count{font-size:12px;color:#65798c;margin-top:7px}
+.market-card .market-banks{font-size:11px;color:#8192a2;margin-top:8px;line-height:1.5}
+.offer-promo{display:inline-flex;align-items:center;gap:6px;margin-top:10px;padding:5px 7px;border-radius:5px;background:#eef5ff;color:#2454a6;font-size:10px;font-weight:850;letter-spacing:.02em}
+.offer-promo.urgent{background:#fff0e8;color:#a6420c}
+.offer-promo.expired{background:#f2f4f7;color:#667085}
+.offer-type{font-size:10px;color:#7b8c9d;margin-top:3px;font-weight:750}
+.bank-wordmark{min-width:126px}
+.market-index{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:22px}
+.market-index a{border:1px solid var(--line);background:#fff;padding:12px 14px;font-size:13px;font-weight:800;color:#334e68}
+.market-index a:hover{border-color:#8ca4b8;color:var(--blue)}
+.research-box{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;border:1px solid var(--line);background:#fff;padding:18px 20px;margin-bottom:20px}
+.research-box strong{display:block}
+.research-box p{margin:3px 0 0;color:var(--muted);font-size:12px}
+.source-pill{font-size:10px;text-transform:uppercase;letter-spacing:.07em;font-weight:850;color:var(--green);background:var(--green-bg);padding:6px 8px}
+.market-callout{background:#0e2438;color:#fff;padding:30px;margin-top:18px}
+.market-callout h3{font-size:24px;margin:0 0 8px}
+.market-callout p{color:#c8d5df;max-width:760px;margin:0}
+.data-table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line)}
+.data-table th,.data-table td{padding:12px 14px;border-bottom:1px solid var(--line);text-align:left;font-size:12px;vertical-align:top}
+.data-table th{background:#f8fafc;color:#52677d;text-transform:uppercase;letter-spacing:.06em;font-size:10px}
+.data-table tr:last-child td{border-bottom:0}
+.updated-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--green);margin-right:6px}
+@media(max-width:850px){
+ .market-grid.v3{grid-template-columns:repeat(2,1fr)}
+ .market-index{grid-template-columns:repeat(2,1fr)}
+ .research-box{grid-template-columns:1fr}
+}
+@media(max-width:540px){
+ .market-grid.v3,.market-index{grid-template-columns:1fr}
+}

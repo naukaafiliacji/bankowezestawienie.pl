@@ -2,59 +2,73 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>BankRanking — Compare banks across Europe</title>
-<meta name="description" content="Independent bank account comparisons for Poland, Germany and France.">
+<title>BankRanking — International bank account comparison</title>
+<meta name="description" content="Compare real bank accounts and current banking promotions across Poland, Germany, France, the UK, USA, Italy, Spain, the Netherlands and Sweden.">
+<link rel="canonical" href="https://bankowezestawienie.pl/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="assets/css/site.css">
-<link rel="canonical" href="https://bankowezestawienie.pl/">
-<meta property="og:title" content="BankRanking — Compare banks across Europe"><meta property="og:description" content="Independent bank account comparisons for Poland, Germany and France."><meta property="og:type" content="website">
-
+<meta property="og:title" content="BankRanking — International bank account comparison"><meta property="og:description" content="Compare real bank accounts and current banking promotions across Poland, Germany, France, the UK, USA, Italy, Spain, the Netherlands and Sweden."><meta property="og:type" content="website">
 </head>
 <body data-page="home">
-<div class="topline"><div class="container"><span><strong>BankRanking</strong> · European banking comparison</span><span class="hide-mobile">Conditions checked · 12 Aug 2026</span></div></div>
+<div class="topline"><div class="container"><span><strong>BankRanking</strong> · International banking comparison</span><span class="hide-mobile">Research snapshot: 12.08.2026</span></div></div>
 <header class="header"><div class="container nav">
-<a class="brand" href="./"><img src="assets/brand/mark.svg" alt=""><span>BankRanking</span><em>Europe</em></a>
-<nav class="primary-nav"><a href="#markets">Markets</a><a href="#standards">Editorial standards</a><a href="pl/methodology.html">Methodology</a><a href="pl/about.html">About</a></nav>
-<div class="header-actions"><select class="market-switch" onchange="location.href=this.value"><option value="">Choose market</option><option value="pl/">🇵🇱 Poland</option><option value="de/">🇩🇪 Germany</option><option value="fr/">🇫🇷 France</option></select><button class="menu-btn">☰</button></div>
-</div><div class="mobile-nav"><a href="#markets">Markets</a><a href="#standards">Editorial standards</a><a href="pl/">🇵🇱 Poland</a><a href="de/">🇩🇪 Germany</a><a href="fr/">🇫🇷 France</a></div></header>
+<a class="brand" href="./"><img src="assets/brand/mark.svg" alt=""><span>BankRanking</span><em>Global</em></a>
+<nav class="primary-nav"><a href="#markets">Markets</a><a href="#research">Research</a><a href="pl/methodology.html">Methodology</a><a href="pl/about.html">About</a></nav>
+<div class="header-actions"><select class="market-switch" id="home-market" onchange="if(this.value)location.href=this.value"><option value="">Choose market</option><option value="pl/">🇵🇱 Polska</option><option value="de/">🇩🇪 Deutschland</option><option value="fr/">🇫🇷 France</option><option value="uk/">🇬🇧 United Kingdom</option><option value="us/">🇺🇸 United States</option><option value="it/">🇮🇹 Italia</option><option value="es/">🇪🇸 España</option><option value="nl/">🇳🇱 Nederland</option><option value="se/">🇸🇪 Sverige</option></select><button class="menu-btn">☰</button></div>
+</div><div class="mobile-nav"><a href="pl/">🇵🇱 Polska</a><a href="de/">🇩🇪 Deutschland</a><a href="fr/">🇫🇷 France</a><a href="uk/">🇬🇧 United Kingdom</a><a href="us/">🇺🇸 United States</a><a href="it/">🇮🇹 Italia</a><a href="es/">🇪🇸 España</a><a href="nl/">🇳🇱 Nederland</a><a href="se/">🇸🇪 Sverige</a></div></header>
 <main>
 <section class="hero"><div class="container hero-grid">
-<div><div class="kicker">European banking intelligence</div><h1>Make a better banking decision.</h1><p class="hero-copy">BankRanking compares everyday banking products using transparent criteria, verified product conditions and market-specific editorial analysis.</p>
-<div class="hero-actions"><a class="btn btn-primary" href="#markets">Explore markets →</a><a class="btn btn-ghost" href="pl/methodology.html">How we rank banks</a></div></div>
-<div class="search-panel"><h3>Find a banking comparison</h3><div class="form-row"><div class="field"><label>Market</label><select id="finder-market"><option value="pl">🇵🇱 Poland</option><option value="de">🇩🇪 Germany</option><option value="fr">🇫🇷 France</option></select></div><div class="field"><label>Product</label><select id="finder-category"><option value="personal">Konta osobiste</option><option value="savings">Oszczędności</option></select></div></div><button id="finder-go" class="btn btn-blue">Compare products →</button><div class="micro">We link to official product conditions. Partner links can be added independently from editorial scoring.</div></div>
+<div><div class="kicker">International banking intelligence</div><h1>Compare banks across markets — not just logos.</h1><p class="hero-copy">BankRanking tracks fees, real welcome benefits, cashback, interest and eligibility across nine banking markets. Every researched offer links back to an official bank source and carries a verification date.</p>
+<div class="hero-actions"><a class="btn btn-primary" href="#markets">Explore 9 markets →</a><a class="btn btn-ghost" href="pl/methodology.html">How scoring works</a></div></div>
+<div class="search-panel"><h3>Open a local ranking</h3><div class="field"><label>Market</label><select id="finder-market"><option value="pl">🇵🇱 Polska</option><option value="de">🇩🇪 Deutschland</option><option value="fr">🇫🇷 France</option><option value="uk">🇬🇧 United Kingdom</option><option value="us">🇺🇸 United States</option><option value="it">🇮🇹 Italia</option><option value="es">🇪🇸 España</option><option value="nl">🇳🇱 Nederland</option><option value="se">🇸🇪 Sverige</option></select></div><button id="finder-go" class="btn btn-blue">Compare banks →</button><div class="micro">Current promotions are time-sensitive. Check the expiry badge and the bank’s official terms before applying.</div></div>
 </div></section>
 <section class="metrics-strip"><div class="container metrics">
-<div class="metric"><strong>3</strong><span>active European markets</span></div>
-<div class="metric"><strong>12 Aug</strong><span>latest verification date</span></div>
-<div class="metric"><strong>10-point</strong><span>editorial scoring system</span></div>
-<div class="metric"><strong>100%</strong><span>methodology publicly explained</span></div>
+<div class="metric"><strong>9</strong><span>active markets</span></div>
+<div class="metric"><strong>33</strong><span>researched products</span></div>
+<div class="metric"><strong>12.08.2026</strong><span>research snapshot</span></div>
+<div class="metric"><strong>10-point</strong><span>transparent score</span></div>
 </div></section>
-<section class="section" id="markets"><div class="container"><div class="section-head"><div><div class="eyebrow">Markets</div><h2>Local comparisons, one European brand.</h2></div><p>Each market uses its own product conditions, terminology, editorial copy and ranking pages rather than a generic machine-translated template.</p></div>
-<div class="market-grid">
-<a class="market-card" href="pl/"><div class="market-top"><span class="flag">🇵🇱</span><span class="market-status">Active</span></div><h3>Poland</h3><p>Personal accounts and savings products, in Polish.</p><span class="link">View Polish rankings →</span></a>
-<a class="market-card" href="de/"><div class="market-top"><span class="flag">🇩🇪</span><span class="market-status">Active</span></div><h3>Germany</h3><p>Girokonten and Tagesgeld, in German.</p><span class="link">View German rankings →</span></a>
-<a class="market-card" href="fr/"><div class="market-top"><span class="flag">🇫🇷</span><span class="market-status">Active</span></div><h3>France</h3><p>Current-account comparisons, in French.</p><span class="link">View French rankings →</span></a>
-</div></div></section>
-<section class="section white"><div class="container"><div class="section-head"><div><div class="eyebrow">Popular comparisons</div><h2>Start with the decision you need to make.</h2></div></div>
-<div class="featured-grid"><a class="featured-main" href="de/girokonto/"><small>Germany · Girokonto</small><h3>Best current accounts in Germany</h3><p>Compare C24 and ING using fees, cards, app functionality and conditions for free banking.</p><span class="link">Open comparison →</span></a>
-<div class="featured-side"><a class="feature-row" href="pl/konta-osobiste/"><small>Poland</small><h3>Best personal accounts</h3><p>Compare fee structures and current welcome promotions.</p></a><a class="feature-row" href="fr/comptes-courants/"><small>France</small><h3>Best current accounts</h3><p>Online accounts, travel cards and monthly-use conditions.</p></a></div></div></div></section>
-<section class="section" id="standards"><div class="container"><div class="section-head"><div><div class="eyebrow">Trust architecture</div><h2>Built to explain, not just redirect.</h2></div><p>Financial comparisons need more than affiliate buttons. BankRanking separates product data, scoring, verification and commercial disclosure.</p></div>
-<div class="trust-grid"><div class="trust-item"><span class="trust-num">01</span><h3>Verified conditions</h3><p>Key fees and promotions are checked against official product pages and dated.</p></div><div class="trust-item"><span class="trust-num">02</span><h3>Transparent score</h3><p>Users can open the score breakdown and see which dimensions drive a rating.</p></div><div class="trust-item"><span class="trust-num">03</span><h3>Comparison tools</h3><p>Choose up to three products and compare core terms side by side.</p></div><div class="trust-item"><span class="trust-num">04</span><h3>Commercial disclosure</h3><p>Affiliate relationships are separated from the editorial methodology.</p></div></div>
+<section class="section" id="markets"><div class="container"><div class="section-head"><div><div class="eyebrow">Markets</div><h2>One brand. Nine local banking markets.</h2></div><p>Local banks, local currencies, local promotions and local terminology — with one common comparison architecture.</p></div>
+<div class="market-grid v3"><a class="market-card" href="pl/">
+<div class="market-top"><span class="flag">🇵🇱</span><span class="market-status">Verified</span></div>
+<h3>Polska</h3><p>Konta osobiste</p><div class="market-count">4 researched products</div><div class="market-banks">mBank, BNP Paribas, Bank Pekao, ING</div><span class="link">Open market →</span></a><a class="market-card" href="de/">
+<div class="market-top"><span class="flag">🇩🇪</span><span class="market-status">Verified</span></div>
+<h3>Deutschland</h3><p>Girokonten</p><div class="market-count">4 researched products</div><div class="market-banks">C24 Bank, ING, Commerzbank, N26</div><span class="link">Open market →</span></a><a class="market-card" href="fr/">
+<div class="market-top"><span class="flag">🇫🇷</span><span class="market-status">Verified</span></div>
+<h3>France</h3><p>Comptes courants</p><div class="market-count">3 researched products</div><div class="market-banks">BoursoBank, Hello bank!, Fortuneo</div><span class="link">Open market →</span></a><a class="market-card" href="uk/">
+<div class="market-top"><span class="flag">🇬🇧</span><span class="market-status">Verified</span></div>
+<h3>United Kingdom</h3><p>Current accounts</p><div class="market-count">3 researched products</div><div class="market-banks">Nationwide, first direct, Chase UK</div><span class="link">Open market →</span></a><a class="market-card" href="us/">
+<div class="market-top"><span class="flag">🇺🇸</span><span class="market-status">Verified</span></div>
+<h3>United States</h3><p>Checking accounts</p><div class="market-count">4 researched products</div><div class="market-banks">Chase, Citi, Wells Fargo, Capital One</div><span class="link">Open market →</span></a><a class="market-card" href="it/">
+<div class="market-top"><span class="flag">🇮🇹</span><span class="market-status">Verified</span></div>
+<h3>Italia</h3><p>Conti correnti</p><div class="market-count">4 researched products</div><div class="market-banks">BBVA, UniCredit buddy, ING, Fineco</div><span class="link">Open market →</span></a><a class="market-card" href="es/">
+<div class="market-top"><span class="flag">🇪🇸</span><span class="market-status">Verified</span></div>
+<h3>España</h3><p>Cuentas bancarias</p><div class="market-count">3 researched products</div><div class="market-banks">BBVA, Banco Sabadell, Unicaja</div><span class="link">Open market →</span></a><a class="market-card" href="nl/">
+<div class="market-top"><span class="flag">🇳🇱</span><span class="market-status">Verified</span></div>
+<h3>Nederland</h3><p>Betaalrekeningen</p><div class="market-count">4 researched products</div><div class="market-banks">Rabobank, bunq, ING, ABN AMRO</div><span class="link">Open market →</span></a><a class="market-card" href="se/">
+<div class="market-top"><span class="flag">🇸🇪</span><span class="market-status">Verified</span></div>
+<h3>Sverige</h3><p>Bankkonton</p><div class="market-count">4 researched products</div><div class="market-banks">Nordea, Swedbank, SEB, Handelsbanken</div><span class="link">Open market →</span></a></div>
+<div class="market-index"><a href="pl/">🇵🇱 Polska</a><a href="de/">🇩🇪 Deutschland</a><a href="fr/">🇫🇷 France</a><a href="uk/">🇬🇧 United Kingdom</a><a href="us/">🇺🇸 United States</a><a href="it/">🇮🇹 Italia</a><a href="es/">🇪🇸 España</a><a href="nl/">🇳🇱 Nederland</a><a href="se/">🇸🇪 Sverige</a></div>
 </div></section>
-<section class="section white"><div class="container"><div class="section-head"><div><div class="eyebrow">Banking guides</div><h2>Context behind the ranking.</h2></div><p>Editorial guides explain fee conditions, cards, promotions and the trade-offs behind the headline numbers.</p></div>
-<div class="guide-grid"><a class="guide-card" href="pl/poradniki/jak-wybrac-konto/"><div class="meta">Poland · Guide</div><h3>Jak wybrać konto osobiste?</h3><p>Premia to tylko jedna część kosztu rachunku.</p><span>Read →</span></a><a class="guide-card" href="de/ratgeber/girokonto-waehlen/"><div class="meta">Germany · Ratgeber</div><h3>Wie wählt man ein Girokonto?</h3><p>Mindestgeldeingang, Karten und Bargeld richtig vergleichen.</p><span>Read →</span></a><a class="guide-card" href="fr/guides/choisir-compte/"><div class="meta">France · Guide</div><h3>Comment choisir son compte bancaire ?</h3><p>Comparer les frais réels au-delà du prix affiché.</p><span>Read →</span></a></div>
-</div></section>
-</main>
-
-
-<section class="cta-band"><div class="container cta-inner"><div><h2>Compare banks in your market.</h2><p>Open a local ranking with market-specific conditions and editorial criteria.</p></div><a class="btn btn-ghost" href="#markets">Choose market →</a></div></section>
-<footer class="footer"><div class="container">
-<div class="footer-grid">
-<div><a class="brand" href="./"><img src="assets/brand/mark.svg" alt=""><span>BankRanking</span><em>Europe</em></a>
-<p>Banking comparisons for European markets. Always confirm current conditions directly with the bank before applying.</p></div>
-<div><h4>Markets</h4><div class="footer-links"><a href="pl/">Poland</a><a href="de/">Germany</a><a href="fr/">France</a></div></div>
-<div><h4>Editorial</h4><div class="footer-links"><a href="pl/methodology.html">Methodology</a><a href="pl/editorial-policy.html">Editorial standards</a><a href="pl/disclosure.html">Affiliate disclosure</a></div></div>
-<div><h4>BankRanking</h4><div class="footer-links"><a href="pl/about.html">About</a><a href="pl/contact.html">Contact</a><a href="pl/privacy.html">Privacy</a><a href="pl/terms.html">Terms</a></div></div>
+<section class="section white" id="research"><div class="container"><div class="section-head"><div><div class="eyebrow">Research model</div><h2>Cash bonus ≠ cashback ≠ interest.</h2></div><p>The site now separates the type of monetary benefit instead of displaying every headline number as if it were an immediate cash reward.</p></div>
+<div class="trust-grid">
+<div class="trust-item"><span class="trust-num">01</span><h3>Cash bonuses</h3><p>Switching and new-customer bonuses show their activity, deposit or balance conditions.</p></div>
+<div class="trust-item"><span class="trust-num">02</span><h3>Cashback</h3><p>Ongoing spending rewards are marked separately from one-off opening rewards.</p></div>
+<div class="trust-item"><span class="trust-num">03</span><h3>Interest</h3><p>Promotional rates show their duration and, where relevant, balance limits.</p></div>
+<div class="trust-item"><span class="trust-num">04</span><h3>Expiry dates</h3><p>Time-limited promotions are visibly dated and urgent offers receive a deadline badge.</p></div>
 </div>
-<div class="footer-bottom"><span>© 2026 BankRanking</span><span>bankowezestawienie.pl · Europe</span></div>
-</div></footer><script src="assets/js/data.js"></script><script src="assets/js/site.js"></script></body></html>
+<div class="market-callout"><h3>Affiliate-ready, editorially separate.</h3><p>Each offer has both an official source URL and a separate affiliate URL field. Today they point to the same official bank page. When you receive a partner link, you replace only the affiliate field — the evidence/source remains unchanged.</p></div>
+</div></section>
+<section class="section"><div class="container"><div class="section-head"><div><div class="eyebrow">Coverage</div><h2>Banks now included in V3.</h2></div></div>
+<table class="data-table"><thead><tr><th>Market</th><th>Banks / providers</th><th>Products researched</th></tr></thead><tbody>
+<tr><td>🇵🇱 Polska</td><td>mBank, BNP Paribas, Bank Pekao, ING</td><td>4</td></tr><tr><td>🇩🇪 Deutschland</td><td>C24 Bank, ING, Commerzbank, N26</td><td>4</td></tr><tr><td>🇫🇷 France</td><td>BoursoBank, Hello bank!, Fortuneo</td><td>3</td></tr><tr><td>🇬🇧 United Kingdom</td><td>Nationwide, first direct, Chase UK</td><td>3</td></tr><tr><td>🇺🇸 United States</td><td>Chase, Citi, Wells Fargo, Capital One</td><td>4</td></tr><tr><td>🇮🇹 Italia</td><td>BBVA, UniCredit buddy, ING, Fineco</td><td>4</td></tr><tr><td>🇪🇸 España</td><td>BBVA, Banco Sabadell, Unicaja</td><td>3</td></tr><tr><td>🇳🇱 Nederland</td><td>Rabobank, bunq, ING, ABN AMRO</td><td>4</td></tr><tr><td>🇸🇪 Sverige</td><td>Nordea, Swedbank, SEB, Handelsbanken</td><td>4</td></tr>
+</tbody></table></div></section>
+</main>
+<footer class="footer"><div class="container"><div class="footer-grid">
+<div><a class="brand" href="./"><img src="assets/brand/mark.svg" alt=""><span>BankRanking</span><em>Global</em></a><p>International bank comparison with dated product research and official-source links.</p></div>
+<div><h4>Europe</h4><div class="footer-links"><a href="pl/">Poland</a><a href="de/">Germany</a><a href="fr/">France</a><a href="uk/">United Kingdom</a><a href="it/">Italy</a><a href="es/">Spain</a><a href="nl/">Netherlands</a><a href="se/">Sweden</a></div></div>
+<div><h4>Americas</h4><div class="footer-links"><a href="us/">United States</a></div></div>
+<div><h4>Editorial</h4><div class="footer-links"><a href="pl/methodology.html">Methodology</a><a href="pl/disclosure.html">Affiliate disclosure</a><a href="pl/contact.html">Contact</a></div></div>
+</div><div class="footer-bottom"><span>© 2026 BankRanking</span><span>bankowezestawienie.pl · V3</span></div></div></footer>
+<script src="assets/js/data.js"></script><script src="assets/js/ui.js"></script><script src="assets/js/site.js"></script>
+</body></html>
