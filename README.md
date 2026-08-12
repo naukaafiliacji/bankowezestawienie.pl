@@ -1,54 +1,51 @@
-# BankRanking starter
+# BankRanking / bankowezestawienie.pl — V2
 
-Gotowy statyczny starter pod GitHub Pages.
+Professional static comparison portal for GitHub Pages.
 
-## Struktura
+## Publish
+Copy the **contents** of this folder into the root of your local Git repository, then:
+1. Commit to `main`
+2. Push origin
+3. GitHub → Settings → Pages → `main` / `(root)`
+4. Custom domain: `bankowezestawienie.pl`
 
-- `/index.html` — międzynarodowa strona główna
-- `/pl/` — Polska
-- `/de/` — Niemcy
-- `/fr/` — Francja
-- `/assets/css/styles.css` — wspólny design
-- `/assets/js/app.js` — oferty, sortowanie, filtrowanie i linki afiliacyjne
+`CNAME` and `.nojekyll` are already included.
 
-## Jak podmienić oferty
+## Affiliate links
+All product data is in:
+`assets/js/data.js`
 
-Otwórz `assets/js/app.js` i znajdź obiekt `offers`.
+Each offer contains:
+- `officialUrl` — source / official product page
+- `affiliateUrl` — replace this with your affiliate tracking URL
 
-Każda oferta ma pola:
-- `bank`
-- `product`
-- `category`: `personal`, `savings`, `business`
-- `fee`
-- `bonus`
-- `rating`
-- `url`
+Right now `affiliateUrl` points to the official bank page, because your affiliate URLs were not provided.
 
-W `url` wpisz własny link afiliacyjny.
+## Editing product data
+The production version should update:
+- fee
+- bonus
+- interest rate
+- summary
+- conditions
+- verification date
+- score breakdown
 
-## GitHub Pages
+whenever the bank changes its offer.
 
-1. Utwórz repozytorium.
-2. Wrzuć **zawartość** tego folderu do głównego katalogu repozytorium.
-3. W GitHub: Settings → Pages → Deploy from a branch.
-4. Wybierz `main` i `/ (root)`.
+## Important
+The site includes a real editorial/affiliate architecture, but the privacy/contact/legal pages still contain explicit reminders to insert your company's actual legal and contact data before commercial launch.
 
-## Ważne przed publikacją
+## Structure
+- `/` international homepage
+- `/pl/`, `/de/`, `/fr/`
+- country-specific category URLs
+- editorial policy / methodology / disclosure
+- guides
+- filters
+- 2–3 offer comparison drawer
+- score detail modal
+- SEO sitemap / canonical URLs / CNAME
 
-Dane ofert w tym starterze są demonstracyjne. Nie publikuj fikcyjnych opłat, bonusów ani ocen jako aktualnych informacji.
-Dostosuj również disclosure, politykę prywatności/cookies, regulaminy i wymagane informacje prawne dla każdego rynku.
-
-## Wersja dla bankowezestawienie.pl
-
-Ta paczka ma już:
-- `CNAME` z wartością `bankowezestawienie.pl`
-- canonical/hreflang wskazujące `https://bankowezestawienie.pl/...`
-- `robots.txt` i `sitemap.xml` dla `bankowezestawienie.pl`
-- `.nojekyll`
-
-Po skopiowaniu plików do lokalnego repo:
-1. Zrób `Commit to main`.
-2. Zrób `Push origin`.
-3. Na GitHub wejdź: Settings → Pages.
-4. Publishing source powinno wskazywać branch `main` i folder `/ (root)`.
-5. W `Custom domain` wpisz `bankowezestawienie.pl` i kliknij Save.
+## Contact email
+Public pages use `kontakt@bankowezestawienie.pl`. Create/configure this mailbox before relying on it for customer contact.
