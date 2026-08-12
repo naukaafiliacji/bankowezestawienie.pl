@@ -331,3 +331,52 @@ h1{font-size:clamp(44px,6vw,76px);line-height:.98;letter-spacing:-.06em;margin:1
 @media(max-width:850px){
   .legal-grid{grid-template-columns:1fr}.legal-nav{position:static}
 }
+
+/* V5 Europe editorial-bank portal */
+.bank-logo{width:150px;height:44px;object-fit:contain;object-position:left center;display:block;margin:5px 0 14px}
+.modal-logo{width:180px;height:50px;object-fit:contain;object-position:left center;margin-bottom:12px}
+.compare-logo{width:130px;height:38px;object-fit:contain;object-position:left center}
+.age-note{margin-top:11px;padding:9px 10px;background:#f0f7ff;border-left:3px solid #2f6fe4;color:#395873;font-size:11px;line-height:1.45}
+.segment-control{display:flex;align-items:center;gap:6px;background:#edf2f6;border:1px solid var(--line);padding:5px;border-radius:10px}
+.segment-btn{border:0;background:transparent;padding:11px 19px;border-radius:7px;font-weight:850;font-size:13px;color:#52677d;cursor:pointer}
+.segment-btn.active{background:#102a43;color:#fff;box-shadow:0 3px 10px rgba(16,42,67,.16)}
+.segment-intro{display:flex;align-items:center;justify-content:space-between;gap:20px;background:#fff;border:1px solid var(--line);padding:15px 17px;margin-bottom:16px}
+.segment-intro p{margin:0;font-size:12px;color:#63778b;max-width:720px}
+.bank-atlas{display:grid;grid-template-columns:1.15fr .85fr;gap:18px}
+.atlas-main{background:#102a43;color:#fff;padding:34px;min-height:330px;display:flex;flex-direction:column;justify-content:space-between}
+.atlas-main h2{font-size:42px;line-height:1.02;letter-spacing:-.05em;margin:0 0 12px}
+.atlas-main p{color:#c5d3df;max-width:620px}
+.atlas-main .atlas-tags{display:flex;gap:8px;flex-wrap:wrap}
+.atlas-main .atlas-tags span{border:1px solid #36536c;padding:7px 9px;font-size:11px;color:#d6e0e8}
+.atlas-side{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.atlas-stat{background:#fff;border:1px solid var(--line);padding:22px;display:flex;flex-direction:column;justify-content:space-between}
+.atlas-stat strong{font-size:34px;letter-spacing:-.05em}
+.atlas-stat span{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:#718096;font-weight:800}
+.logo-wall{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.logo-tile{background:#fff;border:1px solid var(--line);padding:14px;min-height:88px;display:flex;align-items:center;justify-content:center;transition:.16s}
+.logo-tile:hover{box-shadow:var(--shadow);transform:translateY(-2px)}
+.logo-tile img{max-width:100%;height:46px;object-fit:contain}
+.ranking-entry-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.ranking-entry{background:#fff;border:1px solid var(--line);padding:20px;min-height:180px;display:flex;flex-direction:column}
+.ranking-entry .flag{font-size:25px}.ranking-entry h3{margin:16px 0 4px;font-size:20px}.ranking-entry p{font-size:12px;color:#718096;margin:0}.ranking-entry .link{margin-top:auto;padding-top:20px;font-weight:850;color:var(--blue);font-size:13px}
+.editorial-row{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:12px}
+.editorial-card{background:#fff;border:1px solid var(--line);padding:25px}.editorial-card.large{background:#f7fafc}
+.editorial-card h3{font-size:23px;margin:8px 0}.editorial-card p{font-size:13px;color:#66788a}
+.cookie-modal{position:fixed;inset:0;background:rgba(7,20,33,.56);z-index:600;display:none;align-items:center;justify-content:center;padding:20px}
+.cookie-modal.open{display:flex}.cookie-card{width:min(620px,100%);background:#fff;padding:28px;box-shadow:var(--shadow-lg)}
+.cookie-card h2{margin:0 0 8px;font-size:26px}.cookie-card>p{color:#66788a;font-size:13px}
+.cookie-row{display:flex;justify-content:space-between;gap:20px;padding:15px 0;border-top:1px solid var(--line)}
+.cookie-row strong{display:block}.cookie-row small{display:block;color:#7b8c9d;margin-top:2px}
+.cookie-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:20px}
+.cooperation-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.coop-box{background:#fff;border:1px solid var(--line);padding:24px}
+.coop-box h3{margin-top:0}
+@media(max-width:1000px){
+ .bank-atlas{grid-template-columns:1fr}.ranking-entry-grid{grid-template-columns:repeat(2,1fr)}
+ .logo-wall{grid-template-columns:repeat(3,1fr)}.editorial-row{grid-template-columns:1fr}
+}
+@media(max-width:650px){
+ .segment-intro{display:block}.segment-control{margin-bottom:10px;display:inline-flex}
+ .ranking-entry-grid{grid-template-columns:1fr}.logo-wall{grid-template-columns:repeat(2,1fr)}
+ .atlas-side{grid-template-columns:1fr 1fr}.cooperation-grid{grid-template-columns:1fr}
+}
