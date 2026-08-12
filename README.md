@@ -1,21 +1,18 @@
-# BankRanking V6 — data-first European bank portal
+# BankRanking V5 — Europe
 
-## Architecture
-- `/` — data-first homepage: latest rankings, bank search, banking snapshot, bank directory preview, offers, comparisons, guides
-- `/banks/` — directory of 33 bank brands
-- `/banks/<bank>/` — bank profile with markets and tracked products
-- `/rankings/` — ranking hub
-- `/<market>/` — mini country portal
-- `/<market>/rankings/current-accounts/` — full compact ranking with 18–26 / 26+
-- `/offers/` — time-sensitive offers separated from editorial rankings
-- `/compare/` — selected bank-vs-bank comparisons
-- `/accounts/` and `/guides/` — product/category and guide hubs
+Major changes:
+- USA removed.
+- Brand is now BankRanking Europe.
+- Homepage is a bank-focused editorial portal, with rankings as the dominant product.
+- 8 European markets.
+- 37 researched bank/account offers.
+- 18–26 / 26+ ranking switch.
+- Local logo assets for every listed bank.
+- Legal/footer simplified to: Privacy, Cookies, Cookie Settings, Accessibility, Ranking Policy, Cooperation.
+- No on-page Google Translate prompt. Pages remain `lang="en"` so the browser may offer its own translation.
+- Cookie settings modal included; analytics and marketing remain disabled in this build.
 
-## Research snapshot
-12.08.2026. Product offers remain time-sensitive and should be rechecked after deadlines.
+Affiliate destinations remain separate from official source URLs inside `assets/js/data.js`.
 
-## Affiliate links
-Edit `affiliateUrl` in `assets/js/data.js`. Keep `officialUrl` as the evidence/source link.
-
-## Deployment
-Copy the CONTENTS of this folder into the repository root, Commit to main, Push origin. `CNAME` remains `bankowezestawienie.pl`.
+Deploy: copy the CONTENTS of this folder into the root of your Git repo, Commit to main, Push origin.
+CNAME remains bankowezestawienie.pl.
