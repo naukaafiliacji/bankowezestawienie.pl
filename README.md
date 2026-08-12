@@ -16,12 +16,3 @@ Affiliate destinations remain separate from official source URLs inside `assets/
 
 Deploy: copy the CONTENTS of this folder into the root of your Git repo, Commit to main, Push origin.
 CNAME remains bankowezestawienie.pl.
-
-
-## Photo sources added in this build
-Homepage photography uses free-to-use Pexels images saved locally under `assets/photos/`:
-- London financial district — Samuel Phillips / Pexels, photo 36920199
-- Laptop + phone cafe scene — RDNE Stock project / Pexels, photo 10376295
-- Professional working on laptop — LinkedIn Sales Navigator / Pexels, photo 2182971
-
-No existing page copy, ranking data, navigation or ranking logic was changed in the photo pass.

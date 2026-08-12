@@ -380,4 +380,82 @@ h1{font-size:clamp(44px,6vw,76px);line-height:.98;letter-spacing:-.06em;margin:1
  .ranking-entry-grid{grid-template-columns:1fr}.logo-wall{grid-template-columns:repeat(2,1fr)}
  .atlas-side{grid-template-columns:1fr 1fr}.cooperation-grid{grid-template-columns:1fr}
 }
-\n/* V5 photo-only visual layer */\n.homepage-photo-band{padding:0 0 18px;background:var(--bg)}\n.homepage-photo-pair{padding:0 0 48px;background:var(--bg)}\n.photo-frame{overflow:hidden;background:#dfe7ed;border:1px solid var(--line);position:relative}\n.photo-frame img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .55s ease}\n.photo-frame:hover img{transform:scale(1.018)}\n.photo-frame-wide{height:clamp(260px,36vw,470px)}\n.photo-frame-wide img{object-position:center 38%}\n.photo-pair-grid{display:grid;grid-template-columns:1.35fr .85fr;gap:14px}\n.photo-frame-tall{height:clamp(300px,39vw,500px)}\n.photo-frame-tall:first-child img{object-position:center 45%}\n.photo-frame-tall:last-child img{object-position:center 48%}\n@media(max-width:760px){\n .homepage-photo-band{padding-bottom:10px}\n .homepage-photo-pair{padding-bottom:32px}\n .photo-pair-grid{grid-template-columns:1fr}\n .photo-frame-wide{height:280px}\n .photo-frame-tall{height:320px}\n}\n
+
+
+/* V5 photo integration — editorial, not standalone stock blocks */
+.hero{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+}
+.hero::before{
+  content:"";
+  position:absolute;
+  z-index:-2;
+  top:0;right:0;bottom:0;
+  width:min(56vw,900px);
+  background-image:
+    linear-gradient(90deg, rgba(244,247,249,1) 0%, rgba(244,247,249,.82) 17%, rgba(244,247,249,.12) 58%, rgba(244,247,249,.05) 100%),
+    url('../photos/frankfurt-editorial.webp');
+  background-size:cover;
+  background-position:center 48%;
+}
+.hero::after{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(180deg, rgba(244,247,249,.02), rgba(244,247,249,.24));
+}
+.hero .search-panel{
+  background:rgba(255,255,255,.92);
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
+  box-shadow:0 16px 42px rgba(16,42,67,.14);
+}
+
+.editorial-card.large{
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+  min-height:300px;
+  background:#102a43;
+  border-color:#173a58;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+}
+.editorial-card.large::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-2;
+  background:url('../photos/payment-editorial.webp') center 46%/cover no-repeat;
+  transform:scale(1.01);
+}
+.editorial-card.large::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  background:linear-gradient(90deg, rgba(7,23,38,.94) 0%, rgba(7,23,38,.80) 48%, rgba(7,23,38,.34) 100%);
+}
+.editorial-card.large .eyebrow{color:#a7d7c3}
+.editorial-card.large h3{color:#fff;max-width:560px}
+.editorial-card.large p{color:#d2dde6;max-width:620px}
+.editorial-card.large .text-link{color:#fff}
+
+@media(max-width:900px){
+  .hero::before{
+    width:100%;
+    opacity:.23;
+    background-image:linear-gradient(rgba(244,247,249,.80),rgba(244,247,249,.92)),url('../photos/frankfurt-editorial.webp');
+  }
+  .hero .search-panel{background:rgba(255,255,255,.96)}
+}
+@media(max-width:650px){
+  .hero::before{background-position:62% center}
+  .editorial-card.large{min-height:360px}
+  .editorial-card.large::after{background:linear-gradient(180deg,rgba(7,23,38,.45) 0%,rgba(7,23,38,.95) 72%)}
+}
