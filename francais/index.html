@@ -1019,6 +1019,93 @@
   .footer-about{padding-left:0!important}
   .footer-brand{margin-bottom:20px!important}
 }
+</style><style>
+/* =========================================================
+   V16 footer brand lockup fix
+   ========================================================= */
+
+/* Must beat .footer-col a { display:block!important } */
+.footer-col a.footer-brand{
+  display:inline-flex!important;
+  flex-direction:row!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  gap:10px!important;
+  width:auto!important;
+  max-width:100%!important;
+  padding:0!important;
+  margin:0 0 28px!important;
+  color:#fff!important;
+  white-space:nowrap!important;
+  line-height:1!important;
+}
+
+.footer-col a.footer-brand img{
+  display:block!important;
+  width:32px!important;
+  height:32px!important;
+  min-width:32px!important;
+  flex:0 0 32px!important;
+  margin:0!important;
+  padding:0!important;
+  object-fit:contain!important;
+}
+
+.footer-col a.footer-brand span{
+  display:block!important;
+  margin:0!important;
+  padding:0!important;
+  color:#fff!important;
+  font-size:19px!important;
+  line-height:32px!important;
+  font-weight:800!important;
+  letter-spacing:-.035em!important;
+}
+
+.footer-col a.footer-brand em{
+  display:block!important;
+  margin:0 0 0 1px!important;
+  padding:0!important;
+  color:#91a6b6!important;
+  font-size:19px!important;
+  line-height:32px!important;
+  font-weight:500!important;
+  font-style:normal!important;
+  letter-spacing:-.025em!important;
+}
+
+/* Right column spacing */
+.footer-about{
+  padding-left:8px!important;
+}
+.footer-about-copy{
+  margin:0!important;
+  max-width:355px!important;
+  color:#b7c6d0!important;
+  font-size:13px!important;
+  line-height:1.78!important;
+}
+.footer-about-copy .footer-note{
+  display:block!important;
+  margin-top:18px!important;
+  color:#a9bac6!important;
+  font-weight:400!important;
+}
+
+/* Contact/domain removed */
+.footer-about-contact{
+  display:none!important;
+}
+
+@media(max-width:600px){
+  .footer-col a.footer-brand{
+    margin-bottom:22px!important;
+  }
+  .footer-col a.footer-brand span,
+  .footer-col a.footer-brand em{
+    font-size:18px!important;
+  }
+}
 </style></head>
 <body>
 <header class="header">
@@ -1188,7 +1275,7 @@
 <a href="/francais/business-investing/">Investissement professionnel</a>
 <a href="/francais/brokers/">Comparatif des courtiers</a>
 </div>
-<div class="footer-col footer-about"><a class="footer-brand" href="/"><img alt="" src="/assets/brand/mark.svg"/><span>BankRanking</span><em>Europe</em></a><p class="footer-about-copy">BankRanking fournit des informations et compare des comptes bancaires, produits d’épargne et services liés à l’investissement en Europe.<span class="footer-note">Attention : nous ne sommes ni un établissement financier ni une banque.</span></p><div class="footer-about-contact"><a href="mailto:kontakt@bankowezestawienie.pl">kontakt@bankowezestawienie.pl</a><br/>bankowezestawienie.pl</div></div></div><div class="footer-legal">
+<div class="footer-col footer-about"><a class="footer-brand" href="/"><img alt="" src="/assets/brand/mark.svg"/><span>BankRanking</span><em>Europe</em></a><p class="footer-about-copy">BankRanking fournit des informations et compare des comptes bancaires, produits d’épargne et services liés à l’investissement en Europe.<span class="footer-note">Attention : nous ne sommes ni un établissement financier ni une banque.</span></p></div></div><div class="footer-legal">
 <div class="footer-legal-links"><a href="/research/">Recherche</a><a href="/services/">Services</a><a href="/disclaimer/">Avertissement</a><a href="/privacy/">Confidentialité</a><a href="/cookies/">Cookies</a></div>
 <div class="footer-copy">© 2026 BankRanking Europe — Tous droits réservés.</div>
 </div></div>
