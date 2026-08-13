@@ -1051,3 +1051,351 @@
     padding:0 16px!important;
   }
 }
+
+
+/* ============================================================
+   V24 aesthetic repair: balanced ranking layout
+   ============================================================ */
+.ranking-main{
+  padding-bottom:88px!important;
+}
+.ranking-workspace{
+  grid-template-columns:244px minmax(0,1fr)!important;
+  gap:34px!important;
+  align-items:start!important;
+}
+.category-wrap{
+  position:sticky!important;
+  top:20px!important;
+  align-self:start!important;
+}
+.filter-card{
+  border:1px solid #dbe6ee!important;
+  border-radius:12px!important;
+  background:#fff!important;
+  padding:18px 18px 16px!important;
+  box-shadow:0 7px 18px rgba(31,61,85,.035)!important;
+}
+.filter-head{
+  display:flex!important;
+  align-items:flex-start!important;
+  justify-content:space-between!important;
+  gap:10px!important;
+  padding-bottom:14px!important;
+  border-bottom:1px solid #e6edf2!important;
+}
+.filter-head strong{
+  font-size:18px!important;
+  line-height:1.05!important;
+  letter-spacing:-.03em!important;
+  color:#173f61!important;
+}
+.filter-head button{
+  font-size:10px!important;
+  color:#8ca0af!important;
+}
+.filter-section{
+  padding:14px 0!important;
+}
+.filter-label{
+  margin:0 0 10px!important;
+  font-size:9px!important;
+  letter-spacing:.11em!important;
+}
+.filter-card .category-tabs{
+  display:flex!important;
+  flex-direction:column!important;
+  gap:2px!important;
+}
+.filter-card .cat-btn{
+  padding:9px 9px 9px 14px!important;
+  font-size:14px!important;
+  line-height:1.25!important;
+  border-radius:8px!important;
+}
+.filter-card .cat-btn.active{
+  background:#f1f7fb!important;
+}
+.filter-card .cat-btn.active:before{
+  top:8px!important;
+  bottom:8px!important;
+}
+.age-segments{
+  min-height:40px!important;
+}
+.age-btn{
+  font-size:12px!important;
+  padding:9px 8px!important;
+}
+.filter-search-wrap input,
+.filter-card select{
+  height:38px!important;
+  font-size:12px!important;
+}
+.filter-search-wrap input{
+  padding-left:32px!important;
+}
+.filter-check{
+  font-size:11px!important;
+  line-height:1.45!important;
+}
+.filter-foot{
+  font-size:10px!important;
+}
+.filter-foot span{
+  font-size:13px!important;
+}
+
+.rank-heading{
+  padding-bottom:20px!important;
+  margin-bottom:14px!important;
+}
+.rank-heading h2{
+  font-size:36px!important;
+  line-height:1.06!important;
+  letter-spacing:-.045em!important;
+}
+.rank-heading p{
+  font-size:14px!important;
+  line-height:1.68!important;
+  max-width:760px!important;
+}
+.method{
+  max-width:420px!important;
+  font-size:10px!important;
+  line-height:1.55!important;
+  color:#8698a6!important;
+}
+
+/* compact but elegant result cards */
+.rank-list{
+  display:block!important;
+}
+.rank-row{
+  display:grid!important;
+  grid-template-columns:40px 240px minmax(150px,1fr) 130px 130px 136px!important;
+  gap:18px!important;
+  align-items:center!important;
+  margin:0 0 16px!important;
+  padding:26px 22px!important;
+  border:1px solid #dbe6ee!important;
+  border-radius:14px!important;
+  background:#fff!important;
+  box-shadow:0 7px 18px rgba(31,61,85,.03)!important;
+  overflow:hidden!important;
+}
+.rank-row:hover{
+  border-color:#cfdee8!important;
+  box-shadow:0 10px 24px rgba(31,61,85,.05)!important;
+}
+.rank-no{
+  align-self:start!important;
+  padding-top:2px!important;
+  font-size:22px!important;
+  line-height:1!important;
+  font-weight:900!important;
+}
+.provider-cell{
+  grid-template-columns:84px minmax(0,1fr)!important;
+  gap:14px!important;
+  align-items:center!important;
+}
+.provider-logo{
+  width:80px!important;
+  height:54px!important;
+  min-width:80px!important;
+  object-fit:contain!important;
+  object-position:left center!important;
+}
+.provider-cell strong{
+  display:block!important;
+  font-size:20px!important;
+  line-height:1.12!important;
+  letter-spacing:-.03em!important;
+  color:#143d61!important;
+}
+.provider-cell small{
+  display:block!important;
+  margin-top:6px!important;
+  font-size:12px!important;
+  line-height:1.45!important;
+  color:#708597!important;
+}
+.best strong,
+.metric strong{
+  display:block!important;
+}
+.best strong{
+  margin-bottom:7px!important;
+  font-size:13px!important;
+}
+.best span{
+  font-size:12px!important;
+  line-height:1.55!important;
+  color:#708395!important;
+}
+.source-link{
+  margin-top:8px!important;
+  font-size:10px!important;
+}
+.metric label{
+  margin-bottom:6px!important;
+  font-size:9px!important;
+}
+.metric strong{
+  font-size:12px!important;
+  line-height:1.45!important;
+}
+.rank-cta{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:flex-end!important;
+}
+.rank-cta a{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:6px!important;
+  width:136px!important;
+  min-width:136px!important;
+  max-width:136px!important;
+  height:42px!important;
+  min-height:42px!important;
+  padding:0 14px!important;
+  border-radius:10px!important;
+  background:#173f66!important;
+  color:#fff!important;
+  font-size:12px!important;
+  font-weight:850!important;
+  line-height:1!important;
+  text-decoration:none!important;
+  white-space:nowrap!important;
+}
+.rank-cta a:hover{
+  background:#103657!important;
+}
+.rank-cta a span{
+  font-size:12px!important;
+  line-height:1!important;
+}
+.score{display:none!important}
+
+/* Saving/investing sidebars stay elegant too */
+.category-wrap:not(:has(.filter-card)) .cat-btn{
+  font-size:13px!important;
+  padding:10px 9px 10px 14px!important;
+}
+.category-wrap:not(:has(.filter-card)) .provider-btn{
+  font-size:12px!important;
+  padding:10px 9px 10px 14px!important;
+}
+.category-wrap:not(:has(.filter-card)) .category-title{
+  font-size:10px!important;
+}
+
+/* Responsive */
+@media(max-width:1240px){
+  .ranking-workspace{
+    grid-template-columns:228px minmax(0,1fr)!important;
+    gap:28px!important;
+  }
+  .rank-row{
+    grid-template-columns:36px 218px minmax(145px,1fr) 118px 118px 126px!important;
+    gap:14px!important;
+    padding:23px 18px!important;
+  }
+  .provider-cell{
+    grid-template-columns:76px minmax(0,1fr)!important;
+    gap:12px!important;
+  }
+  .provider-logo{
+    width:72px!important;
+    height:50px!important;
+    min-width:72px!important;
+  }
+  .provider-cell strong{font-size:18px!important}
+  .rank-cta a{
+    width:126px!important;
+    min-width:126px!important;
+    max-width:126px!important;
+    font-size:11px!important;
+  }
+}
+@media(max-width:1020px){
+  .ranking-workspace{display:block!important}
+  .category-wrap{
+    position:static!important;
+    margin-bottom:24px!important;
+  }
+  .filter-card .category-tabs{
+    display:grid!important;
+    grid-template-columns:repeat(3,1fr)!important;
+    gap:6px!important;
+  }
+  .filter-card .cat-btn{
+    text-align:center!important;
+    padding:10px 8px!important;
+  }
+  .filter-card .cat-btn.active:before{display:none!important}
+  .rank-heading h2{font-size:34px!important}
+  .rank-row{
+    grid-template-columns:34px minmax(0,1fr) 126px!important;
+    gap:14px!important;
+    padding:22px 18px!important;
+  }
+  .provider-cell{
+    grid-column:2!important;
+    grid-template-columns:76px minmax(0,1fr)!important;
+  }
+  .best,.metric{
+    grid-column:2 / -1!important;
+  }
+  .rank-cta{
+    grid-column:3!important;
+    grid-row:1!important;
+  }
+  .rank-cta a{
+    width:126px!important;
+    min-width:126px!important;
+    max-width:126px!important;
+  }
+}
+@media(max-width:680px){
+  .filter-card .category-tabs{
+    grid-template-columns:1fr 1fr!important;
+  }
+  .rank-heading h2{font-size:30px!important}
+  .rank-heading p{font-size:14px!important}
+  .rank-row{
+    grid-template-columns:28px minmax(0,1fr)!important;
+    gap:12px!important;
+    padding:20px 14px!important;
+  }
+  .rank-no{
+    font-size:20px!important;
+  }
+  .provider-cell,.best,.metric,.rank-cta{
+    grid-column:2!important;
+  }
+  .provider-cell{
+    grid-template-columns:68px minmax(0,1fr)!important;
+    gap:12px!important;
+  }
+  .provider-logo{
+    width:64px!important;
+    height:46px!important;
+    min-width:64px!important;
+  }
+  .provider-cell strong{font-size:18px!important}
+  .provider-cell small{font-size:12px!important}
+  .rank-cta{
+    grid-row:auto!important;
+    justify-content:flex-start!important;
+  }
+  .rank-cta a{
+    width:auto!important;
+    min-width:132px!important;
+    max-width:none!important;
+    padding:0 14px!important;
+  }
+}
