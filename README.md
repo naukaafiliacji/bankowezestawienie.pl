@@ -65,3 +65,7 @@ Homepage now includes a bank.nl-inspired knowledge/newsroom section:
 - Former footer placeholders are now category hubs linking to the 8 live country rankings.
 - /research-sources/ documents the research-source directory.
 - Research snapshot: 13 August 2026.
+
+
+## V8 three-vertical architecture
+Each country is now split into /banking/, /saving/, and /investing/. The old /COUNTRY/ page is a simple 3-card hub. /COUNTRY/banks/ redirects to /COUNTRY/banking/. Ranking typography and spacing were enlarged.
