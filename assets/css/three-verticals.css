@@ -170,3 +170,15 @@
 
 .flag-icon{display:inline-block;background:#fff}
 .lang-pop a .lang-code{display:none!important}
+
+/* V13 breadcrumb: text only */
+.vertical-breadcrumb{
+  display:block!important;
+  font-size:11px!important;
+  color:#7d91a1!important;
+}
+.vertical-breadcrumb a{
+  display:inline!important;
+  color:#526f87!important;
+}
+.vertical-breadcrumb .site-flag{display:none!important}

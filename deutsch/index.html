@@ -459,7 +459,46 @@
 .flag-icon{width:18px;height:12px;object-fit:cover;border-radius:2px;box-shadow:0 0 0 1px rgba(20,40,60,.08);vertical-align:middle;flex:0 0 auto}
 .flag-icon.flag-lg{width:22px;height:15px;border-radius:3px}
 .market-card,.lang-pop a,.lang-menu summary span.flag-wrap{display:inline-flex;align-items:center;gap:8px}
-.lang-code{display:none!important}</style>
+.lang-code{display:none!important}
+/* V13 language selector cleanup */
+.lang-menu{position:relative}
+.lang-menu summary{
+  display:inline-flex!important;
+  align-items:center!important;
+  gap:7px!important;
+  white-space:nowrap!important;
+  cursor:pointer!important;
+}
+.lang-pop{
+  right:0!important;
+  left:auto!important;
+  width:142px!important;
+  min-width:142px!important;
+  padding:5px!important;
+}
+.lang-pop a{
+  width:100%!important;
+  display:grid!important;
+  grid-template-columns:20px minmax(0,1fr)!important;
+  align-items:center!important;
+  justify-content:initial!important;
+  gap:8px!important;
+  padding:8px 9px!important;
+  text-align:left!important;
+  border-radius:6px!important;
+  font-size:12px!important;
+}
+.lang-pop a .site-flag{
+  margin-right:0!important;
+  width:18px!important;
+  height:14px!important;
+}
+.lang-pop a span{
+  min-width:0!important;
+}
+.flag-wrap .site-flag{margin-right:0!important}
+
+</style>
 <style>
 .site-flag{
   display:inline-block!important;
@@ -477,6 +516,260 @@
 .country-nav a,.market-card,.vertical-breadcrumb a,.flag-wrap,.lang-pop a{
   display:inline-flex!important;
   align-items:center!important;
+}
+</style><style>
+/* ==========================================================
+   V13 footer: brand/disclaimer first, legal second, links last
+   ========================================================== */
+.footer{
+  background:#102a43!important;
+  color:#fff!important;
+  padding:48px 0 28px!important;
+}
+.footer-statement{
+  margin:0!important;
+  padding:0 0 26px!important;
+  border:0!important;
+  display:grid!important;
+  grid-template-columns:minmax(0,1.35fr) minmax(220px,.65fr)!important;
+  gap:50px!important;
+  align-items:start!important;
+}
+.footer-statement .brand{
+  display:inline-flex!important;
+  align-items:center!important;
+  gap:10px!important;
+  font-size:20px!important;
+  line-height:1!important;
+  letter-spacing:-.035em!important;
+  font-weight:850!important;
+  color:#fff!important;
+  white-space:nowrap!important;
+}
+.footer-statement .brand img{
+  width:34px!important;
+  height:34px!important;
+  flex:0 0 auto!important;
+}
+.footer-statement .brand span{
+  color:#fff!important;
+  font-size:20px!important;
+  font-weight:850!important;
+  line-height:1!important;
+}
+.footer-statement .brand em{
+  color:#9eb0bf!important;
+  font-size:20px!important;
+  font-weight:650!important;
+  line-height:1!important;
+  font-style:normal!important;
+}
+.footer-brand-note{
+  margin:17px 0 0!important;
+  max-width:690px!important;
+  color:#b5c4cf!important;
+  font-size:13px!important;
+  line-height:1.72!important;
+}
+.footer-brand-note strong{
+  color:#f4f7f9!important;
+  font-weight:750!important;
+}
+.footer-contact-block{
+  padding-top:2px!important;
+  color:#93a8b8!important;
+  font-size:12px!important;
+  line-height:1.8!important;
+  text-align:right!important;
+}
+.footer-contact-block a{
+  color:#d9e4eb!important;
+  font-weight:700!important;
+}
+.footer-legal{
+  margin:0!important;
+  padding:18px 0 23px!important;
+  border-top:1px solid #304a61!important;
+  border-bottom:1px solid #304a61!important;
+  display:flex!important;
+  justify-content:space-between!important;
+  align-items:center!important;
+  gap:24px!important;
+  flex-wrap:wrap!important;
+}
+.footer-legal-links{
+  display:flex!important;
+  gap:18px!important;
+  flex-wrap:wrap!important;
+}
+.footer-legal-links a{
+  color:#9eb0bf!important;
+  font-size:11px!important;
+}
+.footer-copy{
+  color:#8197a8!important;
+  font-size:11px!important;
+}
+.footer-mega{
+  margin-top:30px!important;
+  padding-top:0!important;
+  display:grid!important;
+  grid-template-columns:1.05fr 1fr 1fr .9fr!important;
+  gap:44px!important;
+  align-items:start!important;
+}
+.footer-col h4{
+  margin:0 0 13px!important;
+  color:#f2f6f8!important;
+  font-size:14px!important;
+  font-weight:800!important;
+}
+.footer-col a{
+  color:#aebfcb!important;
+  display:block!important;
+  padding:4px 0!important;
+  font-size:13px!important;
+  line-height:1.35!important;
+}
+.footer-col a:hover{color:#fff!important}
+@media(max-width:900px){
+  .footer-statement{grid-template-columns:1fr!important;gap:22px!important}
+  .footer-contact-block{text-align:left!important}
+  .footer-mega{grid-template-columns:1fr 1fr!important}
+}
+@media(max-width:560px){
+  .footer{padding-top:38px!important}
+  .footer-mega{grid-template-columns:1fr!important;gap:28px!important}
+  .footer-statement .brand,
+  .footer-statement .brand span,
+  .footer-statement .brand em{font-size:19px!important}
+}
+</style><style>
+/* ==========================================================
+   V13 footer: brand/disclaimer first, legal second, links last
+   ========================================================== */
+.footer{
+  background:#102a43!important;
+  color:#fff!important;
+  padding:48px 0 28px!important;
+}
+.footer-statement{
+  margin:0!important;
+  padding:0 0 26px!important;
+  border:0!important;
+  display:grid!important;
+  grid-template-columns:minmax(0,1.35fr) minmax(220px,.65fr)!important;
+  gap:50px!important;
+  align-items:start!important;
+}
+.footer-statement .brand{
+  display:inline-flex!important;
+  align-items:center!important;
+  gap:10px!important;
+  font-size:20px!important;
+  line-height:1!important;
+  letter-spacing:-.035em!important;
+  font-weight:850!important;
+  color:#fff!important;
+  white-space:nowrap!important;
+}
+.footer-statement .brand img{
+  width:34px!important;
+  height:34px!important;
+  flex:0 0 auto!important;
+}
+.footer-statement .brand span{
+  color:#fff!important;
+  font-size:20px!important;
+  font-weight:850!important;
+  line-height:1!important;
+}
+.footer-statement .brand em{
+  color:#9eb0bf!important;
+  font-size:20px!important;
+  font-weight:650!important;
+  line-height:1!important;
+  font-style:normal!important;
+}
+.footer-brand-note{
+  margin:17px 0 0!important;
+  max-width:690px!important;
+  color:#b5c4cf!important;
+  font-size:13px!important;
+  line-height:1.72!important;
+}
+.footer-brand-note strong{
+  color:#f4f7f9!important;
+  font-weight:750!important;
+}
+.footer-contact-block{
+  padding-top:2px!important;
+  color:#93a8b8!important;
+  font-size:12px!important;
+  line-height:1.8!important;
+  text-align:right!important;
+}
+.footer-contact-block a{
+  color:#d9e4eb!important;
+  font-weight:700!important;
+}
+.footer-legal{
+  margin:0!important;
+  padding:18px 0 23px!important;
+  border-top:1px solid #304a61!important;
+  border-bottom:1px solid #304a61!important;
+  display:flex!important;
+  justify-content:space-between!important;
+  align-items:center!important;
+  gap:24px!important;
+  flex-wrap:wrap!important;
+}
+.footer-legal-links{
+  display:flex!important;
+  gap:18px!important;
+  flex-wrap:wrap!important;
+}
+.footer-legal-links a{
+  color:#9eb0bf!important;
+  font-size:11px!important;
+}
+.footer-copy{
+  color:#8197a8!important;
+  font-size:11px!important;
+}
+.footer-mega{
+  margin-top:30px!important;
+  padding-top:0!important;
+  display:grid!important;
+  grid-template-columns:1.05fr 1fr 1fr .9fr!important;
+  gap:44px!important;
+  align-items:start!important;
+}
+.footer-col h4{
+  margin:0 0 13px!important;
+  color:#f2f6f8!important;
+  font-size:14px!important;
+  font-weight:800!important;
+}
+.footer-col a{
+  color:#aebfcb!important;
+  display:block!important;
+  padding:4px 0!important;
+  font-size:13px!important;
+  line-height:1.35!important;
+}
+.footer-col a:hover{color:#fff!important}
+@media(max-width:900px){
+  .footer-statement{grid-template-columns:1fr!important;gap:22px!important}
+  .footer-contact-block{text-align:left!important}
+  .footer-mega{grid-template-columns:1fr 1fr!important}
+}
+@media(max-width:560px){
+  .footer{padding-top:38px!important}
+  .footer-mega{grid-template-columns:1fr!important;gap:28px!important}
+  .footer-statement .brand,
+  .footer-statement .brand span,
+  .footer-statement .brand em{font-size:19px!important}
 }
 </style></head>
 <body>
@@ -553,10 +846,10 @@
 <div class="container">
 <div class="section-head"><div><div class="kicker">Rankings</div><h2>Markt auswählen</h2></div></div>
 <div class="markets">
-<a class="market-card" href="/pl/banking/"><img alt="Poland" class="site-flag-sm site-flag" height="14" src="/assets/flags-v3/pl.png" width="18"/><img alt="Poland" class="site-flag site-flag-sm" height="14" src="/assets/flags-v3/pl.png" width="18"/>Poland</a><a class="market-card" href="/de/banking/"><img alt="Germany" class="site-flag-sm site-flag" height="14" src="/assets/flags-v3/de.png" width="18"/><img alt="Germany" class="site-flag site-flag-sm" height="14" src="/assets/flags-v3/de.png" width="18"/>Germany</a>
-<a class="market-card" href="/fr/banking/"><img alt="France" class="site-flag-sm site-flag" height="14" src="/assets/flags-v3/fr.png" width="18"/><img alt="France" class="site-flag site-flag-sm" height="14" src="/assets/flags-v3/fr.png" width="18"/>France</a><a class="market-card" href="/uk/banking/"><img alt="United Kingdom" class="site-flag-sm site-flag" height="14" src="/assets/flags-v3/gb.png" width="18"/><img alt="United Kingdom" class="site-flag site-flag-sm" height="14" src="/assets/flags-v3/gb.png" width="18"/>United Kingdom</a>
-<a class="market-card" href="/it/banking/"><img alt="Italy" class="site-flag-sm site-flag" height="14" src="/assets/flags-v3/it.png" width="18"/><img alt="Italy" class="site-flag site-flag-sm" height="14" src="/assets/flags-v3/it.png" width="18"/>Italy</a><a class="market-card" href="/es/banking/"><img alt="Spain" class="site-flag-sm site-flag" height="14" src="/assets/flags-v3/es.png" width="18"/><img alt="Spain" class="site-flag site-flag-sm" height="14" src="/assets/flags-v3/es.png" width="18"/>Spain</a>
-<a class="market-card" href="/nl/banking/"><img alt="Netherlands" class="site-flag-sm site-flag" height="14" src="/assets/flags-v3/nl.png" width="18"/><img alt="Netherlands" class="site-flag site-flag-sm" height="14" src="/assets/flags-v3/nl.png" width="18"/>Netherlands</a><a class="market-card" href="/se/banking/"><img alt="Sweden" class="site-flag-sm site-flag" height="14" src="/assets/flags-v3/se.png" width="18"/><img alt="Sweden" class="site-flag site-flag-sm" height="14" src="/assets/flags-v3/se.png" width="18"/>Sweden</a>
+<a class="market-card" href="/pl/banking/"><img alt="Poland" class="site-flag-sm site-flag" height="14" src="/assets/flags-v3/pl.png" width="18"/>Poland</a><a class="market-card" href="/de/banking/"><img alt="Germany" class="site-flag-sm site-flag" height="14" src="/assets/flags-v3/de.png" width="18"/>Germany</a>
+<a class="market-card" href="/fr/banking/"><img alt="France" class="site-flag-sm site-flag" height="14" src="/assets/flags-v3/fr.png" width="18"/>France</a><a class="market-card" href="/uk/banking/"><img alt="United Kingdom" class="site-flag-sm site-flag" height="14" src="/assets/flags-v3/gb.png" width="18"/>United Kingdom</a>
+<a class="market-card" href="/it/banking/"><img alt="Italy" class="site-flag-sm site-flag" height="14" src="/assets/flags-v3/it.png" width="18"/>Italy</a><a class="market-card" href="/es/banking/"><img alt="Spain" class="site-flag-sm site-flag" height="14" src="/assets/flags-v3/es.png" width="18"/>Spain</a>
+<a class="market-card" href="/nl/banking/"><img alt="Netherlands" class="site-flag-sm site-flag" height="14" src="/assets/flags-v3/nl.png" width="18"/>Netherlands</a><a class="market-card" href="/se/banking/"><img alt="Sweden" class="site-flag-sm site-flag" height="14" src="/assets/flags-v3/se.png" width="18"/>Sweden</a>
 </div>
 </div>
 </section>
@@ -619,7 +912,25 @@
 </main>
 <footer class="footer">
 <div class="container">
-<div class="footer-mega">
+<div class="footer-statement">
+<div>
+<a class="brand" href="/deutsch/"><img alt="" src="/assets/brand/mark.svg"/><span>BankRanking</span><em>Europe</em></a>
+<p class="footer-brand-note">BankRanking informiert und vergleicht Bankkonten, Sparprodukte und investitionsbezogene Dienstleistungen in Europa. <strong>Hinweis: Wir sind kein Finanzinstitut und keine Bank.</strong></p>
+</div>
+<div class="footer-contact-block">
+<a href="mailto:kontakt@bankowezestawienie.pl">kontakt@bankowezestawienie.pl</a><br/>
+        bankowezestawienie.pl
+      </div>
+</div><div class="footer-legal">
+<div class="footer-legal-links">
+<a href="/deutsch/research/">Recherche</a>
+<a href="/deutsch/services/">Dienstleistungen</a>
+<a href="/deutsch/disclaimer/">Haftungsausschluss</a>
+<a href="/privacy/">Datenschutz</a>
+<a href="/cookies/">Cookies</a>
+</div>
+<div class="footer-copy">© 2026 BankRanking Europe — Alle Rechte vorbehalten.</div>
+</div><div class="footer-mega">
 <div class="footer-col">
 <h4>Bankkonto</h4>
 <a href="/deutsch/business-accounts/">Geschäftskonto eröffnen</a>
@@ -654,28 +965,7 @@
 <a href="/deutsch/research/">Recherche</a>
 <a href="/deutsch/services/">Dienstleistungen</a>
 </div>
-</div>
-<div class="footer-statement">
-<div>
-<a class="brand" href="/deutsch/"><img alt="" src="/assets/brand/mark.svg"/><span>BankRanking</span><em>Europe</em></a>
-<p class="footer-brand-note">BankRanking informiert und vergleicht Bankkonten, Sparprodukte und investitionsbezogene Dienstleistungen in Europa. <strong>Hinweis: Wir sind kein Finanzinstitut und keine Bank.</strong></p>
-</div>
-<div class="footer-contact-block">
-<a href="mailto:kontakt@bankowezestawienie.pl">kontakt@bankowezestawienie.pl</a><br/>
-        bankowezestawienie.pl
-      </div>
-</div>
-<div class="footer-legal">
-<div class="footer-legal-links">
-<a href="/deutsch/research/">Recherche</a>
-<a href="/deutsch/services/">Dienstleistungen</a>
-<a href="/deutsch/disclaimer/">Haftungsausschluss</a>
-<a href="/privacy/">Datenschutz</a>
-<a href="/cookies/">Cookies</a>
-</div>
-<div class="footer-copy">© 2026 BankRanking Europe — Alle Rechte vorbehalten.</div>
-</div>
-</div>
+</div></div>
 </footer>
 <script>
 document.addEventListener('click', function(e){
