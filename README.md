@@ -34,3 +34,10 @@ Homepage now includes a bank.nl-inspired knowledge/newsroom section:
 - right column with two featured/sponsored-style cards
 - adapted and original text in EN / ES / DE / FR
 - implemented as a homepage replacement for the former simple Guides section
+
+## Insights newsroom update
+- Removed the explanatory Knowledge Hub subtitle entirely.
+- Section label is now simply “Insights”.
+- Editorial cards now use current/recent banking stories inspired by Bank.nl:
+  ABN AMRO/NIBC, GoDutch/Messi/Mastercard and payment-fraud growth.
+- Featured cards use current Bank.nl product information for Raisin RenteBoost and Bunq savings.
