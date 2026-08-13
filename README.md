@@ -53,3 +53,15 @@ Homepage now includes a bank.nl-inspired knowledge/newsroom section:
 - Added Research / Services / Disclaimer / Contact information pages.
 - Added the disclaimer: BankRanking is not a bank or financial institution.
 - Generated 92 supporting category/info pages across EN/ES/DE/FR paths.
+
+
+## V7 multi-category engine
+- 8 country ranking pages, each with 16 category views (128 combinations).
+- Personal preserves the existing 18–26 / 26+ score logic and existing product dataset.
+- Banking: personal, business, joint, student, youth, children.
+- Saving: savings, fixed-term deposits, business savings, child savings.
+- Investing: investment account, funds, managed, self-directed, retirement, business investing.
+- Investing defaults to Banks & bank groups; Specialist / non-bank market is a separate toggle.
+- Former footer placeholders are now category hubs linking to the 8 live country rankings.
+- /research-sources/ documents the research-source directory.
+- Research snapshot: 13 August 2026.
