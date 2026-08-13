@@ -765,3 +765,103 @@ h1{font-size:clamp(44px,6vw,76px);line-height:.98;letter-spacing:-.06em;margin:1
   .footer-legal{align-items:flex-start!important}
   .footer-copy{white-space:normal!important}
 }
+
+
+/* =========================================================
+   V15: cleaner BankRanking brand/about column
+   ========================================================= */
+.footer-about{
+  padding-left:10px!important;
+}
+
+/* Brand lockup: icon + BankRanking + Europe in one clean line */
+.footer-brand{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  gap:9px!important;
+  width:max-content!important;
+  margin:0 0 26px!important;
+  padding:0!important;
+  line-height:1!important;
+}
+.footer-brand img{
+  display:block!important;
+  width:32px!important;
+  height:32px!important;
+  min-width:32px!important;
+  min-height:32px!important;
+  object-fit:contain!important;
+  margin:0!important;
+  padding:0!important;
+  flex:0 0 32px!important;
+}
+.footer-brand span,
+.footer-brand em{
+  display:inline-block!important;
+  margin:0!important;
+  padding:0!important;
+  line-height:32px!important;
+  vertical-align:middle!important;
+  white-space:nowrap!important;
+}
+.footer-brand span{
+  color:#fff!important;
+  font-size:19px!important;
+  font-weight:800!important;
+  letter-spacing:-.035em!important;
+}
+.footer-brand em{
+  color:#9eafbc!important;
+  font-size:19px!important;
+  font-weight:500!important;
+  font-style:normal!important;
+  letter-spacing:-.025em!important;
+}
+
+/* More breathing room, more editorial / bank.nl-like */
+.footer-about-copy{
+  margin:0!important;
+  max-width:365px!important;
+  color:#b7c6d0!important;
+  font-size:13px!important;
+  line-height:1.75!important;
+}
+.footer-about-copy .footer-note{
+  display:block!important;
+  margin-top:16px!important;
+  color:#a8bac7!important;
+  font-weight:400!important;
+}
+.footer-about-copy strong{
+  color:inherit!important;
+  font-weight:400!important;
+}
+
+/* contact separated from disclaimer */
+.footer-about-contact{
+  margin-top:25px!important;
+  padding-top:0!important;
+  color:#92a7b6!important;
+  font-size:12px!important;
+  line-height:1.9!important;
+}
+.footer-about-contact a{
+  display:inline!important;
+  color:#dbe5eb!important;
+  font-size:12px!important;
+  font-weight:600!important;
+  padding:0!important;
+}
+
+/* Give this column slightly more visual breathing room */
+@media(min-width:981px){
+  .footer-mega{
+    grid-template-columns:.95fr .95fr .95fr 1.25fr!important;
+    gap:58px!important;
+  }
+}
+@media(max-width:600px){
+  .footer-about{padding-left:0!important}
+  .footer-brand{margin-bottom:20px!important}
+}

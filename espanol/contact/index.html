@@ -390,6 +390,105 @@ a{text-decoration:none;color:inherit}.container{width:min(1100px,calc(100% - 38p
   .footer-legal{align-items:flex-start!important}
   .footer-copy{white-space:normal!important}
 }
+</style><style>
+/* =========================================================
+   V15: cleaner BankRanking brand/about column
+   ========================================================= */
+.footer-about{
+  padding-left:10px!important;
+}
+
+/* Brand lockup: icon + BankRanking + Europe in one clean line */
+.footer-brand{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  gap:9px!important;
+  width:max-content!important;
+  margin:0 0 26px!important;
+  padding:0!important;
+  line-height:1!important;
+}
+.footer-brand img{
+  display:block!important;
+  width:32px!important;
+  height:32px!important;
+  min-width:32px!important;
+  min-height:32px!important;
+  object-fit:contain!important;
+  margin:0!important;
+  padding:0!important;
+  flex:0 0 32px!important;
+}
+.footer-brand span,
+.footer-brand em{
+  display:inline-block!important;
+  margin:0!important;
+  padding:0!important;
+  line-height:32px!important;
+  vertical-align:middle!important;
+  white-space:nowrap!important;
+}
+.footer-brand span{
+  color:#fff!important;
+  font-size:19px!important;
+  font-weight:800!important;
+  letter-spacing:-.035em!important;
+}
+.footer-brand em{
+  color:#9eafbc!important;
+  font-size:19px!important;
+  font-weight:500!important;
+  font-style:normal!important;
+  letter-spacing:-.025em!important;
+}
+
+/* More breathing room, more editorial / bank.nl-like */
+.footer-about-copy{
+  margin:0!important;
+  max-width:365px!important;
+  color:#b7c6d0!important;
+  font-size:13px!important;
+  line-height:1.75!important;
+}
+.footer-about-copy .footer-note{
+  display:block!important;
+  margin-top:16px!important;
+  color:#a8bac7!important;
+  font-weight:400!important;
+}
+.footer-about-copy strong{
+  color:inherit!important;
+  font-weight:400!important;
+}
+
+/* contact separated from disclaimer */
+.footer-about-contact{
+  margin-top:25px!important;
+  padding-top:0!important;
+  color:#92a7b6!important;
+  font-size:12px!important;
+  line-height:1.9!important;
+}
+.footer-about-contact a{
+  display:inline!important;
+  color:#dbe5eb!important;
+  font-size:12px!important;
+  font-weight:600!important;
+  padding:0!important;
+}
+
+/* Give this column slightly more visual breathing room */
+@media(min-width:981px){
+  .footer-mega{
+    grid-template-columns:.95fr .95fr .95fr 1.25fr!important;
+    gap:58px!important;
+  }
+}
+@media(max-width:600px){
+  .footer-about{padding-left:0!important}
+  .footer-brand{margin-bottom:20px!important}
+}
 </style></head><body>
 <header class="topbar"><div class="container">
 <a class="brand" href="/espanol/"><img alt="" src="/assets/brand/mark.svg"/><span>BankRanking</span><em>Europe</em></a>
@@ -432,8 +531,7 @@ a{text-decoration:none;color:inherit}.container{width:min(1100px,calc(100% - 38p
 <a href="/espanol/business-investing/">Inversión empresarial</a>
 <a href="/espanol/brokers/">Resumen de brókers</a>
 </div>
-
-<div class="footer-col footer-about"><a class="footer-brand" href="/"><img alt="" src="/assets/brand/mark.svg"/><span>BankRanking</span><em>Europe</em></a><p class="footer-about-copy">BankRanking provides information and compares bank accounts, savings products and investment-related services across Europe. <strong>Note: We are not a financial institution or bank.</strong></p><div class="footer-about-contact"><a href="mailto:kontakt@bankowezestawienie.pl">kontakt@bankowezestawienie.pl</a><br/>bankowezestawienie.pl</div></div></div><div class="footer-legal">
+<div class="footer-col footer-about"><a class="footer-brand" href="/"><img alt="" src="/assets/brand/mark.svg"/><span>BankRanking</span><em>Europe</em></a><p class="footer-about-copy">BankRanking provides information and compares bank accounts, savings products and investment-related services across Europe.<span class="footer-note">Note: We are not a financial institution or bank.</span></p><div class="footer-about-contact"><a href="mailto:kontakt@bankowezestawienie.pl">kontakt@bankowezestawienie.pl</a><br/>bankowezestawienie.pl</div></div></div><div class="footer-legal">
 <div class="footer-legal-links"><a href="/research/">Research</a><a href="/services/">Services</a><a href="/disclaimer/">Disclaimer</a><a href="/privacy/">Privacy</a><a href="/cookies/">Cookies</a></div>
 <div class="footer-copy">© 2026 BankRanking Europe — All rights reserved.</div>
 </div></div>
