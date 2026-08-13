@@ -243,6 +243,130 @@
   .ticket-big-number span{font-size:15px}
 }
 
+
+/* -------------------------------------------------------------
+   Knowledge hub / bank.nl-inspired newsroom section
+   ------------------------------------------------------------- */
+.knowledgehub-section{
+  padding:78px 0;
+  background:#fff;
+}
+.kh-header{
+  margin-bottom:30px;
+}
+.kh-label{
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:#6f8ba3;
+  margin-bottom:10px;
+}
+.kh-header h2{
+  margin:0;
+  font-size:42px;
+  line-height:1.06;
+  letter-spacing:-.045em;
+  color:#173d61;
+  max-width:760px;
+}
+.kh-grid{
+  display:grid;
+  grid-template-columns:1.16fr .84fr;
+  gap:36px;
+  align-items:start;
+}
+.kh-list{
+  display:flex;
+  flex-direction:column;
+  gap:0;
+}
+.kh-item{
+  padding:24px 0;
+  border-top:1px solid #e3ebf1;
+}
+.kh-item:first-child{border-top:0;padding-top:0}
+.kh-item h3{
+  margin:0;
+  font-size:26px;
+  line-height:1.18;
+  letter-spacing:-.03em;
+  color:#1b3e60;
+  max-width:720px;
+}
+.kh-item p{
+  margin:12px 0 14px;
+  color:#6d8091;
+  font-size:14px;
+  line-height:1.7;
+  max-width:690px;
+}
+.kh-meta{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  flex-wrap:wrap;
+  color:#91a1af;
+  font-size:11px;
+  font-weight:700;
+}
+.kh-link{
+  color:#2f679f;
+  font-weight:850;
+  font-size:12px;
+}
+.kh-side{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+.kh-ad{
+  border:1px solid #dfe8ef;
+  border-radius:12px;
+  padding:22px;
+  background:#f8fbfd;
+}
+.kh-badge{
+  display:inline-flex;
+  align-items:center;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:#8b6b3f;
+  background:#fff2df;
+  border:1px solid #edd9b8;
+  border-radius:20px;
+  padding:6px 8px;
+}
+.kh-ad h3{
+  margin:14px 0 10px;
+  font-size:22px;
+  line-height:1.2;
+  letter-spacing:-.025em;
+  color:#1c415f;
+}
+.kh-ad p{
+  margin:0 0 14px;
+  font-size:13px;
+  line-height:1.65;
+  color:#6e8090;
+}
+.kh-ad a{
+  font-size:12px;
+  font-weight:850;
+  color:#2f679f;
+}
+@media(max-width:980px){
+  .kh-grid{grid-template-columns:1fr}
+}
+@media(max-width:620px){
+  .knowledgehub-section{padding:54px 0}
+  .kh-header h2{font-size:34px}
+  .kh-item h3{font-size:22px}
+  .kh-ad h3{font-size:20px}
+}
+
 </style>
 </head>
 <body>
@@ -332,16 +456,63 @@
 </div>
 </section>
 
-<section class="section" id="guides">
-<div class="container">
-<div class="section-head"><div><div class="kicker">Guías</div><h2>Lo que de verdad importa</h2></div></div>
-<div class="guides">
-<article class="guide"><div><div class="kicker">01</div><h3>Cómo comparar una cuenta bancaria</h3></div><a href="/ranking-policy/">→</a></article>
-<article class="guide"><div><div class="kicker">02</div><h3>Cuándo merece la pena un bono de bienvenida</h3></div><a href="/ranking-policy/">→</a></article>
-<article class="guide"><div><div class="kicker">03</div><h3>Cuenta personal vs cuenta de empresa</h3></div><a href="#save">→</a></article>
-</div>
-</div>
+
+<section class="knowledgehub-section" id="guides">
+  <div class="container">
+    <div class="kh-header">
+      <div class="kh-label">CENTRO DE CONOCIMIENTO</div>
+      <h2>Temas bancarios interesantes y preguntas frecuentes.</h2>
+    </div>
+
+    <div class="kh-grid">
+      <div class="kh-list">
+        <article class="kh-item">
+          <h3>Cómo evitar las comisiones mensuales de una cuenta</h3>
+          <p>Una lista rápida para revisar comisiones, tarjeta, cajeros y requisitos de ingresos antes de cambiar de banco.</p>
+          <div class="kh-meta">
+            <span>13 agosto 2026</span>
+            <a class="kh-link" href="/ranking-policy/">Seguir leyendo →</a>
+          </div>
+        </article>
+
+        <article class="kh-item">
+          <h3>Qué cubre realmente la garantía de depósitos en la UE</h3>
+          <p>Una explicación breve sobre la protección de hasta 100.000 €, las cuentas conjuntas y los casos más comunes.</p>
+          <div class="kh-meta">
+            <span>8 agosto 2026</span>
+            <a class="kh-link" href="/ranking-policy/">Seguir leyendo →</a>
+          </div>
+        </article>
+
+        <article class="kh-item">
+          <h3>Por qué el ranking 18–26 puede diferir del ranking estándar</h3>
+          <p>Muchos bancos reducen comisiones o requisitos para clientes jóvenes, cambiando por completo el orden del ranking.</p>
+          <div class="kh-meta">
+            <span>2 agosto 2026</span>
+            <a class="kh-link" href="/ranking-policy/">Seguir leyendo →</a>
+          </div>
+        </article>
+      </div>
+
+      <aside class="kh-side">
+        <article class="kh-ad">
+          <span class="kh-badge">DESTACADO</span>
+          <h3>Promoción BBVA: vuelo para dos</h3>
+          <p>Abre la Cuenta Joven en España y haz una compra con tarjeta de 25 € para optar a la promoción actual.</p>
+          <a href="/es/">Más info →</a>
+        </article>
+
+        <article class="kh-ad">
+          <span class="kh-badge">DESTACADO</span>
+          <h3>Cuenta de ahorro Bunq: hasta 3,01%</h3>
+          <p>Una mirada rápida a la propuesta de ahorro de Bunq y a lo que importa además del porcentaje promocionado.</p>
+          <a href="/nl/">Leer más →</a>
+        </article>
+      </aside>
+    </div>
+  </div>
 </section>
+
 
 <section class="save-section" id="save">
 <div class="container save-grid">

@@ -26,3 +26,11 @@ Important:
 The former three-card "Worth checking now" section has been replaced by a single editorial "Did you know?" feature about BBVA Spain's current Young Account flight promotion.
 The visual uses an original boarding-pass composition and keeps the terms deliberately short.
 Source: official BBVA Spain Young Account page, checked 13 Aug 2026.
+
+
+## Knowledge hub section
+Homepage now includes a bank.nl-inspired knowledge/newsroom section:
+- large left editorial column with three article-style entries
+- right column with two featured/sponsored-style cards
+- adapted and original text in EN / ES / DE / FR
+- implemented as a homepage replacement for the former simple Guides section
