@@ -69,3 +69,18 @@ Homepage now includes a bank.nl-inspired knowledge/newsroom section:
 
 ## V8 three-vertical architecture
 Each country is now split into /banking/, /saving/, and /investing/. The old /COUNTRY/ page is a simple 3-card hub. /COUNTRY/banks/ redirects to /COUNTRY/banking/. Ranking typography and spacing were enlarged.
+
+
+## V17 — EU27 + UK major-bank coverage
+Updated 13 August 2026.
+
+- Expanded from 8 to 28 country markets: all 27 EU member states + United Kingdom.
+- Featured homepage markets remain the original 8; the other 20 EU states are under an expandable “See other EU countries” directory.
+- Every country links directly to /COUNTRY/banking/.
+- Created/updated 84 Banking / Saving / Investing vertical pages.
+- Expanded Personal rankings to major retail-bank shortlists (typically 6–13 providers depending on market concentration).
+- Expanded Business / Joint / Student / Youth / Child / Savings / Deposit rankings beyond the previous 3-provider model.
+- Investment rankings retain Banks & bank groups as the default and Specialist market as the second view.
+- Country navigation is now a compact dropdown rather than attempting to show 28 markets in one horizontal header.
+- Clearbit dependency removed from ranking logos; existing verified full logos are used where available, otherwise official-domain favicons.
+- Research source directory updated for all markets.

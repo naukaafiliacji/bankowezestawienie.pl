@@ -1,1 +1,38 @@
-(function(){const D=window.BANKRANKING_MULTI,b=document.body,m=D.markets[b.dataset.market],g=b.dataset.group,cats=D.categories,allowed=JSON.parse(b.dataset.categories);let cat=new URLSearchParams(location.search).get('cat')||allowed[0];if(!allowed.includes(cat))cat=allowed[0];let mode='bank';const bs=[...document.querySelectorAll('.cat-btn')],pbs=[...document.querySelectorAll('.provider-btn')],pw=document.querySelector('.provider-toggle'),title=document.getElementById('ranking-title'),sub=document.getElementById('ranking-sub'),method=document.getElementById('ranking-method'),list=document.getElementById('rank-list');function esc(s){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}function lg(d){return 'https://logo.clearbit.com/'+d}function fb(d){return 'https://www.google.com/s2/favicons?domain='+d+'&sz=128'}function rows(){const d=m.rankings[cat];return g==='investing'?((d&&d[mode])||[]):(Array.isArray(d)?d:[])}function render(){bs.forEach(x=>x.classList.toggle('active',x.dataset.cat===cat));const inv=g==='investing';pw.classList.toggle('visible',inv);pbs.forEach(x=>x.classList.toggle('active',x.dataset.mode===mode));title.textContent=cats[cat].title+' in '+m.country;sub.textContent=inv?(mode==='bank'?'Banks and bank groups are shown first. Switch to the specialist market for brokers, robo-advisors and dedicated investment or pension platforms.':'Specialist non-bank market: brokers, robo-advisors, asset managers and dedicated investment or pension platforms.'):'Top researched products in this category for '+m.country+'.';method.textContent='Scoring: '+cats[cat].method;list.innerHTML=rows().map((x,i)=>`<div class="rank-row"><div class="rank-no ${i<3?'top':''}">${i+1}</div><div class="provider-cell"><img class="provider-logo" src="${lg(x.domain)}" onerror="this.onerror=null;this.src='${fb(x.domain)}'" alt="${esc(x.provider)}"><div><strong>${esc(x.provider)}</strong><small>${esc(x.product)}</small></div></div><div class="best"><strong>Best for</strong><span>${esc(x.bestFor)}</span>${x.source?`<a class="source-link" href="${x.source}" target="_blank" rel="noopener">research source ↗</a>`:''}</div><div class="metric"><label>Key point</label><strong>${esc(x.metric1)}</strong></div><div class="metric"><label>Also</label><strong>${esc(x.metric2)}</strong></div><div class="score"><strong>${Number(x.score).toFixed(1)}</strong><small>/ 10</small></div></div>`).join('')}bs.forEach(x=>x.addEventListener('click',()=>{cat=x.dataset.cat;mode='bank';const u=new URL(location.href);u.searchParams.set('cat',cat);history.replaceState(null,'',u);render()}));pbs.forEach(x=>x.addEventListener('click',()=>{mode=x.dataset.mode;render()}));render()})();
+
+(function(){
+ const D=window.BANKRANKING_MULTI,b=document.body,m=D.markets[b.dataset.market],g=b.dataset.group,cats=D.categories,allowed=JSON.parse(b.dataset.categories);
+ let cat=new URLSearchParams(location.search).get('cat')||allowed[0];if(!allowed.includes(cat))cat=allowed[0];
+ let mode='bank';
+ const bs=[...document.querySelectorAll('.cat-btn')],pbs=[...document.querySelectorAll('.provider-btn')],pw=document.querySelector('.provider-toggle'),title=document.getElementById('ranking-title'),sub=document.getElementById('ranking-sub'),method=document.getElementById('ranking-method'),list=document.getElementById('rank-list');
+ function esc(s){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
+ function favicon(d){return 'https://www.google.com/s2/favicons?domain='+encodeURIComponent(d)+'&sz=256'}
+ function lg(x){return x.logo||x.logoFallback||favicon(x.domain)}
+ function rows(){const d=m.rankings[cat];return g==='investing'?((d&&d[mode])||[]):(Array.isArray(d)?d:[])}
+ function render(){
+   bs.forEach(x=>x.classList.toggle('active',x.dataset.cat===cat));
+   const inv=g==='investing';pw.classList.toggle('visible',inv);
+   pbs.forEach(x=>x.classList.toggle('active',x.dataset.mode===mode));
+   const r=rows();
+   title.textContent=cats[cat].title+' in '+m.country;
+   sub.textContent=inv
+     ? (mode==='bank'
+       ? r.length+' bank / bank-group providers compared. Banks are shown first; switch to Specialist market for brokers, robo-advisors and dedicated investment platforms.'
+       : r.length+' specialist providers compared. Availability and tax treatment can differ by country.')
+     : r.length+' major providers compared. The shortlist prioritises meaningful retail presence in '+m.country+' rather than listing every licensed institution.';
+   method.textContent='Scoring: '+cats[cat].method;
+   list.innerHTML=r.map((x,i)=>`<div class="rank-row">
+     <div class="rank-no ${i<3?'top':''}">${i+1}</div>
+     <div class="provider-cell">
+       <img class="provider-logo" src="${lg(x)}" onerror="this.onerror=null;this.src='${favicon(x.domain)}'" alt="${esc(x.provider)}">
+       <div><strong>${esc(x.provider)}</strong><small>${esc(x.product)}</small></div>
+     </div>
+     <div class="best"><strong>Best for</strong><span>${esc(x.bestFor)}</span>${x.source?`<a class="source-link" href="${x.source}" target="_blank" rel="noopener">research source ↗</a>`:''}</div>
+     <div class="metric"><label>Key point</label><strong>${esc(x.metric1)}</strong></div>
+     <div class="metric"><label>Also</label><strong>${esc(x.metric2)}</strong></div>
+     <div class="score"><strong>${Number(x.score).toFixed(1)}</strong><small>/ 10</small></div>
+   </div>`).join('');
+ }
+ bs.forEach(x=>x.addEventListener('click',()=>{cat=x.dataset.cat;mode='bank';const u=new URL(location.href);u.searchParams.set('cat',cat);history.replaceState(null,'',u);render()}));
+ pbs.forEach(x=>x.addEventListener('click',()=>{mode=x.dataset.mode;render()}));
+ render();
+})();
