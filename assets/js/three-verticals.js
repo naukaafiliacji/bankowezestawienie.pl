@@ -94,6 +94,26 @@
    history.replaceState(null,'',u);
  }
 
+
+ const focusMap={
+   personal:'monthly costs · welcome offers · card and ATM conditions · digital access',
+   business:'recurring cost · payments · cards and team access · business tools',
+   joint:'shared access · recurring cost · cards · mobile banking',
+   student:'fees · student eligibility · travel use · welcome benefits',
+   youth:'age eligibility · fees · card and app access · controls',
+   child:'parental controls · fees · age rules · child-friendly banking',
+   savings:'interest terms · access to money · balance conditions · protection',
+   deposits:'rate · term · minimum deposit · early-withdrawal rules',
+   business_savings:'rate · liquidity · business eligibility · balance conditions',
+   child_savings:'interest · age eligibility · parental access · conditions',
+   investment:'fees · product range · custody structure · usability',
+   funds:'fund range · total costs · recurring investing · usability',
+   managed:'total costs · diversification · management model · minimum investment',
+   self_directed:'trading costs · market access · platform tools · FX and custody',
+   retirement:'tax wrapper · total costs · investment choice · flexibility',
+   business_investing:'corporate eligibility · costs · investment range · reporting'
+ };
+
  function ctaLabel(){
    if(g==='banking')return 'Open account';
    if(g==='saving')return 'View product';
@@ -121,7 +141,7 @@
        : r.length+' specialist providers shown. Availability and tax treatment can differ by country.')
      : r.length+' matching providers'+ageText+'. Use the filters to compare the ranking, listed fees and welcome offers.';
 
-   method.textContent='Scoring: '+cats[cat].method;
+   method.textContent='Comparison factors: '+(focusMap[cat]||'costs · access · product terms · usability');
 
    if(!r.length){
      list.innerHTML='<div class="no-filter-results"><strong>No matching accounts.</strong><span>Change or reset the filters to see more providers.</span></div>';
@@ -137,7 +157,6 @@
      <div class="best"><strong>Best for</strong><span>${esc(x.bestFor)}</span>${x.source?`<a class="source-link" href="${esc(x.source)}" target="_blank" rel="noopener">research source ↗</a>`:''}</div>
      <div class="metric"><label>Key point</label><strong>${esc(x.metric1)}</strong></div>
      <div class="metric"><label>Also</label><strong>${esc(x.metric2)}</strong></div>
-     <div class="score"><strong>${score(x).toFixed(1)}</strong><small>/ 10</small></div>
      <div class="rank-cta"><a href="${esc(providerUrl(x))}" target="_blank" rel="noopener">${ctaLabel()} <span>↗</span></a></div>
    </div>`).join('');
  }

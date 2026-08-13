@@ -548,3 +548,163 @@
   .rank-cta{text-align:left}
   .rank-cta a{width:auto;padding-left:14px;padding-right:14px}
 }
+
+
+/* ============================================================
+   V22: larger ranking cards, no visible numerical rating
+   ============================================================ */
+.ranking-main{
+  padding-bottom:90px!important;
+}
+.rank-heading{
+  padding-bottom:22px!important;
+  margin-bottom:18px!important;
+}
+.rank-heading h2{
+  font-size:40px!important;
+  line-height:1.08!important;
+}
+.rank-heading p{
+  font-size:14px!important;
+  line-height:1.65!important;
+  max-width:760px!important;
+}
+.method{
+  max-width:470px!important;
+  font-size:11px!important;
+  line-height:1.55!important;
+}
+.rank-list{
+  border-top:0!important;
+}
+.rank-row{
+  grid-template-columns:34px 245px minmax(170px,1fr) 145px 145px 122px!important;
+  gap:18px!important;
+  align-items:center!important;
+  margin:0 0 14px!important;
+  padding:28px 22px!important;
+  border:1px solid #dce6ee!important;
+  border-radius:12px!important;
+  background:#fff!important;
+  box-shadow:0 7px 22px rgba(31,61,85,.035)!important;
+}
+.rank-row:hover{
+  background:#fcfdfe!important;
+  border-color:#cddce6!important;
+  box-shadow:0 11px 29px rgba(31,61,85,.065)!important;
+}
+.rank-no{
+  align-self:start!important;
+  padding-top:4px!important;
+  font-size:21px!important;
+  font-weight:900!important;
+}
+.provider-cell{
+  grid-template-columns:96px minmax(0,1fr)!important;
+  gap:16px!important;
+  align-items:center!important;
+}
+.provider-logo{
+  width:92px!important;
+  height:62px!important;
+  min-width:92px!important;
+  object-fit:contain!important;
+  object-position:left center!important;
+  background:#fff!important;
+}
+.provider-cell strong{
+  font-size:17px!important;
+  line-height:1.25!important;
+}
+.provider-cell small{
+  margin-top:5px!important;
+  font-size:12px!important;
+  line-height:1.35!important;
+}
+.best strong{
+  margin-bottom:7px!important;
+  font-size:12px!important;
+}
+.best span{
+  font-size:12px!important;
+  line-height:1.55!important;
+}
+.source-link{
+  margin-top:9px!important;
+  font-size:10px!important;
+}
+.metric label{
+  margin-bottom:7px!important;
+  font-size:9px!important;
+}
+.metric strong{
+  font-size:12px!important;
+  line-height:1.5!important;
+}
+.rank-cta a{
+  min-height:42px!important;
+  padding:10px 12px!important;
+  border-radius:8px!important;
+  font-size:11px!important;
+}
+.score{display:none!important}
+
+/* more breathing room between ranking content and filter */
+.ranking-workspace{
+  gap:42px!important;
+}
+.filter-card{
+  padding:19px 17px 16px!important;
+}
+.filter-section{
+  padding:17px 0!important;
+}
+.filter-card .cat-btn{
+  padding-top:9px!important;
+  padding-bottom:9px!important;
+  font-size:12px!important;
+}
+
+/* Saving / Investing old minimalist sidebar also scales up */
+.category-wrap:not(:has(.filter-card)) .cat-btn{
+  font-size:13px!important;
+  padding-top:11px!important;
+  padding-bottom:11px!important;
+}
+.category-wrap:not(:has(.filter-card)) .provider-btn{
+  font-size:12px!important;
+  padding-top:10px!important;
+  padding-bottom:10px!important;
+}
+
+@media(max-width:1150px){
+  .rank-row{
+    grid-template-columns:30px 220px minmax(140px,1fr) 125px 122px!important;
+  }
+  .rank-row .metric:nth-of-type(2){display:none!important}
+  .provider-cell{grid-template-columns:82px 1fr!important}
+  .provider-logo{width:78px!important;height:56px!important;min-width:78px!important}
+}
+@media(max-width:850px){
+  .rank-row{
+    grid-template-columns:32px minmax(0,1fr) 118px!important;
+    padding:24px 18px!important;
+  }
+  .provider-cell{grid-column:2!important}
+  .best,.metric{grid-column:2/-1!important}
+  .rank-cta{grid-column:3!important;grid-row:1!important}
+  .provider-cell{grid-template-columns:80px 1fr!important}
+  .provider-logo{width:76px!important;height:54px!important;min-width:76px!important}
+}
+@media(max-width:600px){
+  .rank-heading h2{font-size:34px!important}
+  .rank-row{
+    grid-template-columns:28px minmax(0,1fr)!important;
+    padding:22px 15px!important;
+  }
+  .provider-cell,.best,.metric,.rank-cta{grid-column:2!important}
+  .rank-cta{grid-row:auto!important;text-align:left!important}
+  .provider-cell{grid-template-columns:72px 1fr!important}
+  .provider-logo{width:68px!important;height:50px!important;min-width:68px!important}
+  .rank-cta a{width:auto!important;min-width:130px!important}
+}

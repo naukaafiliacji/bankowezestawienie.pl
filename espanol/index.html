@@ -1133,6 +1133,154 @@
 /* V21 ticker spacing */
 .ticker-track{gap:48px!important}
 .ticker-group{gap:48px!important;padding-right:0!important}
+</style><style data-v22-home="true">
+/* ==========================================================
+   V22 newsletter
+   ========================================================== */
+.newsletter-section{
+  background:#eaf4fb;
+  border-top:1px solid #d6e6f0;
+  border-bottom:1px solid #d6e6f0;
+  padding:66px 0;
+}
+.newsletter-shell{
+  display:grid;
+  grid-template-columns:minmax(0,1.15fr) minmax(330px,.85fr);
+  gap:64px;
+  align-items:center;
+}
+.newsletter-kicker{
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.11em;
+  color:#62829c;
+  margin-bottom:13px;
+}
+.newsletter-copy h2{
+  margin:0;
+  color:#163e61;
+  font-size:42px;
+  line-height:1.04;
+  letter-spacing:-.045em;
+}
+.newsletter-copy>p{
+  margin:16px 0 20px;
+  max-width:680px;
+  color:#617d92;
+  font-size:15px;
+  line-height:1.7;
+}
+.newsletter-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+.newsletter-tags span{
+  border:1px solid #c8dce8;
+  border-radius:22px;
+  background:rgba(255,255,255,.55);
+  padding:7px 10px;
+  color:#526f86;
+  font-size:10px;
+  font-weight:750;
+}
+.newsletter-form-card{
+  background:#fff;
+  border:1px solid #d3e2ec;
+  border-radius:14px;
+  padding:24px;
+  box-shadow:0 18px 45px rgba(29,66,96,.08);
+}
+.newsletter-form-title{
+  margin:0 0 5px;
+  color:#203f59;
+  font-size:17px;
+  font-weight:850;
+}
+.newsletter-form-sub{
+  margin:0 0 17px;
+  color:#7c8f9f;
+  font-size:11px;
+  line-height:1.55;
+}
+.newsletter-form-row{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  gap:8px;
+}
+.newsletter-form-row input{
+  min-width:0;
+  height:44px;
+  border:1px solid #d3dfe7;
+  border-radius:8px;
+  padding:0 13px;
+  color:#35546c;
+  font:inherit;
+  font-size:12px;
+  outline:none;
+}
+.newsletter-form-row input:focus{
+  border-color:#8fb2c9;
+  box-shadow:0 0 0 3px rgba(47,103,159,.08);
+}
+.newsletter-form-row button{
+  height:44px;
+  border:0;
+  border-radius:8px;
+  background:#173f66;
+  color:#fff;
+  padding:0 16px;
+  font-size:11px;
+  font-weight:850;
+  cursor:pointer;
+  white-space:nowrap;
+}
+.newsletter-form-row button:hover{background:#103657}
+.newsletter-micro{
+  margin-top:10px;
+  color:#91a0ac;
+  font-size:9px;
+  line-height:1.45;
+}
+.newsletter-status{
+  display:none;
+  margin-top:11px;
+  border-top:1px solid #edf2f5;
+  padding-top:10px;
+  color:#6b8193;
+  font-size:10px;
+  line-height:1.5;
+}
+.newsletter-status.show{display:block}
+@media(max-width:850px){
+  .newsletter-shell{grid-template-columns:1fr;gap:30px}
+  .newsletter-copy h2{font-size:36px}
+}
+@media(max-width:520px){
+  .newsletter-section{padding:48px 0}
+  .newsletter-form-row{grid-template-columns:1fr}
+  .newsletter-form-row button{width:100%}
+}
+
+/* Ticket route: both labels receive EXACTLY the same optical angle */
+.ticket-route{
+  align-items:end!important;
+}
+.ticket-route-stop{
+  min-height:48px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  transform:rotate(-0.18deg);
+  transform-origin:center bottom;
+}
+.ticket-route-stop.ticket-route-destination{
+  align-items:flex-end;
+  text-align:right;
+}
+.ticket-route-stop strong{
+  white-space:nowrap;
+}
 </style></head>
 <body>
 <header class="header">
@@ -1168,7 +1316,7 @@
 <section class="didyouknow-section" id="accounts">
 <div class="container didyouknow-grid">
 <div class="didyouknow-copy">
-<div class="story-kicker">¿SABÍAS QUE...? · PROMOCIÓN ACTIVA</div>
+<div class="story-kicker">¿LO SABÍAS? · PROMOCIÓN DESTACADA</div>
 <h2>Ahora una cuenta bancaria puede venir con un viaje para dos.</h2>
 <p>BBVA España ofrece a nuevos clientes de 18 a 29 años un vuelo de ida y vuelta para dos al abrir la Cuenta Joven con el código promocional y hacer una compra de 25 € con tarjeta en el primer mes.</p>
 <div class="story-deadline">Disponible para abrir la cuenta hasta el 2 sep 2026</div>
@@ -1185,7 +1333,7 @@
 <img alt="BBVA" class="ticket-brand" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/BBVA%20logo%202025.svg"/>
 <span class="ticket-live">SIN SORTEO</span>
 </div>
-<div class="ticket-route"><div><small>SALIDA</small><strong>España</strong></div><div class="route-line"></div><div style="text-align:right"><small>DESTINOS</small><strong>Europa + Marruecos</strong></div></div>
+<div class="ticket-route"><div class="ticket-route-stop ticket-route-origin"><small>SALIDA</small><strong>España</strong></div><div class="route-line"></div><div class="ticket-route-stop ticket-route-destination"><small>DESTINOS</small><strong>Europa + Marruecos</strong></div></div>
 <div class="ticket-big">
 <div class="ticket-big-number">2<span>PERSONAS</span></div>
 <div class="ticket-detail"><strong>IDA Y VUELTA</strong><small>1 × compra de 25 €</small></div>
@@ -1259,6 +1407,27 @@
 <div class="save-feature"><div class="save-icon">◎</div><h3>Evita costes de cajero y divisa</h3><p>Las pequeñas comisiones se acumulan rápidamente.</p></div>
 <div class="save-feature"><div class="save-icon">＋</div><h3>Aprovecha bien los bonos</h3><p>Obtén la recompensa sin elegir una cuenta cara a largo plazo.</p></div>
 <div class="save-feature"><div class="save-icon">▦</div><h3>Reduce costes bancarios de empresa</h3><p>Controla transferencias, tarjetas y costes recurrentes.</p></div>
+</div>
+</div>
+</section><section class="newsletter-section" id="newsletter">
+<div class="container newsletter-shell">
+<div class="newsletter-copy">
+<div class="newsletter-kicker">NEWSLETTER BANKRANKING</div>
+<h2>Noticias bancarias que merece la pena conocer.</h2>
+<p>Nuevas ofertas, cambios en el ahorro, lanzamientos, adquisiciones y novedades útiles de la banca europea en un solo correo conciso.</p>
+<div class="newsletter-tags"><span>Ofertas bancarias</span><span>Tipos de ahorro</span><span>Nuevos bancos</span><span>Banca europea</span></div>
+</div>
+<div class="newsletter-form-card">
+<div class="newsletter-form-title">Newsletter Bankranking</div>
+<p class="newsletter-form-sub">Nuevas ofertas, cambios en el ahorro, lanzamientos, adquisiciones y novedades útiles de la banca europea en un solo correo conciso.</p>
+<form class="newsletter-form" data-newsletter-form="">
+<div class="newsletter-form-row">
+<input aria-label="Tu correo electrónico" autocomplete="email" placeholder="Tu correo electrónico" required="" type="email"/>
+<button type="submit">Unirme al newsletter</button>
+</div>
+<div class="newsletter-micro">Un resumen breve. Puedes darte de baja en cualquier momento.</div>
+<div class="newsletter-status" role="status">El diseño está listo. Conecta un proveedor de newsletter para activar los envíos.</div>
+</form>
 </div>
 </div>
 </section>
@@ -1338,4 +1507,12 @@ document.addEventListener('click', function(e){
 })();
 </script>
 <script>(function(){const i=document.getElementById('site-search'),b=document.getElementById('search-results');if(!i||!b)return;const x=[["Personal accounts", "/bank-accounts/"], ["Business accounts", "/business-accounts/"], ["Joint accounts", "/joint-account/"], ["Student accounts", "/student-account/"], ["Youth accounts", "/youth-account/"], ["Children's accounts", "/child-account/"], ["Savings accounts", "/savings/"], ["Fixed-term deposits", "/fixed-term-deposits/"], ["Business savings", "/business-savings/"], ["Child savings", "/child-savings/"], ["Investment accounts", "/investment-accounts/"], ["Fund investing", "/fund-investing/"], ["Managed investing", "/managed-investing/"], ["Self-directed investing", "/self-directed-investing/"], ["Retirement investing", "/retirement-investing/"], ["Business investing", "/business-investing/"]];i.addEventListener('input',()=>{const q=i.value.trim().toLowerCase();if(q.length<2)return;const h=x.filter(v=>v[0].toLowerCase().includes(q)).slice(0,5);if(!h.length)return;const add=h.map(v=>'<a class="search-result" href="'+v[1]+'"><span class="result-dot">C</span><span><strong>'+v[0]+'</strong><small>Category rankings</small></span></a>').join('');if(!b.dataset.cats){b.innerHTML=add+b.innerHTML;b.dataset.cats='1'};b.classList.add('open')});i.addEventListener('search',()=>{b.dataset.cats=''})})();</script>
-</body></html>
+<script>
+document.querySelectorAll('[data-newsletter-form]').forEach(function(form){
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var status=form.querySelector('.newsletter-status');
+    if(status) status.classList.add('show');
+  });
+});
+</script></body></html>
