@@ -84,3 +84,7 @@ Updated 13 August 2026.
 - Country navigation is now a compact dropdown rather than attempting to show 28 markets in one horizontal header.
 - Clearbit dependency removed from ranking logos; existing verified full logos are used where available, otherwise official-domain favicons.
 - Research source directory updated for all markets.
+
+
+## V32 — Research methodology 2.0
+Expanded /methodology/ into a public research protocol covering scope, evidence grades, data normalisation, category-specific decision rules, promotions, robustness, commercial independence, freshness, corrections, limitations and a 30+ source reference library. Methodology effective 13 August 2026.
