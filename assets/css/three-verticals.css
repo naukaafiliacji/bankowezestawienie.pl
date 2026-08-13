@@ -404,3 +404,14 @@
   }
   .provider-btn.active:before{display:none!important}
 }
+
+/* V20: SVG flags — dimensions intentionally unchanged */
+.country-flag{
+  width:18px!important;
+  height:13px!important;
+  min-width:18px!important;
+  max-width:18px!important;
+  min-height:13px!important;
+  max-height:13px!important;
+  background-size:cover!important;
+}
