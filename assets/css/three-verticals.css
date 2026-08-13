@@ -141,3 +141,29 @@
   .provider-toggle.visible{display:grid!important}
   .provider-toggle span{grid-column:1/-1}
 }
+
+
+/* Real SVG flags */
+.flag-icon{
+  width:18px;
+  height:12px;
+  object-fit:cover;
+  border-radius:2px;
+  box-shadow:0 0 0 1px rgba(20,40,60,.08);
+  flex:0 0 auto;
+  vertical-align:middle;
+}
+.flag-icon.flag-lg{
+  width:24px;
+  height:16px;
+  border-radius:3px;
+}
+.country-nav a,
+.market-card,
+.lang-pop a,
+.lang-menu summary span.flag-wrap,
+.vertical-breadcrumb a{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+}
