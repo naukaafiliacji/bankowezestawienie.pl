@@ -1,10 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="fr">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
 <title>BankRanking Europe</title>
-<meta name="description" content="Comparez les frais, les offres actuelles et les conditions d’usage au quotidien.">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta content="Comparez les frais, les offres actuelles et les conditions d’usage au quotidien." name="description"/>
+<link href="/favicon.svg" rel="icon" type="image/svg+xml"/>
 <style>
 :root{--blue:#123b66;--soft:#edf6ff;--ink:#16334f;--muted:#70879a;--line:#dce6ef;--green:#16815e;--save:#e9f5ee}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:var(--ink);background:#fff}a{text-decoration:none;color:inherit}img{display:block;max-width:100%}.container{width:min(1180px,calc(100% - 40px));margin:auto}
@@ -459,16 +460,33 @@
 .flag-icon.flag-lg{width:22px;height:15px;border-radius:3px}
 .market-card,.lang-pop a,.lang-menu summary span.flag-wrap{display:inline-flex;align-items:center;gap:8px}
 .lang-code{display:none!important}</style>
-</head>
+<style>
+.site-flag{
+  display:inline-block!important;
+  object-fit:cover!important;
+  object-position:center!important;
+  vertical-align:-2px!important;
+  border-radius:2px!important;
+  box-shadow:0 0 0 1px rgba(20,40,60,.10)!important;
+  flex:0 0 auto!important;
+  margin-right:7px!important;
+  background:#fff!important;
+}
+.site-flag-sm{width:18px!important;height:14px!important}
+.site-flag-lg{width:24px!important;height:18px!important}
+.country-nav a,.market-card,.vertical-breadcrumb a,.flag-wrap,.lang-pop a{
+  display:inline-flex!important;
+  align-items:center!important;
+}
+</style></head>
 <body>
 <header class="header">
 <div class="container nav">
-<a class="brand" href="/"><img src="/assets/brand/mark.svg" alt=""><span>BankRanking</span><em>Europe</em></a>
-<div class="header-search"><div class="search-shell"><span class="search-glyph">⌕</span><input id="site-search" type="search" autocomplete="off" placeholder="Rechercher banques, comptes ou marchés" aria-label="Rechercher banques, comptes ou marchés"></div><div id="search-results" class="search-results"></div></div>
-<div class="navright"><details class="lang-menu"><summary><span class="flag-wrap"><img class="flag-icon" src="/assets/flags/fr.svg" alt="Français"><span>Français</span></span><span class="lang-chevron">▾</span></summary><div class="lang-pop"><a href="/francais/"><img class="flag-icon" src="/assets/flags/fr.svg" alt="Français"><span>Français</span></a><a href="/"><img class="flag-icon" src="/assets/flags/en.svg" alt="English"><span>English</span></a><a href="/espanol/"><img class="flag-icon" src="/assets/flags/es.svg" alt="Español"><span>Español</span></a><a href="/deutsch/"><img class="flag-icon" src="/assets/flags/de.svg" alt="Deutsch"><span>Deutsch</span></a></div></details></div>
+<a class="brand" href="/"><img alt="" src="/assets/brand/mark.svg"/><span>BankRanking</span><em>Europe</em></a>
+<div class="header-search"><div class="search-shell"><span class="search-glyph">⌕</span><input aria-label="Rechercher banques, comptes ou marchés" autocomplete="off" id="site-search" placeholder="Rechercher banques, comptes ou marchés" type="search"/></div><div class="search-results" id="search-results"></div></div>
+<div class="navright"><details class="lang-menu"><summary><span class="flag-wrap"><img alt="Français" class="site-flag site-flag-sm" height="14" src="/assets/flags-v3/fr.png" width="18"/><span>Français</span></span><span class="lang-chevron">▾</span></summary><div class="lang-pop"><a href="/francais/"><img alt="Français" class="site-flag site-flag-sm" height="14" src="/assets/flags-v3/fr.png" width="18"/><span>Français</span></a><a href="/"><img alt="English" class="site-flag site-flag-sm" height="14" src="/assets/flags-v3/en.png" width="18"/><span>English</span></a><a href="/espanol/"><img alt="Español" class="site-flag site-flag-sm" height="14" src="/assets/flags-v3/es.png" width="18"/><span>Español</span></a><a href="/deutsch/"><img alt="Deutsch" class="site-flag site-flag-sm" height="14" src="/assets/flags-v3/de.png" width="18"/><span>Deutsch</span></a></div></details></div>
 </div>
 </header>
-
 <main>
 <section class="hero">
 <div class="container hero-grid">
@@ -480,121 +498,108 @@
 <a class="category" href="#accounts"><span class="cat-icon">→</span><span><strong>Compte personnel</strong><small>Banque au quotidien</small></span></a>
 <a class="category" href="#accounts"><span class="cat-icon">→</span><span><strong>Compte 18–26</strong><small>Tarifs jeunes</small></span></a>
 <a class="category" href="#accounts"><span class="cat-icon">→</span><span><strong>Compte 26+</strong><small>Tarifs standards</small></span></a>
-<a class="category" href="#save"><span class="cat-icon">→</span><span><strong>Compte professionnel</strong><small>Indépendants & sociétés</small></span></a>
+<a class="category" href="#save"><span class="cat-icon">→</span><span><strong>Compte professionnel</strong><small>Indépendants &amp; sociétés</small></span></a>
 </div>
 </div>
-<div class="cards-scene" aria-label="European bank accounts">
-<div class="debit-card c1"><div class="dc-top"><span>PERSONAL</span><span>•••</span></div><img src="/assets/real-logos/ing-full.webp" onerror="this.onerror=null;this.src=\'https://www.google.com/s2/favicons?domain=ing.com&amp;sz=256\'" alt="ING"><div class="dc-bottom"><span>Europe</span><strong>ING</strong></div></div>
-<div class="debit-card c2"><div class="dc-top"><span>DIGITAL</span><span>•••</span></div><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/N26%20logo.svg" onerror="this.onerror=null;this.src=\'https://www.google.com/s2/favicons?domain=n26.com&amp;sz=256\'" alt="N26"><div class="dc-bottom"><span>Europe</span><strong>N26</strong></div></div>
-<div class="debit-card c3"><div class="dc-top"><span>ACCOUNT</span><span>•••</span></div><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/BBVA%20logo%202025.svg" onerror="this.onerror=null;this.src=\'https://www.google.com/s2/favicons?domain=bbva.es&amp;sz=256\'" alt="BBVA"><div class="dc-bottom"><span>Europe</span><strong>BBVA</strong></div></div>
-<div class="debit-card c4"><div class="dc-top"><span>BANKING</span><span>•••</span></div><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Mbank%20logo.svg" onerror="this.onerror=null;this.src=\'https://www.google.com/s2/favicons?domain=mbank.pl&amp;sz=256\'" alt="mBank"><div class="dc-bottom"><span>Europe</span><strong>mBank</strong></div></div>
+<div aria-label="European bank accounts" class="cards-scene">
+<div class="debit-card c1"><div class="dc-top"><span>PERSONAL</span><span>•••</span></div><img alt="ING" onerror="this.onerror=null;this.src=\'https://www.google.com/s2/favicons?domain=ing.com&amp;sz=256\'" src="/assets/real-logos/ing-full.webp"/><div class="dc-bottom"><span>Europe</span><strong>ING</strong></div></div>
+<div class="debit-card c2"><div class="dc-top"><span>DIGITAL</span><span>•••</span></div><img alt="N26" onerror="this.onerror=null;this.src=\'https://www.google.com/s2/favicons?domain=n26.com&amp;sz=256\'" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/N26%20logo.svg"/><div class="dc-bottom"><span>Europe</span><strong>N26</strong></div></div>
+<div class="debit-card c3"><div class="dc-top"><span>ACCOUNT</span><span>•••</span></div><img alt="BBVA" onerror="this.onerror=null;this.src=\'https://www.google.com/s2/favicons?domain=bbva.es&amp;sz=256\'" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/BBVA%20logo%202025.svg"/><div class="dc-bottom"><span>Europe</span><strong>BBVA</strong></div></div>
+<div class="debit-card c4"><div class="dc-top"><span>BANKING</span><span>•••</span></div><img alt="mBank" onerror="this.onerror=null;this.src=\'https://www.google.com/s2/favicons?domain=mbank.pl&amp;sz=256\'" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Mbank%20logo.svg"/><div class="dc-bottom"><span>Europe</span><strong>mBank</strong></div></div>
 </div>
 </div>
 </section>
-
-<section class="network-strip"><div class="container network-row"><div class="network-label">Affiliate networks &amp; platforms</div><div class="ticker-viewport" aria-label="Affiliate networks and platforms"><div class="ticker-track"><div class="ticker-group"><div class="ticker-brand"><img src="https://www.google.com/s2/favicons?domain=fintelconnect.com&sz=128" alt="Fintel Connect"><span>Fintel Connect</span></div><div class="ticker-brand"><img src="https://www.google.com/s2/favicons?domain=financeads.com&sz=128" alt="financeAds"><span>financeAds</span></div><div class="ticker-brand"><img src="https://www.google.com/s2/favicons?domain=awin.com&sz=128" alt="Awin"><span>Awin</span></div><div class="ticker-brand"><img src="https://www.google.com/s2/favicons?domain=tradedoubler.com&sz=128" alt="Tradedoubler"><span>Tradedoubler</span></div><div class="ticker-brand"><img src="https://www.google.com/s2/favicons?domain=webgains.com&sz=128" alt="Webgains"><span>Webgains</span></div><div class="ticker-brand"><img src="https://www.google.com/s2/favicons?domain=tradetracker.com&sz=128" alt="TradeTracker"><span>TradeTracker</span></div><div class="ticker-brand"><img src="https://www.google.com/s2/favicons?domain=daisycon.com&sz=128" alt="Daisycon"><span>Daisycon</span></div><div class="ticker-brand"><img src="https://www.google.com/s2/favicons?domain=adtraction.com&sz=128" alt="Adtraction"><span>Adtraction</span></div><div class="ticker-brand"><img src="https://www.google.com/s2/favicons?domain=partnerize.com&sz=128" alt="Partnerize"><span>Partnerize</span></div><div class="ticker-brand"><img src="https://www.google.com/s2/favicons?domain=flexoffers.com&sz=128" alt="FlexOffers"><span>FlexOffers</span></div><div class="ticker-brand"><img src="https://www.google.com/s2/favicons?domain=commissionfactory.com&sz=128" alt="Commission Factory"><span>Commission Factory</span></div></div><div class="ticker-group" aria-hidden="true"><div class="ticker-brand"><img src="https://www.google.com/s2/favicons?domain=fintelconnect.com&sz=128" alt="Fintel Connect"><span>Fintel Connect</span></div><div class="ticker-brand"><img src="https://www.google.com/s2/favicons?domain=financeads.com&sz=128" alt="financeAds"><span>financeAds</span></div><div class="ticker-brand"><img src="https://www.google.com/s2/favicons?domain=awin.com&sz=128" alt="Awin"><span>Awin</span></div><div class="ticker-brand"><img src="https://www.google.com/s2/favicons?domain=tradedoubler.com&sz=128" alt="Tradedoubler"><span>Tradedoubler</span></div><div class="ticker-brand"><img src="https://www.google.com/s2/favicons?domain=webgains.com&sz=128" alt="Webgains"><span>Webgains</span></div><div class="ticker-brand"><img src="https://www.google.com/s2/favicons?domain=tradetracker.com&sz=128" alt="TradeTracker"><span>TradeTracker</span></div><div class="ticker-brand"><img src="https://www.google.com/s2/favicons?domain=daisycon.com&sz=128" alt="Daisycon"><span>Daisycon</span></div><div class="ticker-brand"><img src="https://www.google.com/s2/favicons?domain=adtraction.com&sz=128" alt="Adtraction"><span>Adtraction</span></div><div class="ticker-brand"><img src="https://www.google.com/s2/favicons?domain=partnerize.com&sz=128" alt="Partnerize"><span>Partnerize</span></div><div class="ticker-brand"><img src="https://www.google.com/s2/favicons?domain=flexoffers.com&sz=128" alt="FlexOffers"><span>FlexOffers</span></div><div class="ticker-brand"><img src="https://www.google.com/s2/favicons?domain=commissionfactory.com&sz=128" alt="Commission Factory"><span>Commission Factory</span></div></div></div></div></div></section>
-
+<section class="network-strip"><div class="container network-row"><div class="network-label">Affiliate networks &amp; platforms</div><div aria-label="Affiliate networks and platforms" class="ticker-viewport"><div class="ticker-track"><div class="ticker-group"><div class="ticker-brand"><img alt="Fintel Connect" src="https://www.google.com/s2/favicons?domain=fintelconnect.com&amp;sz=128"/><span>Fintel Connect</span></div><div class="ticker-brand"><img alt="financeAds" src="https://www.google.com/s2/favicons?domain=financeads.com&amp;sz=128"/><span>financeAds</span></div><div class="ticker-brand"><img alt="Awin" src="https://www.google.com/s2/favicons?domain=awin.com&amp;sz=128"/><span>Awin</span></div><div class="ticker-brand"><img alt="Tradedoubler" src="https://www.google.com/s2/favicons?domain=tradedoubler.com&amp;sz=128"/><span>Tradedoubler</span></div><div class="ticker-brand"><img alt="Webgains" src="https://www.google.com/s2/favicons?domain=webgains.com&amp;sz=128"/><span>Webgains</span></div><div class="ticker-brand"><img alt="TradeTracker" src="https://www.google.com/s2/favicons?domain=tradetracker.com&amp;sz=128"/><span>TradeTracker</span></div><div class="ticker-brand"><img alt="Daisycon" src="https://www.google.com/s2/favicons?domain=daisycon.com&amp;sz=128"/><span>Daisycon</span></div><div class="ticker-brand"><img alt="Adtraction" src="https://www.google.com/s2/favicons?domain=adtraction.com&amp;sz=128"/><span>Adtraction</span></div><div class="ticker-brand"><img alt="Partnerize" src="https://www.google.com/s2/favicons?domain=partnerize.com&amp;sz=128"/><span>Partnerize</span></div><div class="ticker-brand"><img alt="FlexOffers" src="https://www.google.com/s2/favicons?domain=flexoffers.com&amp;sz=128"/><span>FlexOffers</span></div><div class="ticker-brand"><img alt="Commission Factory" src="https://www.google.com/s2/favicons?domain=commissionfactory.com&amp;sz=128"/><span>Commission Factory</span></div></div><div aria-hidden="true" class="ticker-group"><div class="ticker-brand"><img alt="Fintel Connect" src="https://www.google.com/s2/favicons?domain=fintelconnect.com&amp;sz=128"/><span>Fintel Connect</span></div><div class="ticker-brand"><img alt="financeAds" src="https://www.google.com/s2/favicons?domain=financeads.com&amp;sz=128"/><span>financeAds</span></div><div class="ticker-brand"><img alt="Awin" src="https://www.google.com/s2/favicons?domain=awin.com&amp;sz=128"/><span>Awin</span></div><div class="ticker-brand"><img alt="Tradedoubler" src="https://www.google.com/s2/favicons?domain=tradedoubler.com&amp;sz=128"/><span>Tradedoubler</span></div><div class="ticker-brand"><img alt="Webgains" src="https://www.google.com/s2/favicons?domain=webgains.com&amp;sz=128"/><span>Webgains</span></div><div class="ticker-brand"><img alt="TradeTracker" src="https://www.google.com/s2/favicons?domain=tradetracker.com&amp;sz=128"/><span>TradeTracker</span></div><div class="ticker-brand"><img alt="Daisycon" src="https://www.google.com/s2/favicons?domain=daisycon.com&amp;sz=128"/><span>Daisycon</span></div><div class="ticker-brand"><img alt="Adtraction" src="https://www.google.com/s2/favicons?domain=adtraction.com&amp;sz=128"/><span>Adtraction</span></div><div class="ticker-brand"><img alt="Partnerize" src="https://www.google.com/s2/favicons?domain=partnerize.com&amp;sz=128"/><span>Partnerize</span></div><div class="ticker-brand"><img alt="FlexOffers" src="https://www.google.com/s2/favicons?domain=flexoffers.com&amp;sz=128"/><span>FlexOffers</span></div><div class="ticker-brand"><img alt="Commission Factory" src="https://www.google.com/s2/favicons?domain=commissionfactory.com&amp;sz=128"/><span>Commission Factory</span></div></div></div></div></div></section>
 <section class="didyouknow-section" id="accounts">
 <div class="container didyouknow-grid">
-  <div class="didyouknow-copy">
-    <div class="story-kicker">LE SAVIEZ-VOUS ? · OFFRE EN COURS</div>
-    <h2>Un compte bancaire peut actuellement inclure un voyage pour deux.</h2>
-    <p>BBVA Espagne offre à ses nouveaux clients de 18 à 29 ans un vol aller-retour pour deux après l’ouverture du Compte Jeune avec le code promo et un achat de 25 € par carte dans le premier mois.</p>
-    <div class="story-deadline">Ouverture du compte jusqu’au 2 sept. 2026</div>
-    <div class="story-actions">
-      <a class="story-primary" href="/es/banking/">Voir le classement Espagne →</a>
-      <a class="story-secondary" href="https://www.bbva.es/en/personas/productos/cuentas/cuenta-joven.html" target="_blank" rel="noopener">Offre officielle ↗</a>
-    </div>
-    <p class="story-small">Résidents en Espagne · nouveaux clients BBVA · 18–29 ans · conditions et disponibilités applicables</p>
-  </div>
-
-  <div class="boarding-wrap" aria-label="BBVA flight promotion">
-    <div class="boarding-pass">
-      <div class="boarding-main">
-        <div class="ticket-top">
-          <img class="ticket-brand" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/BBVA%20logo%202025.svg" alt="BBVA">
-          <span class="ticket-live">SANS TIRAGE AU SORT</span>
-        </div>
-        <div class="ticket-route">
-          <div><small>DEPUIS L’ESPAGNE</small><strong style="display:inline-flex;align-items:center;gap:8px"><img class="flag-icon flag-lg" src="/assets/flags/es.svg" alt="Espagne">Espagne</strong></div>
-          <div class="route-line"></div>
-          <div style="text-align:right"><small>EUROPE / MAROC</small><strong>Europe + Maroc</strong></div>
-        </div>
-        <div class="ticket-big">
-          <div class="ticket-big-number">2<span>2 PERSONNES</span></div>
-          <div class="ticket-detail"><strong>ALLER-RETOUR</strong><small>1 × achat de 25 €</small></div>
-        </div>
-      </div>
-      <div class="boarding-side">
-        <div class="ticket-code">BBVAVUELOS</div>
-        <div class="ticket-barcode"></div>
-        <div class="ticket-date">FIN 02 SEP 2026</div>
-      </div>
-    </div>
-  </div>
+<div class="didyouknow-copy">
+<div class="story-kicker">LE SAVIEZ-VOUS ? · OFFRE EN COURS</div>
+<h2>Un compte bancaire peut actuellement inclure un voyage pour deux.</h2>
+<p>BBVA Espagne offre à ses nouveaux clients de 18 à 29 ans un vol aller-retour pour deux après l’ouverture du Compte Jeune avec le code promo et un achat de 25 € par carte dans le premier mois.</p>
+<div class="story-deadline">Ouverture du compte jusqu’au 2 sept. 2026</div>
+<div class="story-actions">
+<a class="story-primary" href="/es/banking/">Voir le classement Espagne →</a>
+<a class="story-secondary" href="https://www.bbva.es/en/personas/productos/cuentas/cuenta-joven.html" rel="noopener" target="_blank">Offre officielle ↗</a>
+</div>
+<p class="story-small">Résidents en Espagne · nouveaux clients BBVA · 18–29 ans · conditions et disponibilités applicables</p>
+</div>
+<div aria-label="BBVA flight promotion" class="boarding-wrap">
+<div class="boarding-pass">
+<div class="boarding-main">
+<div class="ticket-top">
+<img alt="BBVA" class="ticket-brand" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/BBVA%20logo%202025.svg"/>
+<span class="ticket-live">SANS TIRAGE AU SORT</span>
+</div>
+<div class="ticket-route">
+<div><small>DEPUIS L’ESPAGNE</small><strong style="display:inline-flex;align-items:center;gap:8px"><img alt="Espagne" class="site-flag-sm site-flag" height="14" src="/assets/flags-v3/es.png" width="18"/>Espagne</strong></div>
+<div class="route-line"></div>
+<div style="text-align:right"><small>EUROPE / MAROC</small><strong>Europe + Maroc</strong></div>
+</div>
+<div class="ticket-big">
+<div class="ticket-big-number">2<span>2 PERSONNES</span></div>
+<div class="ticket-detail"><strong>ALLER-RETOUR</strong><small>1 × achat de 25 €</small></div>
+</div>
+</div>
+<div class="boarding-side">
+<div class="ticket-code">BBVAVUELOS</div>
+<div class="ticket-barcode"></div>
+<div class="ticket-date">FIN 02 SEP 2026</div>
+</div>
+</div>
+</div>
 </div>
 </section>
-
 <section class="section alt" id="markets">
 <div class="container">
 <div class="section-head"><div><div class="kicker">Classements</div><h2>Choisissez un marché</h2></div></div>
 <div class="markets">
-<a class="market-card" href="/pl/banking/"><img class="flag-icon flag-lg" src="/assets/flags/pl.svg" alt="Poland">🇵🇱Poland</a><a class="market-card" href="/de/banking/"><img class="flag-icon flag-lg" src="/assets/flags/de.svg" alt="Germany">🇩🇪Germany</a>
-<a class="market-card" href="/fr/banking/"><img class="flag-icon flag-lg" src="/assets/flags/fr.svg" alt="France">🇫🇷France</a><a class="market-card" href="/uk/banking/"><img class="flag-icon flag-lg" src="/assets/flags/uk.svg" alt="United Kingdom">🇬🇧United Kingdom</a>
-<a class="market-card" href="/it/banking/"><img class="flag-icon flag-lg" src="/assets/flags/it.svg" alt="Italy">🇮🇹Italy</a><a class="market-card" href="/es/banking/"><img class="flag-icon flag-lg" src="/assets/flags/es.svg" alt="Spain">🇪🇸Spain</a>
-<a class="market-card" href="/nl/banking/"><img class="flag-icon flag-lg" src="/assets/flags/nl.svg" alt="Netherlands">🇳🇱Netherlands</a><a class="market-card" href="/se/banking/"><img class="flag-icon flag-lg" src="/assets/flags/se.svg" alt="Sweden">🇸🇪Sweden</a>
+<a class="market-card" href="/pl/banking/"><img alt="Poland" class="site-flag-sm site-flag" height="14" src="/assets/flags-v3/pl.png" width="18"/><img alt="Poland" class="site-flag site-flag-sm" height="14" src="/assets/flags-v3/pl.png" width="18"/>Poland</a><a class="market-card" href="/de/banking/"><img alt="Germany" class="site-flag-sm site-flag" height="14" src="/assets/flags-v3/de.png" width="18"/><img alt="Germany" class="site-flag site-flag-sm" height="14" src="/assets/flags-v3/de.png" width="18"/>Germany</a>
+<a class="market-card" href="/fr/banking/"><img alt="France" class="site-flag-sm site-flag" height="14" src="/assets/flags-v3/fr.png" width="18"/><img alt="France" class="site-flag site-flag-sm" height="14" src="/assets/flags-v3/fr.png" width="18"/>France</a><a class="market-card" href="/uk/banking/"><img alt="United Kingdom" class="site-flag-sm site-flag" height="14" src="/assets/flags-v3/gb.png" width="18"/><img alt="United Kingdom" class="site-flag site-flag-sm" height="14" src="/assets/flags-v3/gb.png" width="18"/>United Kingdom</a>
+<a class="market-card" href="/it/banking/"><img alt="Italy" class="site-flag-sm site-flag" height="14" src="/assets/flags-v3/it.png" width="18"/><img alt="Italy" class="site-flag site-flag-sm" height="14" src="/assets/flags-v3/it.png" width="18"/>Italy</a><a class="market-card" href="/es/banking/"><img alt="Spain" class="site-flag-sm site-flag" height="14" src="/assets/flags-v3/es.png" width="18"/><img alt="Spain" class="site-flag site-flag-sm" height="14" src="/assets/flags-v3/es.png" width="18"/>Spain</a>
+<a class="market-card" href="/nl/banking/"><img alt="Netherlands" class="site-flag-sm site-flag" height="14" src="/assets/flags-v3/nl.png" width="18"/><img alt="Netherlands" class="site-flag site-flag-sm" height="14" src="/assets/flags-v3/nl.png" width="18"/>Netherlands</a><a class="market-card" href="/se/banking/"><img alt="Sweden" class="site-flag-sm site-flag" height="14" src="/assets/flags-v3/se.png" width="18"/><img alt="Sweden" class="site-flag site-flag-sm" height="14" src="/assets/flags-v3/se.png" width="18"/>Sweden</a>
 </div>
 </div>
 </section>
-
-
 <section class="knowledgehub-section" id="guides">
-  <div class="container">
-    <div class="kh-header kh-header-minimal">
-      <div class="kh-label">INSIGHTS</div>
-    </div>
-
-    <div class="kh-grid">
-      <div class="kh-list">
-        <article class="kh-item">
-          <h3><a href="https://www.bank.nl/nieuws/nibc-officieel-overgenomen-door-abn-amro/" target="_blank" rel="noopener">ABN AMRO finalise le rachat de NIBC</a></h3>
-          <p>ABN AMRO a finalisé l’acquisition de NIBC, l’une des opérations bancaires néerlandaises les plus importantes de ces dernières années.</p>
-          <div class="kh-meta"><span>3 août 2026</span><a class="kh-link" href="https://www.bank.nl/nieuws/nibc-officieel-overgenomen-door-abn-amro/" target="_blank" rel="noopener">Lire la suite →</a></div>
-        </article>
-
-        <article class="kh-item">
-          <h3><a href="https://www.bank.nl/nieuws/godutch-kondigt-samenwerking-met-lionel-messi-en-mastercard-aan/" target="_blank" rel="noopener">GoDutch s’associe à Lionel Messi et Mastercard</a></h3>
-          <p>La fintech néerlandaise a lancé une Business Mastercard en édition limitée ainsi qu’une campagne de cashback pour les nouveaux clients professionnels.</p>
-          <div class="kh-meta"><span>9 juillet 2026</span><a class="kh-link" href="https://www.bank.nl/nieuws/godutch-kondigt-samenwerking-met-lionel-messi-en-mastercard-aan/" target="_blank" rel="noopener">Lire la suite →</a></div>
-        </article>
-
-        <article class="kh-item">
-          <h3><a href="https://www.bank.nl/nieuws/fraude-bij-betalingen-met-30-procent-toegenomen-in-2025/" target="_blank" rel="noopener">La fraude aux paiements a bondi de 30% en 2025</a></h3>
-          <p>Le nombre de transactions frauduleuses a fortement augmenté l’an dernier et le montant total des pertes a lui aussi progressé.</p>
-          <div class="kh-meta"><span>30 juin 2026</span><a class="kh-link" href="https://www.bank.nl/nieuws/fraude-bij-betalingen-met-30-procent-toegenomen-in-2025/" target="_blank" rel="noopener">Lire la suite →</a></div>
-        </article>
-      </div>
-
-      <aside class="kh-side">
-        <article class="kh-ad">
-          <span class="kh-badge">À LA UNE</span>
-          <h3><a href="https://www.bank.nl/raisin/renteboost/" target="_blank" rel="noopener">Raisin RenteBoost : 2,85% par an pendant 3 mois</a></h3>
-          <p>Les nouveaux clients et anciens clients revenant chez Raisin peuvent actuellement obtenir un taux annuel garanti de 2,85% pendant trois mois.</p>
-          <a href="https://www.bank.nl/raisin/renteboost/" target="_blank" rel="noopener">Plus d’infos →</a>
-        </article>
-
-        <article class="kh-ad">
-          <span class="kh-badge">À LA UNE</span>
-          <h3><a href="https://www.bank.nl/banken/bunq/bunq-free/" target="_blank" rel="noopener">Épargne Bunq : 3,01% pour les nouveaux clients</a></h3>
-          <p>Les nouveaux clients Bunq peuvent actuellement obtenir 3,01% sur l’épargne éligible pendant les six premiers mois, sous réserve des conditions.</p>
-          <a href="https://www.bank.nl/banken/bunq/bunq-free/" target="_blank" rel="noopener">Plus d’infos →</a>
-        </article>
-      </aside>
-    </div>
-  </div>
+<div class="container">
+<div class="kh-header kh-header-minimal">
+<div class="kh-label">INSIGHTS</div>
+</div>
+<div class="kh-grid">
+<div class="kh-list">
+<article class="kh-item">
+<h3><a href="https://www.bank.nl/nieuws/nibc-officieel-overgenomen-door-abn-amro/" rel="noopener" target="_blank">ABN AMRO finalise le rachat de NIBC</a></h3>
+<p>ABN AMRO a finalisé l’acquisition de NIBC, l’une des opérations bancaires néerlandaises les plus importantes de ces dernières années.</p>
+<div class="kh-meta"><span>3 août 2026</span><a class="kh-link" href="https://www.bank.nl/nieuws/nibc-officieel-overgenomen-door-abn-amro/" rel="noopener" target="_blank">Lire la suite →</a></div>
+</article>
+<article class="kh-item">
+<h3><a href="https://www.bank.nl/nieuws/godutch-kondigt-samenwerking-met-lionel-messi-en-mastercard-aan/" rel="noopener" target="_blank">GoDutch s’associe à Lionel Messi et Mastercard</a></h3>
+<p>La fintech néerlandaise a lancé une Business Mastercard en édition limitée ainsi qu’une campagne de cashback pour les nouveaux clients professionnels.</p>
+<div class="kh-meta"><span>9 juillet 2026</span><a class="kh-link" href="https://www.bank.nl/nieuws/godutch-kondigt-samenwerking-met-lionel-messi-en-mastercard-aan/" rel="noopener" target="_blank">Lire la suite →</a></div>
+</article>
+<article class="kh-item">
+<h3><a href="https://www.bank.nl/nieuws/fraude-bij-betalingen-met-30-procent-toegenomen-in-2025/" rel="noopener" target="_blank">La fraude aux paiements a bondi de 30% en 2025</a></h3>
+<p>Le nombre de transactions frauduleuses a fortement augmenté l’an dernier et le montant total des pertes a lui aussi progressé.</p>
+<div class="kh-meta"><span>30 juin 2026</span><a class="kh-link" href="https://www.bank.nl/nieuws/fraude-bij-betalingen-met-30-procent-toegenomen-in-2025/" rel="noopener" target="_blank">Lire la suite →</a></div>
+</article>
+</div>
+<aside class="kh-side">
+<article class="kh-ad">
+<span class="kh-badge">À LA UNE</span>
+<h3><a href="https://www.bank.nl/raisin/renteboost/" rel="noopener" target="_blank">Raisin RenteBoost : 2,85% par an pendant 3 mois</a></h3>
+<p>Les nouveaux clients et anciens clients revenant chez Raisin peuvent actuellement obtenir un taux annuel garanti de 2,85% pendant trois mois.</p>
+<a href="https://www.bank.nl/raisin/renteboost/" rel="noopener" target="_blank">Plus d’infos →</a>
+</article>
+<article class="kh-ad">
+<span class="kh-badge">À LA UNE</span>
+<h3><a href="https://www.bank.nl/banken/bunq/bunq-free/" rel="noopener" target="_blank">Épargne Bunq : 3,01% pour les nouveaux clients</a></h3>
+<p>Les nouveaux clients Bunq peuvent actuellement obtenir 3,01% sur l’épargne éligible pendant les six premiers mois, sous réserve des conditions.</p>
+<a href="https://www.bank.nl/banken/bunq/bunq-free/" rel="noopener" target="_blank">Plus d’infos →</a>
+</article>
+</aside>
+</div>
+</div>
 </section>
-
-
 <section class="save-section" id="save">
 <div class="container save-grid">
 <div class="save-copy">
@@ -605,78 +610,72 @@
 </div>
 <div class="save-features">
 <div class="save-feature"><div class="save-icon">↘</div><h3>Réduire les frais mensuels</h3><p>Comparez le coût récurrent réel, pas seulement l’offre d’entrée.</p></div>
-<div class="save-feature"><div class="save-icon">◎</div><h3>Éviter les frais DAB & change</h3><p>Les petites commissions s’additionnent rapidement.</p></div>
+<div class="save-feature"><div class="save-icon">◎</div><h3>Éviter les frais DAB &amp; change</h3><p>Les petites commissions s’additionnent rapidement.</p></div>
 <div class="save-feature"><div class="save-icon">＋</div><h3>Utiliser les primes intelligemment</h3><p>Profitez de la prime sans choisir un compte coûteux à long terme.</p></div>
 <div class="save-feature"><div class="save-icon">▦</div><h3>Réduire les coûts professionnels</h3><p>Maîtrisez virements, cartes et frais récurrents.</p></div>
 </div>
 </div>
 </section>
 </main>
-
 <footer class="footer">
-  <div class="container">
-    <div class="footer-mega">
-      <div class="footer-col">
-        <h4>Compte bancaire</h4>
-        <a href="/francais/business-accounts/">Ouvrir un compte professionnel</a>
-        <a href="/francais/joint-account/">Ouvrir un compte joint</a>
-        <a href="/francais/student-account/">Ouvrir un compte étudiant</a>
-        <a href="/francais/child-account/">Ouvrir un compte enfant</a>
-        <a href="/francais/youth-account/">Ouvrir un compte jeune</a>
-        <a href="/francais/bank-accounts/">Aperçu des comptes bancaires</a>
-      </div>
-
-      <div class="footer-col">
-        <h4>Épargne</h4>
-        <a href="/francais/savings/">Comptes d’épargne</a>
-        <a href="/francais/fixed-term-deposits/">Dépôts à terme</a>
-        <a href="/francais/business-savings/">Épargne professionnelle</a>
-        <a href="/francais/child-savings/">Épargne enfant</a>
-        <a href="/francais/savings-rates/">Aperçu des taux d’épargne</a>
-      </div>
-
-      <div class="footer-col">
-        <h4>Investissement</h4>
-        <a href="/francais/investment-accounts/">Comptes d’investissement</a>
-        <a href="/francais/fund-investing/">Investissement en fonds</a>
-        <a href="/francais/managed-investing/">Gestion pilotée</a>
-        <a href="/francais/self-directed-investing/">Investissement autonome</a>
-        <a href="/francais/retirement-investing/">Investissement retraite</a>
-        <a href="/francais/business-investing/">Investissement professionnel</a>
-        <a href="/francais/brokers/">Comparatif des courtiers</a>
-      </div>
-
-      <div class="footer-col footer-contact">
-        <h4>Contact</h4>
-        <a href="/francais/contact/">Contact</a>
-        <a href="mailto:kontakt@bankowezestawienie.pl">kontakt@bankowezestawienie.pl</a>
-        <a href="/francais/research/">Recherche</a>
-        <a href="/francais/services/">Services</a>
-      </div>
-    </div>
-
-    <div class="footer-statement">
-      <div>
-        <a class="brand" href="/francais/"><img src="/assets/brand/mark.svg" alt=""><span>BankRanking</span><em>Europe</em></a>
-        <p class="footer-brand-note">BankRanking fournit des informations et compare des comptes bancaires, produits d’épargne et services liés à l’investissement en Europe. <strong>Attention : nous ne sommes ni un établissement financier ni une banque.</strong></p>
-      </div>
-      <div class="footer-contact-block">
-        <a href="mailto:kontakt@bankowezestawienie.pl">kontakt@bankowezestawienie.pl</a><br>
+<div class="container">
+<div class="footer-mega">
+<div class="footer-col">
+<h4>Compte bancaire</h4>
+<a href="/francais/business-accounts/">Ouvrir un compte professionnel</a>
+<a href="/francais/joint-account/">Ouvrir un compte joint</a>
+<a href="/francais/student-account/">Ouvrir un compte étudiant</a>
+<a href="/francais/child-account/">Ouvrir un compte enfant</a>
+<a href="/francais/youth-account/">Ouvrir un compte jeune</a>
+<a href="/francais/bank-accounts/">Aperçu des comptes bancaires</a>
+</div>
+<div class="footer-col">
+<h4>Épargne</h4>
+<a href="/francais/savings/">Comptes d’épargne</a>
+<a href="/francais/fixed-term-deposits/">Dépôts à terme</a>
+<a href="/francais/business-savings/">Épargne professionnelle</a>
+<a href="/francais/child-savings/">Épargne enfant</a>
+<a href="/francais/savings-rates/">Aperçu des taux d’épargne</a>
+</div>
+<div class="footer-col">
+<h4>Investissement</h4>
+<a href="/francais/investment-accounts/">Comptes d’investissement</a>
+<a href="/francais/fund-investing/">Investissement en fonds</a>
+<a href="/francais/managed-investing/">Gestion pilotée</a>
+<a href="/francais/self-directed-investing/">Investissement autonome</a>
+<a href="/francais/retirement-investing/">Investissement retraite</a>
+<a href="/francais/business-investing/">Investissement professionnel</a>
+<a href="/francais/brokers/">Comparatif des courtiers</a>
+</div>
+<div class="footer-col footer-contact">
+<h4>Contact</h4>
+<a href="/francais/contact/">Contact</a>
+<a href="mailto:kontakt@bankowezestawienie.pl">kontakt@bankowezestawienie.pl</a>
+<a href="/francais/research/">Recherche</a>
+<a href="/francais/services/">Services</a>
+</div>
+</div>
+<div class="footer-statement">
+<div>
+<a class="brand" href="/francais/"><img alt="" src="/assets/brand/mark.svg"/><span>BankRanking</span><em>Europe</em></a>
+<p class="footer-brand-note">BankRanking fournit des informations et compare des comptes bancaires, produits d’épargne et services liés à l’investissement en Europe. <strong>Attention : nous ne sommes ni un établissement financier ni une banque.</strong></p>
+</div>
+<div class="footer-contact-block">
+<a href="mailto:kontakt@bankowezestawienie.pl">kontakt@bankowezestawienie.pl</a><br/>
         bankowezestawienie.pl
       </div>
-    </div>
-
-    <div class="footer-legal">
-      <div class="footer-legal-links">
-        <a href="/francais/research/">Recherche</a>
-        <a href="/francais/services/">Services</a>
-        <a href="/francais/disclaimer/">Avertissement</a>
-        <a href="/privacy/">Confidentialité</a>
-        <a href="/cookies/">Cookies</a>
-      </div>
-      <div class="footer-copy">© 2026 BankRanking Europe — Tous droits réservés.</div>
-    </div>
-  </div>
+</div>
+<div class="footer-legal">
+<div class="footer-legal-links">
+<a href="/francais/research/">Recherche</a>
+<a href="/francais/services/">Services</a>
+<a href="/francais/disclaimer/">Avertissement</a>
+<a href="/privacy/">Confidentialité</a>
+<a href="/cookies/">Cookies</a>
+</div>
+<div class="footer-copy">© 2026 BankRanking Europe — Tous droits réservés.</div>
+</div>
+</div>
 </footer>
 <script>
 document.addEventListener('click', function(e){
@@ -685,7 +684,6 @@ document.addEventListener('click', function(e){
   });
 });
 </script>
-
 <script>
 (function(){
   const INDEX = [{"type": "bank", "label": "mBank", "sub": "Poland", "url": "/pl/banking/"}, {"type": "account", "label": "eKonto do usług", "sub": "mBank · Poland", "url": "/pl/banking/"}, {"type": "bank", "label": "BNP Paribas", "sub": "Poland", "url": "/pl/banking/"}, {"type": "account", "label": "Konto Otwarte na Ciebie + Karta Otwarta na Świat", "sub": "BNP Paribas · Poland", "url": "/pl/banking/"}, {"type": "bank", "label": "Bank Pekao", "sub": "Poland", "url": "/pl/banking/"}, {"type": "account", "label": "Konto Przekorzystne", "sub": "Bank Pekao · Poland", "url": "/pl/banking/"}, {"type": "bank", "label": "ING", "sub": "Poland", "url": "/pl/banking/"}, {"type": "account", "label": "Konto w Planie ING Go", "sub": "ING · Poland", "url": "/pl/banking/"}, {"type": "bank", "label": "Bank Millennium", "sub": "Poland", "url": "/pl/banking/"}, {"type": "account", "label": "Millennium 360°", "sub": "Bank Millennium · Poland", "url": "/pl/banking/"}, {"type": "bank", "label": "VeloBank", "sub": "Poland", "url": "/pl/banking/"}, {"type": "account", "label": "VeloKonto", "sub": "VeloBank · Poland", "url": "/pl/banking/"}, {"type": "bank", "label": "C24 Bank", "sub": "Germany", "url": "/de/banking/"}, {"type": "account", "label": "C24 Smart", "sub": "C24 Bank · Germany", "url": "/de/banking/"}, {"type": "account", "label": "Girokonto", "sub": "ING · Germany", "url": "/de/banking/"}, {"type": "bank", "label": "Commerzbank", "sub": "Germany", "url": "/de/banking/"}, {"type": "account", "label": "GiroKonto", "sub": "Commerzbank · Germany", "url": "/de/banking/"}, {"type": "bank", "label": "N26", "sub": "Germany", "url": "/de/banking/"}, {"type": "account", "label": "N26 Standard", "sub": "N26 · Germany", "url": "/de/banking/"}, {"type": "bank", "label": "DKB", "sub": "Germany", "url": "/de/banking/"}, {"type": "account", "label": "Girokonto", "sub": "DKB · Germany", "url": "/de/banking/"}, {"type": "bank", "label": "BoursoBank", "sub": "France", "url": "/fr/banking/"}, {"type": "account", "label": "Welcome", "sub": "BoursoBank · France", "url": "/fr/banking/"}, {"type": "bank", "label": "Hello bank!", "sub": "France", "url": "/fr/banking/"}, {"type": "account", "label": "Hello One", "sub": "Hello bank! · France", "url": "/fr/banking/"}, {"type": "bank", "label": "Fortuneo", "sub": "France", "url": "/fr/banking/"}, {"type": "account", "label": "Fosfo Mastercard", "sub": "Fortuneo · France", "url": "/fr/banking/"}, {"type": "bank", "label": "BforBank", "sub": "France", "url": "/fr/banking/"}, {"type": "account", "label": "BforBASIC", "sub": "BforBank · France", "url": "/fr/banking/"}, {"type": "bank", "label": "Nationwide", "sub": "United Kingdom", "url": "/uk/banking/"}, {"type": "account", "label": "FlexDirect / FlexAccount", "sub": "Nationwide · United Kingdom", "url": "/uk/banking/"}, {"type": "bank", "label": "first direct", "sub": "United Kingdom", "url": "/uk/banking/"}, {"type": "account", "label": "1st Account", "sub": "first direct · United Kingdom", "url": "/uk/banking/"}, {"type": "bank", "label": "Chase UK", "sub": "United Kingdom", "url": "/uk/banking/"}, {"type": "account", "label": "Current Account", "sub": "Chase UK · United Kingdom", "url": "/uk/banking/"}, {"type": "bank", "label": "NatWest", "sub": "United Kingdom", "url": "/uk/banking/"}, {"type": "account", "label": "Select", "sub": "NatWest · United Kingdom", "url": "/uk/banking/"}, {"type": "bank", "label": "Monzo", "sub": "United Kingdom", "url": "/uk/banking/"}, {"type": "account", "label": "Free Current Account", "sub": "Monzo · United Kingdom", "url": "/uk/banking/"}, {"type": "bank", "label": "BBVA", "sub": "Italy", "url": "/it/banking/"}, {"type": "account", "label": "Conto Corrente Online", "sub": "BBVA · Italy", "url": "/it/banking/"}, {"type": "bank", "label": "UniCredit buddy", "sub": "Italy", "url": "/it/banking/"}, {"type": "account", "label": "Genius buddy", "sub": "UniCredit buddy · Italy", "url": "/it/banking/"}, {"type": "account", "label": "Conto Corrente Arancio", "sub": "ING · Italy", "url": "/it/banking/"}, {"type": "bank", "label": "Fineco", "sub": "Italy", "url": "/it/banking/"}, {"type": "account", "label": "Fineco One", "sub": "Fineco · Italy", "url": "/it/banking/"}, {"type": "bank", "label": "isybank", "sub": "Italy", "url": "/it/banking/"}, {"type": "account", "label": "isyPrime", "sub": "isybank · Italy", "url": "/it/banking/"}, {"type": "account", "label": "Cuenta Nómina Sin Comisiones", "sub": "BBVA · Spain", "url": "/es/banking/"}, {"type": "bank", "label": "Banco Sabadell", "sub": "Spain", "url": "/es/banking/"}, {"type": "account", "label": "Cuenta Online Sabadell", "sub": "Banco Sabadell · Spain", "url": "/es/banking/"}, {"type": "bank", "label": "Unicaja", "sub": "Spain", "url": "/es/banking/"}, {"type": "account", "label": "Cuenta Online", "sub": "Unicaja · Spain", "url": "/es/banking/"}, {"type": "bank", "label": "Openbank", "sub": "Spain", "url": "/es/banking/"}, {"type": "account", "label": "Open Current Account", "sub": "Openbank · Spain", "url": "/es/banking/"}, {"type": "bank", "label": "Rabobank", "sub": "Netherlands", "url": "/nl/banking/"}, {"type": "account", "label": "Rabo Free (18–28)", "sub": "Rabobank · Netherlands", "url": "/nl/banking/"}, {"type": "bank", "label": "bunq", "sub": "Netherlands", "url": "/nl/banking/"}, {"type": "account", "label": "bunq Free", "sub": "bunq · Netherlands", "url": "/nl/banking/"}, {"type": "account", "label": "ING Go", "sub": "ING · Netherlands", "url": "/nl/banking/"}, {"type": "bank", "label": "ABN AMRO", "sub": "Netherlands", "url": "/nl/banking/"}, {"type": "account", "label": "Basic Payment Package", "sub": "ABN AMRO · Netherlands", "url": "/nl/banking/"}, {"type": "bank", "label": "Nordea", "sub": "Sweden", "url": "/se/banking/"}, {"type": "account", "label": "Vardagspaket", "sub": "Nordea · Sweden", "url": "/se/banking/"}, {"type": "bank", "label": "Swedbank", "sub": "Sweden", "url": "/se/banking/"}, {"type": "account", "label": "Nyckelkund", "sub": "Swedbank · Sweden", "url": "/se/banking/"}, {"type": "bank", "label": "SEB", "sub": "Sweden", "url": "/se/banking/"}, {"type": "account", "label": "Enkla vardagen", "sub": "SEB · Sweden", "url": "/se/banking/"}, {"type": "bank", "label": "Handelsbanken", "sub": "Sweden", "url": "/se/banking/"}, {"type": "account", "label": "Baserbjudande", "sub": "Handelsbanken · Sweden", "url": "/se/banking/"}, {"type": "market", "label": "Poland", "sub": "Bank account ranking", "url": "/pl/banking/"}, {"type": "market", "label": "Germany", "sub": "Bank account ranking", "url": "/de/banking/"}, {"type": "market", "label": "France", "sub": "Bank account ranking", "url": "/fr/banking/"}, {"type": "market", "label": "United Kingdom", "sub": "Bank account ranking", "url": "/uk/banking/"}, {"type": "market", "label": "Italy", "sub": "Bank account ranking", "url": "/it/banking/"}, {"type": "market", "label": "Spain", "sub": "Bank account ranking", "url": "/es/banking/"}, {"type": "market", "label": "Netherlands", "sub": "Bank account ranking", "url": "/nl/banking/"}, {"type": "market", "label": "Sweden", "sub": "Bank account ranking", "url": "/se/banking/"}];
@@ -718,6 +716,5 @@ document.addEventListener('click', function(e){
   document.addEventListener('click',e=>{if(!e.target.closest('.header-search'))box.classList.remove('open')});
 })();
 </script>
-
 <script>(function(){const i=document.getElementById('site-search'),b=document.getElementById('search-results');if(!i||!b)return;const x=[["Personal accounts", "/bank-accounts/"], ["Business accounts", "/business-accounts/"], ["Joint accounts", "/joint-account/"], ["Student accounts", "/student-account/"], ["Youth accounts", "/youth-account/"], ["Children's accounts", "/child-account/"], ["Savings accounts", "/savings/"], ["Fixed-term deposits", "/fixed-term-deposits/"], ["Business savings", "/business-savings/"], ["Child savings", "/child-savings/"], ["Investment accounts", "/investment-accounts/"], ["Fund investing", "/fund-investing/"], ["Managed investing", "/managed-investing/"], ["Self-directed investing", "/self-directed-investing/"], ["Retirement investing", "/retirement-investing/"], ["Business investing", "/business-investing/"]];i.addEventListener('input',()=>{const q=i.value.trim().toLowerCase();if(q.length<2)return;const h=x.filter(v=>v[0].toLowerCase().includes(q)).slice(0,5);if(!h.length)return;const add=h.map(v=>'<a class="search-result" href="'+v[1]+'"><span class="result-dot">C</span><span><strong>'+v[0]+'</strong><small>Category rankings</small></span></a>').join('');if(!b.dataset.cats){b.innerHTML=add+b.innerHTML;b.dataset.cats='1'};b.classList.add('open')});i.addEventListener('search',()=>{b.dataset.cats=''})})();</script>
 </body></html>
