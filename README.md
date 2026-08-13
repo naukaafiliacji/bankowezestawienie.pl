@@ -21,3 +21,8 @@ Important:
 - no Google Translate popup
 - CNAME remains bankowezestawienie.pl
 - homepage styles are embedded directly in index.html so the page does not collapse into unstyled text if an old CSS asset is cached incorrectly.
+
+## Homepage editorial promotion feature
+The former three-card "Worth checking now" section has been replaced by a single editorial "Did you know?" feature about BBVA Spain's current Young Account flight promotion.
+The visual uses an original boarding-pass composition and keeps the terms deliberately short.
+Source: official BBVA Spain Young Account page, checked 13 Aug 2026.

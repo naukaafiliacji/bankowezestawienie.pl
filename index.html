@@ -97,6 +97,152 @@
 @media(max-width:900px){.header-search{width:min(390px,43vw)}}
 @media(max-width:700px){.header-search{display:none}.ticker-track,.ticker-group{gap:38px}.ticker-group{padding-right:38px}.ticker-brand{font-size:13px}}
 
+
+/* -------------------------------------------------------------
+   Editorial "Did you know?" promotion story
+   ------------------------------------------------------------- */
+.didyouknow-section{
+  padding:78px 0;
+  background:#fff8ed;
+  border-top:1px solid #f1e3ce;
+  border-bottom:1px solid #eadcc8;
+  overflow:hidden;
+}
+.didyouknow-grid{
+  display:grid;
+  grid-template-columns:1.03fr .97fr;
+  gap:58px;
+  align-items:center;
+}
+.story-kicker{
+  display:flex;align-items:center;gap:9px;
+  color:#9a6431;font-size:11px;font-weight:900;letter-spacing:.11em;text-transform:uppercase;
+  margin-bottom:16px;
+}
+.story-kicker:before{
+  content:"";width:26px;height:2px;background:#d89a56;border-radius:2px;
+}
+.didyouknow-copy h2{
+  margin:0;
+  max-width:680px;
+  font-size:48px;
+  line-height:1.02;
+  letter-spacing:-.052em;
+  color:#263b4b;
+}
+.didyouknow-copy>p{
+  margin:20px 0 0;
+  max-width:660px;
+  color:#6d655d;
+  font-size:16px;
+  line-height:1.65;
+}
+.story-deadline{
+  margin-top:16px;
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12px;font-weight:800;color:#895a2d;
+}
+.story-deadline:before{content:"●";font-size:8px;color:#df7e35}
+.story-actions{display:flex;align-items:center;gap:11px;margin-top:24px;flex-wrap:wrap}
+.story-primary{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:11px 15px;border-radius:7px;background:#183f64;color:#fff;
+  font-size:12px;font-weight:850;
+}
+.story-secondary{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:10px 14px;border-radius:7px;border:1px solid #d7c8b5;background:rgba(255,255,255,.48);
+  color:#705e4e;font-size:12px;font-weight:800;
+}
+
+/* boarding-pass visual */
+.boarding-wrap{position:relative;padding:20px 6px}
+.boarding-wrap:before{
+  content:"✈";position:absolute;right:-4px;top:-20px;
+  font-size:92px;line-height:1;color:#ead6bb;transform:rotate(12deg);opacity:.8
+}
+.boarding-pass{
+  position:relative;
+  display:grid;
+  grid-template-columns:1fr 118px;
+  min-height:260px;
+  background:#fff;
+  border:1px solid #e8d5ba;
+  border-radius:18px;
+  box-shadow:0 22px 55px rgba(78,56,35,.13);
+  overflow:hidden;
+  transform:rotate(1.5deg);
+}
+.boarding-main{padding:24px 27px 22px}
+.boarding-side{
+  position:relative;
+  border-left:2px dashed #dec8aa;
+  background:#f7ead7;
+  padding:22px 14px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:space-between;
+}
+.boarding-side:before,.boarding-side:after{
+  content:"";position:absolute;left:-12px;width:22px;height:22px;border-radius:50%;background:#fff8ed
+}
+.boarding-side:before{top:-11px}.boarding-side:after{bottom:-11px}
+.ticket-top{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.ticket-brand{
+  width:118px;height:37px;object-fit:contain;object-position:left center;
+}
+.ticket-live{
+  font-size:9px;font-weight:900;letter-spacing:.1em;color:#a66a35;
+  background:#fff4e1;border:1px solid #edd7b8;border-radius:20px;padding:6px 8px;
+}
+.ticket-route{
+  display:grid;grid-template-columns:auto 1fr auto;align-items:end;gap:13px;margin-top:30px
+}
+.ticket-route strong{display:block;font-size:24px;letter-spacing:-.035em;color:#203e58}
+.ticket-route small{display:block;font-size:9px;font-weight:850;letter-spacing:.09em;color:#9a8a79;margin-bottom:5px}
+.route-line{height:1px;background:#cfb895;position:relative;margin-bottom:10px}
+.route-line:after{content:"✈";position:absolute;left:50%;top:50%;transform:translate(-50%,-54%);background:#fff;padding:0 8px;color:#b2763c;font-size:17px}
+.ticket-big{
+  display:flex;align-items:flex-end;justify-content:space-between;gap:18px;
+  margin-top:30px;padding-top:20px;border-top:1px solid #eadfce
+}
+.ticket-big-number{font-size:60px;line-height:.78;font-weight:900;letter-spacing:-.07em;color:#153f67}
+.ticket-big-number span{font-size:18px;letter-spacing:-.03em;margin-left:7px;color:#395b75}
+.ticket-detail{text-align:right}
+.ticket-detail strong{display:block;font-size:13px;color:#765b42}
+.ticket-detail small{display:block;font-size:10px;color:#a18e7d;margin-top:4px}
+.ticket-code{
+  writing-mode:vertical-rl;transform:rotate(180deg);
+  font-size:11px;font-weight:900;letter-spacing:.1em;color:#76512e
+}
+.ticket-date{font-size:9px;font-weight:850;letter-spacing:.07em;color:#98775a;text-align:center}
+.ticket-barcode{
+  width:54px;height:42px;
+  background:repeating-linear-gradient(90deg,#4e3e30 0 2px,transparent 2px 5px,#4e3e30 5px 6px,transparent 6px 9px);
+  opacity:.75
+}
+.story-small{
+  margin-top:14px!important;
+  font-size:10px!important;
+  line-height:1.45!important;
+  color:#9a8c80!important;
+}
+@media(max-width:920px){
+  .didyouknow-grid{grid-template-columns:1fr;gap:34px}
+  .boarding-wrap{max-width:640px;width:100%;margin:auto}
+}
+@media(max-width:620px){
+  .didyouknow-section{padding:54px 0}
+  .didyouknow-copy h2{font-size:37px}
+  .didyouknow-copy>p{font-size:15px}
+  .boarding-pass{grid-template-columns:1fr 88px;min-height:235px}
+  .boarding-main{padding:20px}
+  .ticket-route strong{font-size:19px}
+  .ticket-big-number{font-size:50px}
+  .ticket-big-number span{font-size:15px}
+}
+
 </style>
 </head>
 <body>
@@ -133,14 +279,44 @@
 
 <section class="network-strip"><div class="container network-row"><div class="network-label">Affiliate networks &amp; platforms</div><div class="ticker-viewport" aria-label="Affiliate networks and platforms"><div class="ticker-track"><div class="ticker-group"><div class="ticker-brand"><img src="https://www.google.com/s2/favicons?domain=fintelconnect.com&sz=128" alt="Fintel Connect"><span>Fintel Connect</span></div><div class="ticker-brand"><img src="https://www.google.com/s2/favicons?domain=financeads.com&sz=128" alt="financeAds"><span>financeAds</span></div><div class="ticker-brand"><img src="https://www.google.com/s2/favicons?domain=awin.com&sz=128" alt="Awin"><span>Awin</span></div><div class="ticker-brand"><img src="https://www.google.com/s2/favicons?domain=tradedoubler.com&sz=128" alt="Tradedoubler"><span>Tradedoubler</span></div><div class="ticker-brand"><img src="https://www.google.com/s2/favicons?domain=webgains.com&sz=128" alt="Webgains"><span>Webgains</span></div><div class="ticker-brand"><img src="https://www.google.com/s2/favicons?domain=tradetracker.com&sz=128" alt="TradeTracker"><span>TradeTracker</span></div><div class="ticker-brand"><img src="https://www.google.com/s2/favicons?domain=daisycon.com&sz=128" alt="Daisycon"><span>Daisycon</span></div><div class="ticker-brand"><img src="https://www.google.com/s2/favicons?domain=adtraction.com&sz=128" alt="Adtraction"><span>Adtraction</span></div><div class="ticker-brand"><img src="https://www.google.com/s2/favicons?domain=partnerize.com&sz=128" alt="Partnerize"><span>Partnerize</span></div><div class="ticker-brand"><img src="https://www.google.com/s2/favicons?domain=flexoffers.com&sz=128" alt="FlexOffers"><span>FlexOffers</span></div><div class="ticker-brand"><img src="https://www.google.com/s2/favicons?domain=commissionfactory.com&sz=128" alt="Commission Factory"><span>Commission Factory</span></div></div><div class="ticker-group" aria-hidden="true"><div class="ticker-brand"><img src="https://www.google.com/s2/favicons?domain=fintelconnect.com&sz=128" alt="Fintel Connect"><span>Fintel Connect</span></div><div class="ticker-brand"><img src="https://www.google.com/s2/favicons?domain=financeads.com&sz=128" alt="financeAds"><span>financeAds</span></div><div class="ticker-brand"><img src="https://www.google.com/s2/favicons?domain=awin.com&sz=128" alt="Awin"><span>Awin</span></div><div class="ticker-brand"><img src="https://www.google.com/s2/favicons?domain=tradedoubler.com&sz=128" alt="Tradedoubler"><span>Tradedoubler</span></div><div class="ticker-brand"><img src="https://www.google.com/s2/favicons?domain=webgains.com&sz=128" alt="Webgains"><span>Webgains</span></div><div class="ticker-brand"><img src="https://www.google.com/s2/favicons?domain=tradetracker.com&sz=128" alt="TradeTracker"><span>TradeTracker</span></div><div class="ticker-brand"><img src="https://www.google.com/s2/favicons?domain=daisycon.com&sz=128" alt="Daisycon"><span>Daisycon</span></div><div class="ticker-brand"><img src="https://www.google.com/s2/favicons?domain=adtraction.com&sz=128" alt="Adtraction"><span>Adtraction</span></div><div class="ticker-brand"><img src="https://www.google.com/s2/favicons?domain=partnerize.com&sz=128" alt="Partnerize"><span>Partnerize</span></div><div class="ticker-brand"><img src="https://www.google.com/s2/favicons?domain=flexoffers.com&sz=128" alt="FlexOffers"><span>FlexOffers</span></div><div class="ticker-brand"><img src="https://www.google.com/s2/favicons?domain=commissionfactory.com&sz=128" alt="Commission Factory"><span>Commission Factory</span></div></div></div></div></div></section>
 
-<section class="section" id="accounts">
-<div class="container">
-<div class="section-head"><div><div class="kicker">Current offers</div><h2>Worth checking now</h2></div></div>
-<div class="product-grid">
-<article class="product-card"><div class="product-logo"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Bank%20Millenium.svg" onerror="this.onerror=null;this.src=\'https://www.google.com/s2/favicons?domain=bankmillennium.pl&amp;sz=256\'" alt="Bank Millennium"></div><div class="market-label">🇵🇱 POLAND</div><h3>Millennium 360°</h3><div class="product-value">up to PLN 700</div><div class="product-note">Welcome campaign</div></article>
-<article class="product-card"><div class="product-logo"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/NatWest%20wordmark.svg" onerror="this.onerror=null;this.src=\'https://www.google.com/s2/favicons?domain=natwest.com&amp;sz=256\'" alt="NatWest"></div><div class="market-label">🇬🇧 UNITED KINGDOM</div><h3>NatWest Select</h3><div class="product-value">£200</div><div class="product-note">Switch incentive</div></article>
-<article class="product-card"><div class="product-logo"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/BBVA%20logo%202025.svg" onerror="this.onerror=null;this.src=\'https://www.google.com/s2/favicons?domain=bbva.es&amp;sz=256\'" alt="BBVA"></div><div class="market-label">🇪🇸 SPAIN</div><h3>BBVA Cuenta Nómina</h3><div class="product-value">up to €1,060</div><div class="product-note">Combined benefits</div></article>
-</div>
+<section class="didyouknow-section" id="accounts">
+<div class="container didyouknow-grid">
+  <div class="didyouknow-copy">
+    <div class="story-kicker">DID YOU KNOW? · LIVE PROMOTION</div>
+    <h2>A bank account can currently come with a trip for two.</h2>
+    <p>BBVA Spain is offering new customers aged 18–29 a return flight for two after opening its Young Account with the promo code and making one €25 card purchase within a month.</p>
+    <div class="story-deadline">Offer available to open until 2 Sep 2026</div>
+    <div class="story-actions">
+      <a class="story-primary" href="/es/">See Spain ranking →</a>
+      <a class="story-secondary" href="https://www.bbva.es/en/personas/productos/cuentas/cuenta-joven.html" target="_blank" rel="noopener">Official offer ↗</a>
+    </div>
+    <p class="story-small">Spain residents · new BBVA customers · age 18–29 · terms and route availability apply</p>
+  </div>
+
+  <div class="boarding-wrap" aria-label="BBVA flight promotion">
+    <div class="boarding-pass">
+      <div class="boarding-main">
+        <div class="ticket-top">
+          <img class="ticket-brand" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/BBVA%20logo%202025.svg" alt="BBVA">
+          <span class="ticket-live">NO PRIZE DRAW</span>
+        </div>
+        <div class="ticket-route">
+          <div><small>FROM SPAIN</small><strong>ES</strong></div>
+          <div class="route-line"></div>
+          <div style="text-align:right"><small>EUROPE / MOROCCO</small><strong>EU+</strong></div>
+        </div>
+        <div class="ticket-big">
+          <div class="ticket-big-number">2<span>2 PEOPLE</span></div>
+          <div class="ticket-detail"><strong>RETURN FLIGHT</strong><small>1 × €25 purchase</small></div>
+        </div>
+      </div>
+      <div class="boarding-side">
+        <div class="ticket-code">BBVAVUELOS</div>
+        <div class="ticket-barcode"></div>
+        <div class="ticket-date">ENDS 02 SEP 2026</div>
+      </div>
+    </div>
+  </div>
 </div>
 </section>
 
