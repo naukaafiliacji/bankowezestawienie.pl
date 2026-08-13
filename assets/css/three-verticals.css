@@ -167,3 +167,6 @@
   align-items:center;
   gap:8px;
 }
+
+.flag-icon{display:inline-block;background:#fff}
+.lang-pop a .lang-code{display:none!important}
