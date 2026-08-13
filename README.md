@@ -41,3 +41,15 @@ Homepage now includes a bank.nl-inspired knowledge/newsroom section:
 - Editorial cards now use current/recent banking stories inspired by Bank.nl:
   ABN AMRO/NIBC, GoDutch/Messi/Mastercard and payment-fraud growth.
 - Featured cards use current Bank.nl product information for Raisin RenteBoost and Bunq savings.
+
+
+## Expanded footer and product architecture
+- Footer rebuilt in a Bank.nl-inspired structure (without the Netherlands-bank column).
+- New top-level areas: bank accounts, savings/deposits and investing.
+- No loan / mortgage / credit section added.
+- Added specific account types: business, joint, student, child and youth.
+- Added savings: savings accounts, fixed-term deposits, business savings, child savings and rate overview.
+- Added investing: investment accounts, funds, managed, self-directed, retirement, business investing and broker overview.
+- Added Research / Services / Disclaimer / Contact information pages.
+- Added the disclaimer: BankRanking is not a bank or financial institution.
+- Generated 92 supporting category/info pages across EN/ES/DE/FR paths.

@@ -409,3 +409,81 @@ h1{font-size:clamp(44px,6vw,76px);line-height:.98;letter-spacing:-.06em;margin:1
 .bank-logo{width:180px!important;height:54px!important;max-width:100%!important;object-fit:contain!important;object-position:left center!important;background:transparent!important;border:0!important;padding:0!important}
 .modal-logo{max-width:200px!important;height:56px!important;object-fit:contain!important;object-position:left center!important}
 .compare-logo{max-width:165px!important;height:44px!important;object-fit:contain!important}
+
+
+/* -------------------------------------------------------------
+   Expanded Bank.nl-inspired footer: accounts / savings / investing
+   ------------------------------------------------------------- */
+.footer{background:#102a43;color:#fff;padding:58px 0 22px}
+.footer-mega{
+  display:grid;
+  grid-template-columns:1.05fr 1fr 1fr .9fr;
+  gap:44px;
+  align-items:start;
+}
+.footer-col h4{
+  margin:0 0 14px;
+  font-size:14px;
+  color:#f1f5f8;
+  font-weight:800;
+  letter-spacing:-.01em;
+  text-transform:none;
+}
+.footer-col a{
+  display:block;
+  color:#b7c5d0;
+  font-size:13px;
+  line-height:1.35;
+  padding:4px 0;
+}
+.footer-col a:hover{color:#fff}
+.footer-contact a{color:#d7e3eb}
+.footer-statement{
+  margin-top:38px;
+  padding-top:24px;
+  border-top:1px solid #304a61;
+  display:grid;
+  grid-template-columns:1.4fr .6fr;
+  gap:38px;
+  align-items:start;
+}
+.footer-statement p{
+  margin:0;
+  max-width:700px;
+  color:#b4c3ce;
+  font-size:13px;
+  line-height:1.7;
+}
+.footer-statement strong{color:#fff}
+.footer-contact-block{
+  color:#9fb1bf;
+  font-size:12px;
+  line-height:1.7;
+}
+.footer-contact-block a{color:#d4e0e8}
+.footer-legal{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:28px;
+  flex-wrap:wrap;
+  margin-top:28px;
+  padding-top:18px;
+  border-top:1px solid #304a61;
+}
+.footer-legal-links{display:flex;gap:18px;flex-wrap:wrap}
+.footer-legal-links a{font-size:11px;color:#95a8b7}
+.footer-copy{font-size:11px;color:#8197a8}
+.footer .brand{font-size:22px!important;font-weight:650!important;letter-spacing:-.025em!important;gap:10px!important}
+.footer .brand span{font-size:inherit!important;font-weight:650!important}
+.footer .brand em{font-size:inherit!important;font-weight:500!important;color:#9aaab7!important}
+.footer .brand img{width:34px!important;height:34px!important}
+.footer-brand-note{margin-top:14px!important;max-width:350px!important;color:#9fb1bf!important;font-size:12px!important}
+@media(max-width:900px){
+  .footer-mega{grid-template-columns:1fr 1fr}
+  .footer-statement{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+  .footer-mega{grid-template-columns:1fr}
+  .footer{padding-top:44px}
+}

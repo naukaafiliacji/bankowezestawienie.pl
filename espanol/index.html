@@ -376,6 +376,84 @@
   letter-spacing:.08em;
 }
 
+
+/* -------------------------------------------------------------
+   Expanded Bank.nl-inspired footer: accounts / savings / investing
+   ------------------------------------------------------------- */
+.footer{background:#102a43;color:#fff;padding:58px 0 22px}
+.footer-mega{
+  display:grid;
+  grid-template-columns:1.05fr 1fr 1fr .9fr;
+  gap:44px;
+  align-items:start;
+}
+.footer-col h4{
+  margin:0 0 14px;
+  font-size:14px;
+  color:#f1f5f8;
+  font-weight:800;
+  letter-spacing:-.01em;
+  text-transform:none;
+}
+.footer-col a{
+  display:block;
+  color:#b7c5d0;
+  font-size:13px;
+  line-height:1.35;
+  padding:4px 0;
+}
+.footer-col a:hover{color:#fff}
+.footer-contact a{color:#d7e3eb}
+.footer-statement{
+  margin-top:38px;
+  padding-top:24px;
+  border-top:1px solid #304a61;
+  display:grid;
+  grid-template-columns:1.4fr .6fr;
+  gap:38px;
+  align-items:start;
+}
+.footer-statement p{
+  margin:0;
+  max-width:700px;
+  color:#b4c3ce;
+  font-size:13px;
+  line-height:1.7;
+}
+.footer-statement strong{color:#fff}
+.footer-contact-block{
+  color:#9fb1bf;
+  font-size:12px;
+  line-height:1.7;
+}
+.footer-contact-block a{color:#d4e0e8}
+.footer-legal{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:28px;
+  flex-wrap:wrap;
+  margin-top:28px;
+  padding-top:18px;
+  border-top:1px solid #304a61;
+}
+.footer-legal-links{display:flex;gap:18px;flex-wrap:wrap}
+.footer-legal-links a{font-size:11px;color:#95a8b7}
+.footer-copy{font-size:11px;color:#8197a8}
+.footer .brand{font-size:22px!important;font-weight:650!important;letter-spacing:-.025em!important;gap:10px!important}
+.footer .brand span{font-size:inherit!important;font-weight:650!important}
+.footer .brand em{font-size:inherit!important;font-weight:500!important;color:#9aaab7!important}
+.footer .brand img{width:34px!important;height:34px!important}
+.footer-brand-note{margin-top:14px!important;max-width:350px!important;color:#9fb1bf!important;font-size:12px!important}
+@media(max-width:900px){
+  .footer-mega{grid-template-columns:1fr 1fr}
+  .footer-statement{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+  .footer-mega{grid-template-columns:1fr}
+  .footer{padding-top:44px}
+}
+
 </style>
 </head>
 <body>
@@ -532,14 +610,69 @@
 </main>
 
 <footer class="footer">
-<div class="container">
-<div class="footer-grid">
-<div><a class="brand" href="/"><img src="/assets/brand/mark.svg" alt=""><span>BankRanking</span><em>Europe</em></a><p>Comparaciones independientes centradas en cuentas bancarias.</p></div>
-<div><h4>Europe</h4><a href="/pl/">Poland</a><a href="/de/">Germany</a><a href="/fr/">France</a><a href="/uk/">United Kingdom</a><a href="/it/">Italy</a><a href="/es/">Spain</a><a href="/nl/">Netherlands</a><a href="/se/">Sweden</a></div>
-<div><h4>BankRanking</h4><a href="/privacy/">Privacidad</a><a href="/cookies/">Cookies</a><a href="/accessibility/">Accesibilidad</a><a href="/ranking-policy/">Metodología</a><a href="/cooperation/">Colaboración</a></div>
-</div>
-<div class="brand-rights-notice">Los nombres, logotipos y marcas de terceros se muestran únicamente para identificar y comparar a los proveedores citados. Siguen siendo propiedad de sus respectivos titulares. Cuando corresponda, su uso es meramente referencial/de cita conforme a la legislación aplicable y no implica patrocinio, recomendación ni asociación. <a href="/logo-notice/">Logo & trademark notice →</a></div><div class="footer-bottom">© 2026 BankRanking Europe</div>
-</div>
+  <div class="container">
+    <div class="footer-mega">
+      <div class="footer-col">
+        <h4>Cuenta bancaria</h4>
+        <a href="/espanol/business-accounts/">Abrir cuenta de empresa</a>
+        <a href="/espanol/joint-account/">Abrir cuenta conjunta</a>
+        <a href="/espanol/student-account/">Abrir cuenta para estudiantes</a>
+        <a href="/espanol/child-account/">Abrir cuenta para niños</a>
+        <a href="/espanol/youth-account/">Abrir cuenta joven</a>
+        <a href="/espanol/bank-accounts/">Resumen de cuentas bancarias</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Ahorro</h4>
+        <a href="/espanol/savings/">Cuentas de ahorro</a>
+        <a href="/espanol/fixed-term-deposits/">Depósitos a plazo</a>
+        <a href="/espanol/business-savings/">Ahorro empresarial</a>
+        <a href="/espanol/child-savings/">Ahorro para niños</a>
+        <a href="/espanol/savings-rates/">Resumen de tipos de ahorro</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Inversión</h4>
+        <a href="/espanol/investment-accounts/">Cuentas de inversión</a>
+        <a href="/espanol/fund-investing/">Fondos de inversión</a>
+        <a href="/espanol/managed-investing/">Inversión gestionada</a>
+        <a href="/espanol/self-directed-investing/">Invertir por cuenta propia</a>
+        <a href="/espanol/retirement-investing/">Inversión para la jubilación</a>
+        <a href="/espanol/business-investing/">Inversión empresarial</a>
+        <a href="/espanol/brokers/">Resumen de brókers</a>
+      </div>
+
+      <div class="footer-col footer-contact">
+        <h4>Contacto</h4>
+        <a href="/espanol/contact/">Contacto</a>
+        <a href="mailto:kontakt@bankowezestawienie.pl">kontakt@bankowezestawienie.pl</a>
+        <a href="/espanol/research/">Investigación</a>
+        <a href="/espanol/services/">Servicios</a>
+      </div>
+    </div>
+
+    <div class="footer-statement">
+      <div>
+        <a class="brand" href="/espanol/"><img src="/assets/brand/mark.svg" alt=""><span>BankRanking</span><em>Europe</em></a>
+        <p class="footer-brand-note">BankRanking ofrece información y compara cuentas bancarias, productos de ahorro y servicios relacionados con la inversión en Europa. <strong>Aviso: no somos una institución financiera ni un banco.</strong></p>
+      </div>
+      <div class="footer-contact-block">
+        <a href="mailto:kontakt@bankowezestawienie.pl">kontakt@bankowezestawienie.pl</a><br>
+        bankowezestawienie.pl
+      </div>
+    </div>
+
+    <div class="footer-legal">
+      <div class="footer-legal-links">
+        <a href="/espanol/research/">Investigación</a>
+        <a href="/espanol/services/">Servicios</a>
+        <a href="/espanol/disclaimer/">Aviso legal</a>
+        <a href="/privacy/">Privacidad</a>
+        <a href="/cookies/">Cookies</a>
+      </div>
+      <div class="footer-copy">© 2026 BankRanking Europe — Todos los derechos reservados.</div>
+    </div>
+  </div>
 </footer>
 <script>
 document.addEventListener('click', function(e){
