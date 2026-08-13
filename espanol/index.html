@@ -1281,6 +1281,32 @@
 .ticket-route-stop strong{
   white-space:nowrap;
 }
+</style><style>
+/* ==========================================================
+   V30 newsletter background + consent
+   ========================================================== */
+.newsletter-section{background:#fff!important;border-top:1px solid #edf2f5!important;border-bottom:1px solid #edf2f5!important}
+.newsletter-tags span{background:#fff!important}
+.newsletter-form-card{box-shadow:0 16px 38px rgba(29,66,96,.07)!important}
+.newsletter-consent{margin-top:13px}
+.newsletter-consent-label{display:flex;align-items:flex-start;gap:10px;color:#72899c;font-size:10px;line-height:1.55;cursor:pointer}
+.newsletter-consent-label input{margin:2px 0 0;accent-color:#173f66;flex:0 0 auto}
+.newsletter-consent-actions{margin-top:8px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.newsletter-consent-link{border:0;background:transparent;padding:0;color:#1d6aa5;font-size:10px;font-weight:800;cursor:pointer}
+.newsletter-consent-link:hover{text-decoration:underline}
+.newsletter-modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;padding:22px;background:rgba(17,32,47,.5);z-index:120}
+.newsletter-modal.show{display:flex}
+.newsletter-modal-card{width:min(560px,calc(100% - 24px));background:#fff;border:1px solid #dce6ee;border-radius:16px;box-shadow:0 28px 60px rgba(18,48,73,.22);padding:22px 22px 18px}
+.newsletter-modal-card h3{margin:0 0 10px;color:#173f61;font-size:22px;line-height:1.08;letter-spacing:-.03em}
+.newsletter-modal-card p{margin:0;color:#698093;font-size:13px;line-height:1.7}
+.newsletter-modal-actions{margin-top:18px;display:flex;justify-content:flex-end}
+.newsletter-modal-actions button{height:40px;border:1px solid #d7e2ea;border-radius:9px;background:#fff;color:#28455f;padding:0 14px;font-size:12px;font-weight:800;cursor:pointer}
+@media(max-width:720px){
+  .newsletter-consent-label{font-size:9px}
+  .newsletter-modal-card{padding:18px 16px 15px}
+  .newsletter-modal-card h3{font-size:20px}
+  .newsletter-modal-card p{font-size:12px}
+}
 </style></head>
 <body>
 <header class="header">
@@ -1425,9 +1451,9 @@
 <input aria-label="Tu correo electrónico" autocomplete="email" placeholder="Tu correo electrónico" required="" type="email"/>
 <button type="submit">Unirme al newsletter</button>
 </div>
-<div class="newsletter-micro">Un resumen breve. Puedes darte de baja en cualquier momento.</div>
+<div class="newsletter-consent"><label class="newsletter-consent-label"><input data-newsletter-consent="" required="required" type="checkbox"/><span>Confirmo que esta es mi dirección de correo electrónico y acepto recibir correos periódicos de BankRanking Europe sobre ofertas bancarias, ahorro, inversión y novedades del sector bancario. Puedo darme de baja en cualquier momento.</span></label><div class="newsletter-consent-actions"><button class="newsletter-consent-link" data-newsletter-consent-trigger="" type="button">Detalles del consentimiento</button></div></div><div class="newsletter-micro">Un resumen breve. Puedes darte de baja en cualquier momento.</div>
 <div class="newsletter-status" role="status">El diseño está listo. Conecta un proveedor de newsletter para activar los envíos.</div>
-</form>
+<div class="newsletter-modal" data-newsletter-modal="" hidden="hidden"><div class="newsletter-modal-card"><h3>Consentimiento del newsletter</h3><p>Al marcar la casilla, confirmas que eres el titular de la dirección de correo electrónico indicada arriba y aceptas recibir correos periódicos, editoriales y comerciales, de BankRanking Europe sobre banca, ahorro, inversión, promociones, lanzamientos y novedades importantes del mercado. Puedes retirar tu consentimiento en cualquier momento mediante el enlace de baja incluido en cada newsletter.</p><div class="newsletter-modal-actions"><button data-newsletter-modal-close="" type="button">Cerrar</button></div></div></div></form>
 </div>
 </div>
 </section>
@@ -1507,10 +1533,26 @@ document.addEventListener('click', function(e){
 })();
 </script>
 <script>(function(){const i=document.getElementById('site-search'),b=document.getElementById('search-results');if(!i||!b)return;const x=[["Personal accounts", "/bank-accounts/"], ["Business accounts", "/business-accounts/"], ["Joint accounts", "/joint-account/"], ["Student accounts", "/student-account/"], ["Youth accounts", "/youth-account/"], ["Children's accounts", "/child-account/"], ["Savings accounts", "/savings/"], ["Fixed-term deposits", "/fixed-term-deposits/"], ["Business savings", "/business-savings/"], ["Child savings", "/child-savings/"], ["Investment accounts", "/investment-accounts/"], ["Fund investing", "/fund-investing/"], ["Managed investing", "/managed-investing/"], ["Self-directed investing", "/self-directed-investing/"], ["Retirement investing", "/retirement-investing/"], ["Business investing", "/business-investing/"]];i.addEventListener('input',()=>{const q=i.value.trim().toLowerCase();if(q.length<2)return;const h=x.filter(v=>v[0].toLowerCase().includes(q)).slice(0,5);if(!h.length)return;const add=h.map(v=>'<a class="search-result" href="'+v[1]+'"><span class="result-dot">C</span><span><strong>'+v[0]+'</strong><small>Category rankings</small></span></a>').join('');if(!b.dataset.cats){b.innerHTML=add+b.innerHTML;b.dataset.cats='1'};b.classList.add('open')});i.addEventListener('search',()=>{b.dataset.cats=''})})();</script>
+
 <script>
 document.querySelectorAll('[data-newsletter-form]').forEach(function(form){
+  var consentBtn=form.querySelector('[data-newsletter-consent-trigger]');
+  var modal=form.querySelector('[data-newsletter-modal]');
+  var closeBtn=form.querySelector('[data-newsletter-modal-close]');
+  if(consentBtn && modal){
+    consentBtn.addEventListener('click', function(){ modal.classList.add('show'); modal.removeAttribute('hidden'); });
+    modal.addEventListener('click', function(e){ if(e.target===modal) { modal.classList.remove('show'); modal.setAttribute('hidden','hidden'); } });
+  }
+  if(closeBtn && modal){
+    closeBtn.addEventListener('click', function(){ modal.classList.remove('show'); modal.setAttribute('hidden','hidden'); });
+  }
   form.addEventListener('submit', function(e){
     e.preventDefault();
+    var consent=form.querySelector('[data-newsletter-consent]');
+    if(consent && !consent.checked){
+      consent.reportValidity();
+      return;
+    }
     var status=form.querySelector('.newsletter-status');
     if(status) status.classList.add('show');
   });

@@ -1121,3 +1121,33 @@
   .rank-cta{grid-row:auto!important;text-align:left!important}
   .rank-cta a{width:auto!important;min-width:118px!important;max-width:none!important}
 }
+
+
+/* ============================================================
+   V30 — ranking footer cleanup and spacing before footer
+   ============================================================ */
+.ranking-main{
+  padding:0 0 94px!important;
+}
+.ranking-workspace{
+  margin-bottom:34px!important;
+}
+.category-wrap{
+  padding-bottom:36px!important;
+}
+.footer-sections{
+  display:none!important;
+}
+.footer-row{
+  min-height:56px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:space-between!important;
+  gap:18px!important;
+  flex-wrap:wrap!important;
+}
+@media(max-width:980px){
+  .ranking-main{padding:0 0 88px!important}
+  .ranking-workspace{margin-bottom:28px!important}
+  .category-wrap{padding-bottom:26px!important}
+}
