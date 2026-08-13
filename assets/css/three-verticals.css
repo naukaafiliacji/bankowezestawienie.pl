@@ -10,3 +10,134 @@
 @media(max-width:1000px){.rank-row{grid-template-columns:42px 220px 1fr 130px 82px}.rank-row .metric:nth-of-type(2){display:none}}
 @media(max-width:850px){.vertical-grid{grid-template-columns:1fr}.country-nav{display:none}.vertical-hero-top{display:block}.updated{text-align:left;margin-top:14px}.rank-heading{display:block}.method{text-align:left;margin-top:10px}}
 @media(max-width:680px){.container{width:min(100% - 26px,1180px)}.header{height:68px}.country-hero h1{font-size:40px}.vertical-hero h1{font-size:38px}.category-tabs{display:grid;grid-template-columns:1fr 1fr}.cat-btn{text-align:left}.rank-row{grid-template-columns:38px 1fr 70px;gap:10px;padding:19px 0}.provider-cell{grid-column:2}.score{grid-column:3;grid-row:1}.best,.metric{grid-column:2/-1}.provider-logo{width:52px;height:42px}}
+
+
+/* ============================================================
+   V9: sidebar ranking navigation
+   ============================================================ */
+
+/* Hide the old Banking / Saving / Investing switch completely. */
+.vertical-switch{display:none!important}
+
+/* Two-column ranking workspace: filter sidebar + ranking content. */
+.ranking-workspace{
+  display:grid;
+  grid-template-columns:220px minmax(0,1fr);
+  gap:38px;
+  align-items:start;
+  padding-top:34px;
+}
+
+.category-wrap{
+  padding:0!important;
+  position:sticky;
+  top:22px;
+  align-self:start;
+}
+
+.category-title{
+  font-size:11px!important;
+  margin-bottom:12px!important;
+}
+
+.category-tabs{
+  display:flex!important;
+  flex-direction:column!important;
+  gap:7px!important;
+}
+
+.cat-btn{
+  width:100%;
+  text-align:left!important;
+  font-size:14px!important;
+  line-height:1.25;
+  padding:12px 13px!important;
+  border-radius:8px!important;
+}
+
+.provider-toggle{
+  margin-top:20px!important;
+  display:none;
+  flex-direction:column;
+  align-items:stretch!important;
+  gap:7px!important;
+}
+.provider-toggle.visible{display:flex!important}
+.provider-toggle span{
+  margin:0 0 3px!important;
+  font-size:10px!important;
+}
+.provider-btn{
+  width:100%;
+  text-align:left;
+  border-radius:8px!important;
+  padding:10px 12px!important;
+  font-size:12px!important;
+}
+
+.ranking-main{
+  padding:0 0 72px!important;
+}
+
+.rank-heading{
+  margin-bottom:21px!important;
+}
+
+.rank-heading h2{
+  font-size:38px!important;
+}
+
+.rank-heading p{
+  font-size:14px!important;
+}
+
+/* Slightly larger ranking content for readability. */
+.provider-cell strong{font-size:17px!important}
+.provider-cell small{font-size:12px!important}
+.best strong{font-size:13px!important}
+.best span{font-size:12px!important}
+.metric strong{font-size:13px!important}
+.score strong{font-size:27px!important}
+
+/* Country hub is no longer the normal route, but stays usable. */
+.vertical-grid{padding-top:42px}
+
+/* Footer gets the three vertical links and is now the only normal
+   navigation path from Banking to Saving / Investing. */
+.footer-sections{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-top:12px;
+}
+.footer-sections a{
+  display:inline-flex;
+  padding:7px 10px;
+  border:1px solid #365268;
+  border-radius:6px;
+  color:#d7e3ea!important;
+  font-size:11px!important;
+  font-weight:750;
+}
+.footer-sections a:hover{background:#193951}
+
+@media(max-width:900px){
+  .ranking-workspace{
+    grid-template-columns:180px minmax(0,1fr);
+    gap:25px;
+  }
+}
+@media(max-width:740px){
+  .ranking-workspace{display:block;padding-top:24px}
+  .category-wrap{position:static;margin-bottom:25px}
+  .category-tabs{
+    display:grid!important;
+    grid-template-columns:1fr 1fr!important;
+  }
+  .provider-toggle{
+    display:none;
+    grid-template-columns:1fr 1fr;
+  }
+  .provider-toggle.visible{display:grid!important}
+  .provider-toggle span{grid-column:1/-1}
+}
