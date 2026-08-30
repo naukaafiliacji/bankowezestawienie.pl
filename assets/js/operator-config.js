@@ -1,8 +1,8 @@
 
 window.BANKRANKING_OPERATOR = {
   tradingName: "BankRanking",
-  domain: "bankowezestawienie.pl",
-  contactEmail: "kontakt@bankowezestawienie.pl",
+  domain: "bankranking.eu",
+  contactEmail: "kontakt@bankranking.eu",
 
   // COMPLETE THESE FIELDS BEFORE COMMERCIAL LAUNCH.
   legalName: "",

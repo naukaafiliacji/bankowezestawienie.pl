@@ -1,7 +1,15 @@
 
 (function(){
+ // V36_DATA_GUARD: fail visibly instead of leaving an empty ranking if the data asset is unavailable.
  const D=window.BANKRANKING_MULTI;
  const b=document.body;
+ if(!D || !D.markets){
+   const list=document.getElementById('rank-list');
+   const title=document.getElementById('ranking-title');
+   if(title) title.textContent='Ranking data could not be loaded';
+   if(list) list.innerHTML='<div class="no-filter-results"><strong>Ranking data is temporarily unavailable.</strong><span>Please refresh the page. If the problem persists, the data asset did not load.</span></div>';
+   return;
+ }
  const m=D.markets[b.dataset.market];
  const g=b.dataset.group;
  const cats=D.categories;
@@ -120,6 +128,34 @@
    return 'View provider';
  }
 
+ function researchOrder(){
+   return [...rawRows()].sort((a,b)=>score(b)-score(a));
+ }
+ function researchPosition(x){
+   const rr=researchOrder();
+   const idx=rr.indexOf(x);
+   return {index:idx<0?rr.findIndex(y=>y.provider===x.provider&&y.product===x.product):idx,total:rr.length,rows:rr};
+ }
+ function methodFactors(){
+   return String(cats[cat].method||'').split(' · ').map(s=>s.trim()).filter(Boolean);
+ }
+ function verifyCopy(){
+   if(g==='banking')return 'Check the full fee-waiver rules, card and ATM pricing, eligibility requirements and any promotional conditions directly with the provider before applying.';
+   if(g==='saving')return 'Check the current rate period, balance caps, access or withdrawal rules, eligibility and the applicable deposit-protection framework before placing money.';
+   return 'Check the complete fee schedule, instrument availability, custody and FX charges, account eligibility and the relevant tax treatment before investing.';
+ }
+ function sourceType(x){
+   if(!x.source)return '';
+   try{
+     const a=new URL(x.source,location.href), b=new URL(providerUrl(x),location.href);
+     const ah=a.hostname.replace(/^www\./,''), bh=b.hostname.replace(/^www\./,'');
+     return (ah===bh||ah.endsWith('.'+bh)||bh.endsWith('.'+ah))?'Primary provider source':'Research / coverage source';
+   }catch(e){return 'Research source'}
+ }
+ function analysisId(x,i){
+   return 'analysis-'+String(x.provider||'provider').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')+'-'+i;
+ }
+
  function render(){
    bs.forEach(x=>x.classList.toggle('active',x.dataset.cat===cat));
    const inv=g==='investing';
@@ -141,24 +177,62 @@
        : r.length+' specialist providers shown. Availability and tax treatment can differ by country.')
      : r.length+' matching providers'+ageText+'. Use the filters to compare the ranking, listed fees and welcome offers.';
 
-   method.textContent='Comparison factors: '+(focusMap[cat]||'costs · access · product terms · usability');
+   method.textContent='Weighted model: '+(cats[cat].method||('Comparison factors: '+(focusMap[cat]||'costs · access · product terms · usability')));
 
    if(!r.length){
      list.innerHTML='<div class="no-filter-results"><strong>No matching accounts.</strong><span>Change or reset the filters to see more providers.</span></div>';
      return;
    }
 
-   list.innerHTML=r.map((x,i)=>`<div class="rank-row">
-     <div class="rank-no ${i<3?'top':''}">${i+1}</div>
-     <div class="provider-cell">
-       <img class="provider-logo" src="${esc(lg(x))}" onerror="this.onerror=null;this.src='${favicon(x.domain)}'" alt="${esc(x.provider)}">
-       <div><strong>${esc(x.provider)}</strong><small>${esc(x.product)}</small></div>
-     </div>
-     <div class="best"><strong>Best for</strong><span>${esc(x.bestFor)}</span>${x.source?`<a class="source-link" href="${esc(x.source)}" target="_blank" rel="noopener">research source ↗</a>`:''}</div>
-     <div class="metric"><label>Key point</label><strong>${esc(x.metric1)}</strong></div>
-     <div class="metric"><label>Also</label><strong>${esc(x.metric2)}</strong></div>
-     <div class="rank-cta"><a href="${esc(providerUrl(x))}" target="_blank" rel="noopener">${ctaLabel()} <span>↗</span></a></div>
-   </div>`).join('');
+   list.innerHTML=r.map((x,i)=>{
+     const pos=researchPosition(x);
+     const rankIndex=Math.max(0,pos.index);
+     const above=rankIndex>0?pos.rows[rankIndex-1]:null;
+     const aid=analysisId(x,i);
+     const factors=methodFactors();
+     const positionCopy=rankIndex===0
+       ? `${esc(x.provider)} is in the leading position under the current ${esc(cats[cat].title.toLowerCase())} model.`
+       : `${esc(x.provider)} sits below ${esc(above?above.provider:'the provider above it')} in the current weighted model. This means the combined result is lower under these category assumptions — not that the higher-ranked provider is universally better for every customer.`;
+     const evidenceLabel=sourceType(x);
+     return `<div class="rank-row">
+       <div class="provider-cell">
+         <img class="provider-logo" src="${esc(lg(x))}" onerror="this.onerror=null;this.src='${favicon(x.domain)}'" alt="${esc(x.provider)}">
+         <div class="provider-copy"><strong>${esc(x.provider)}</strong><small>${esc(x.product)}</small></div>
+       </div>
+       <div class="card-metrics">
+         <div class="metric-card metric-card-best">
+           <label>Best for</label>
+           <strong>${esc(x.bestFor)}</strong>
+         </div>
+         <div class="metric-card">
+           <label>Key point</label>
+           <strong>${esc(x.metric1)}</strong>
+         </div>
+         <div class="metric-card">
+           <label>Also</label>
+           <strong>${esc(x.metric2)}</strong>
+         </div>
+       </div>
+       <div class="rank-cta">
+         <a href="${esc(providerUrl(x))}" target="_blank" rel="noopener">${ctaLabel()} <span>↗</span></a>
+         <button type="button" class="analysis-toggle" data-analysis-toggle aria-expanded="false" aria-controls="${aid}">View analysis ↓</button>
+       </div>
+       <div class="rank-analysis-panel" id="${aid}">
+         <div class="analysis-intro">
+           <div><span class="analysis-eyebrow">RESEARCH ANALYSIS</span><h3>Why this position</h3></div>
+           <p>This analysis explains the main evidence behind <strong>${esc(x.provider)}</strong>'s current place in the ranking. The position is based on the weighted category factors and segment assumptions shown below, without converting the result into a numerical or qualitative grade.</p>
+         </div>
+         <div class="analysis-grid">
+           <section><span class="analysis-label">Why it ranks here</span><p>The current comparison record identifies <strong>${esc(x.bestFor)}</strong> as the clearest use case. It also flags <strong>${esc(x.metric1)}</strong> and <strong>${esc(x.metric2)}</strong> as relevant product details in this comparison.</p></section>
+           <section><span class="analysis-label">Position context</span><p>${positionCopy}</p></section>
+           <section><span class="analysis-label">What to verify</span><p>${verifyCopy()}</p></section>
+           <section><span class="analysis-label">Research record</span><p>Research snapshot: <strong>${esc(D.updatedDisplay||D.updated||'Current')}</strong>. Category: <strong>${esc(cats[cat].title)}</strong>${g==='banking'&&cat==='personal'?` · Segment: <strong>${age==='young'?'18–26':'26+'}</strong>`:''}.</p></section>
+         </div>
+         <div class="analysis-factors"><span class="analysis-label">Weighted factors used for every provider in this ranking</span><div>${factors.map(f=>`<span>${esc(f)}</span>`).join('')}</div></div>
+         <div class="analysis-evidence"><span class="analysis-label">Evidence & documentation</span><div class="analysis-links"><a href="${esc(providerUrl(x))}" target="_blank" rel="noopener">Provider page ↗</a>${x.source?`<a href="${esc(x.source)}" target="_blank" rel="noopener">${esc(evidenceLabel)} ↗</a>`:''}<a href="/methodology/">Methodology ↗</a><a href="/research/">Research framework ↗</a></div></div>
+       </div>
+     </div>`;
+   }).join('');
  }
 
  bs.forEach(x=>x.addEventListener('click',()=>{
@@ -185,6 +259,16 @@
    if(freeOnly)freeOnly.checked=false;
    age='young';
    updateURL();render();
+ });
+
+ list.addEventListener('click',e=>{
+   const btn=e.target.closest('[data-analysis-toggle]');
+   if(!btn)return;
+   const row=btn.closest('.rank-row');
+   const open=!row.classList.contains('analysis-open');
+   row.classList.toggle('analysis-open',open);
+   btn.setAttribute('aria-expanded',String(open));
+   btn.textContent=open?'Hide analysis ↑':'View analysis ↓';
  });
 
  render();
