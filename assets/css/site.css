@@ -660,7 +660,7 @@ h1{font-size:clamp(44px,6vw,76px);line-height:.98;letter-spacing:-.06em;margin:1
 }
 .footer-col a:hover{color:#fff!important}
 
-/* Right-side BankRanking column */
+/* Right-side BankoweZestawienie column */
 .footer-about{
   padding-left:4px!important;
 }
@@ -768,13 +768,13 @@ h1{font-size:clamp(44px,6vw,76px);line-height:.98;letter-spacing:-.06em;margin:1
 
 
 /* =========================================================
-   V15: cleaner BankRanking brand/about column
+   V15: cleaner BankoweZestawienie brand/about column
    ========================================================= */
 .footer-about{
   padding-left:10px!important;
 }
 
-/* Brand lockup: icon + BankRanking + Europe in one clean line */
+/* Brand lockup: icon + BankoweZestawienie + Europe in one clean line */
 .footer-brand{
   display:flex!important;
   align-items:center!important;

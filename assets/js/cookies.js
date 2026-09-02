@@ -1,6 +1,6 @@
 
 (() => {
-  const KEY='bankranking_cookie_preferences_v1';
+  const KEY='bankowezestawienie_cookie_preferences_v1';
   const defaults={essential:true,analytics:false,marketing:false};
   function read(){try{return {...defaults,...JSON.parse(localStorage.getItem(KEY)||'{}')}}catch(e){return {...defaults}}}
   function save(p){try{localStorage.setItem(KEY,JSON.stringify(p))}catch(e){}}

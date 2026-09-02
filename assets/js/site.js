@@ -1,6 +1,6 @@
 
 (() => {
-  const DATA=window.BANKRANKING_DATA;
+  const DATA=window.BANKOWEZESTAWIENIE_DATA;
   const $=(s,p=document)=>p.querySelector(s);
   const $$=(s,p=document)=>[...p.querySelectorAll(s)];
   const market=document.body.dataset.market||"";
@@ -51,7 +51,7 @@
     list.innerHTML=a.map((o,i)=>{
       const score=currentScore(o);
       return `<article class="offer-card">
-      ${i===0?'<div class="offer-ribbon">#1 BankRanking</div>':""}
+      ${i===0?'<div class="offer-ribbon">#1 BankoweZestawienie</div>':""}
       <div class="offer-main">
         <div class="bank-cell">
           <img class="bank-logo" src="${esc(o.logo)}" onerror="this.onerror=null;this.src=\'${esc(o.logoFallback||o.logo)}\'" alt="${esc(o.bank)} logo" loading="lazy">
@@ -59,7 +59,7 @@
           ${o.ageNote?`<div class="age-note">${esc(o.ageNote)}</div>`:""}
           <label class="compare-check"><input class="compare-box" type="checkbox" data-id="${esc(o.id)}" ${state.selected.has(o.id)?"checked":""}> Compare</label>
         </div>
-        <div class="offer-center"><div class="score-line"><div><span class="score">${score.toFixed(1)}<small>/10</small></span><div class="score-label">BankRanking Score · ${state.segment==="young"?"18–26":"26+"}</div></div></div>
+        <div class="offer-center"><div class="score-line"><div><span class="score">${score.toFixed(1)}<small>/10</small></span><div class="score-label">BankoweZestawienie Score · ${state.segment==="young"?"18–26":"26+"}</div></div></div>
         <p>${esc(o.summary)}</p><div class="pros">${o.pros.slice(0,4).map(x=>`<div class="pro">${esc(x)}</div>`).join("")}</div></div>
         <div class="offer-stats"><div class="stat-grid">
           <div class="stat"><label>Monthly fee</label><strong>${esc(o.fee)}</strong></div>
@@ -95,7 +95,7 @@
     if(a.length<2){alert("Choose at least 2 offers.");return}
     $("#modal-content").innerHTML=`<div class="modal-head"><h3>Compare offers</h3><button class="close">×</button></div><div class="compare-table-wrap"><table class="compare-table">
     <tr><th></th>${a.map(o=>`<th><img class="compare-logo" src="${esc(o.logo)}" onerror="this.onerror=null;this.src=\'${esc(o.logoFallback||o.logo)}\'" alt=""><br>${esc(o.product)}</th>`).join("")}</tr>
-    <tr><td>BankRanking Score</td>${a.map(o=>`<td><strong>${currentScore(o).toFixed(1)}/10</strong></td>`).join("")}</tr>
+    <tr><td>BankoweZestawienie Score</td>${a.map(o=>`<td><strong>${currentScore(o).toFixed(1)}/10</strong></td>`).join("")}</tr>
     <tr><td>Monthly fee</td>${a.map(o=>`<td>${esc(o.fee)}</td>`).join("")}</tr>
     <tr><td>Benefit</td>${a.map(o=>`<td><strong>${esc(o.benefit)}</strong><br><small>${esc(o.benefitType)}</small></td>`).join("")}</tr>
     <tr><td>Rate / value</td>${a.map(o=>`<td>${esc(o.rate)}</td>`).join("")}</tr></table></div>`;

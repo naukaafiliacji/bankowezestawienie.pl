@@ -1,6 +1,6 @@
 
 (function(){
- const D=window.BANKRANKING_MULTI, code=document.body.dataset.market, m=D.markets[code], cats=D.categories;
+ const D=window.BANKOWEZESTAWIENIE_MULTI, code=document.body.dataset.market, m=D.markets[code], cats=D.categories;
  let q=new URLSearchParams(location.search), cat=q.get('cat')||'personal', age=q.get('age')||'adult', mode=q.get('mode')||'bank';
  if(!cats[cat])cat='personal'; if(!['young','adult'].includes(age))age='adult'; if(!['bank','specialist'].includes(mode))mode='bank';
  const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];

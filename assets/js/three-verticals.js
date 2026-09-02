@@ -1,7 +1,7 @@
 
 (function(){
  // V36_DATA_GUARD: fail visibly instead of leaving an empty ranking if the data asset is unavailable.
- const D=window.BANKRANKING_MULTI;
+ const D=window.BANKOWEZESTAWIENIE_MULTI;
  const b=document.body;
  if(!D || !D.markets){
    const list=document.getElementById('rank-list');
